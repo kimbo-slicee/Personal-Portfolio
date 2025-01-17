@@ -247,13 +247,14 @@ color: var(--hover-color);
    background:var(--bottom-nav-bg);
    backdrop-filter:blur(10px);
    padding: 16px 35px;
+   display: flex;
    justify-content: center;
    align-items: center;
    column-gap: 25px;
    border-bottom: 1px solid hsl(var(--hue) 45% 98% /.1);
    border-left: 1px solid hsl(var(--hue) 45% 98% /.1);
    border-radius: 50px;
-   display: none;
+   /*display: none;*/
 }
 .bottom-nav .menu li a{
    display:flex;
@@ -340,7 +341,9 @@ flex-direction: column;
 row-gap:5px;
 translate: -50% 0;
 left:50%;
-bottom: 50px;
+/*bottom: 50px;*/
+bottom: -75px;
+opacity: 0;
 border-radius:5px;
 cursor: pointer;
 overflow: hidden;
