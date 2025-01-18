@@ -115,10 +115,19 @@ body{
 /* =========================================
    Reusable Styles
 ========================================= */
+.section{
+   position: relative;
+   overflow: hidden;
+}
 .container{
-   max-width: 1170px;
    margin-left: auto;
-   margin-right:auto ;
+   margin-right:auto;
+   max-width: 80%;
+}
+.wrapper{
+   position: relative;
+   width: 100%;
+   height: 100%;
 }
 
 /* =========================================
@@ -164,9 +173,15 @@ body{
    display: none;
 }
 .lets-talk-icon:hover{
-color: var(--hover-color);
+   color: var(--hover-color);
 }
-
+.fill-btn{
+   background: var(--primary-color);
+   border: 2px solid var(--primary-color);
+}
+.fill-btn a {
+   color: var(--dark-color);
+}
 
 /* =========================================
    Header
@@ -196,7 +211,7 @@ color: var(--hover-color);
 .logo a:hover{
    color:var(--hover-color);
 }
-.header-btns{
+.header-btn{
    display: flex;
    justify-content: center;
    align-items: center;
@@ -238,7 +253,7 @@ color: var(--hover-color);
    position: fixed;
    left: 50%;
    transform: translateX(-50%);
-   bottom: 50px;
+   bottom:5px;
 }
 .bottom-nav-inner{
    position: relative;
@@ -246,7 +261,7 @@ color: var(--hover-color);
 .bottom-nav .menu{
    background:var(--bottom-nav-bg);
    backdrop-filter:blur(10px);
-   padding: 16px 35px;
+   padding:  10px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -264,8 +279,8 @@ color: var(--hover-color);
 }
 .bottom-nav .menu li a i{
 color: var(--color-02);
-font-size: 1.4rem;
-padding: 10px;
+font-size: 1.3rem;
+padding: 5px;
 border-radius: 50%;
 transition: .3s;
 }
@@ -391,6 +406,128 @@ transition: .15s;
 /* =========================================
    Home
 ========================================= */
+.home-container{
+   height:100vh;
+}
+.home-container .wrapper{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.avatar-container{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   column-gap: 25px;
+}
+.avatar-img{
+   position: relative;
+   width: 500px;
+   height: 400px;
+}
+.avatar-img img{
+   position: absolute;
+   width: 90%;
+}
+.home-social{
+   position: absolute;
+   top:40vh;
+   left: 0;
+}
+.home-social span{
+   position: absolute;
+   left: 10px;
+   color:var(--color-01);
+   font-size: var(--tiny-font-size);
+   white-space: nowrap;
+   transform: rotateZ(-90deg);
+   transform-origin:left;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+}
+.home-social .social-line{
+   background: var(--color-01);
+   width: 1px;
+   height: 100px;
+   margin-top: 37px;
+   margin-bottom: 25px;
+   margin-left: 10px;
+}
+.home-social .social-icons{
+   display: flex;
+   flex-direction: column;
+   gap:25px;
+}
+.home-social .social-icons li a {
+   color: var(--color-01);
+   font-size: var(--xlarge-font-size);
+   transition: .3s;
+}
+.home-social .social-icons li a:hover{
+   color: var(--hover-color);
+}
+.avatar-container .hire-btn-01{
+   display: none;
+}
+.avatar-info{
+   position: relative;
+}
+.avatar-info .text-content{
+   display: flex;
+   flex-direction: column;
+   row-gap: 10px;
+}
+.avatar-info{
+   font-size: var(--base-font-size);
+   font-weight: var(--font-semi-bold);
+}
+.avatar-info .my-name{
+   color: var(--color-02);
+   font-size: var(--h1-font-size);
+   font-weight: var(--font-bold);
+}
+.avatar-info .what-i-do{
+   font-size: var(--base-font-size);
+   font-weight: var(--font-semi-bold);
+   margin-bottom:35px;
+}
+.home-scroll-btn{
+   position: absolute;
+   right: -5px;
+   color: var(--color-01);
+   display: grid;
+   justify-items: center;
+   row-gap:5px;
+   animation: up-down 1.5s linear infinite;
+   animation-delay:1.85s;
+   font-size: var(--medium-font-size);
+}
+.home-scroll-btn:hover{
+   color: var(--hover-color);
+}
+.home-scroll-btn div{
+   font-size: var(--tiny-font-size);
+   font-weight: var(--font-regular);
+   white-space: nowrap;
+   transform: rotate(-180deg);
+   margin-top: 7px;
+   writing-mode: vertical-lr;
+   text-orientation: mixed;
+   text-transform: uppercase;
+}
+@keyframes up-down{
+   0%{
+      transform: translateY(8px);
+   }
+   50%{
+      transform: translateY(-8px);
+   }100%{
+       transform: translateY(8px);
+    }
+}
+
+
 
 /* =========================================
    About Me
