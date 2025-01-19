@@ -2,10 +2,33 @@
    Resume section tabs and tab contents
 ===================================================== */
 const resumeTabs=document.querySelector(".resume-tabs")
-const resumePortfolioTabBtns=resumeTabs.querySelectorAll(".tab-btn");
-console.log(resumePortfolioTabBtns)
-
-
+const resumePortfolioTabBtn=resumeTabs.querySelectorAll(".tab-btn");
+const resumeTabContents=document.querySelectorAll(".resume-tab-content")
+resumePortfolioTabBtn.forEach((btn,i)=>{
+    btn.addEventListener("click",(e)=>{
+        if(!e.target.className.includes("active")){
+            e.target.classList.add("active")
+            resumePortfolioTabBtn.forEach(btn=>btn!==e.target?btn.classList.remove("active"):"")
+            resumeSection(i)
+        }
+    })
+})
+// show section
+const resumeSection=(i)=>{
+    resumeTabContents[i].style.display="flex";
+    resumeTabContents[i].classList.add("active")
+    resumeTabContents.forEach((content)=>{
+       if(content!==resumeTabContents[i]){
+           content.style.display="none";
+           content.classList.remove("active")
+       }
+    })
+}
+/*
+*
+*
+*
+* */
 /* =====================================================
    Service modal open/close function
 ===================================================== */

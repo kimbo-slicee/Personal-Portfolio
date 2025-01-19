@@ -216,7 +216,7 @@ body{
 ========================================= */
 .header{
    z-index:var(--z-fixed);
-   position: fixed;
+   position:relative;
    width:100%;
    top:0;
    left: 0;
@@ -635,6 +635,7 @@ transition: .15s;
    column-gap: 30px;
    row-gap: 30px;
    margin-bottom: 100px;
+   cursor: pointer;
 }
 
 .resume-tabs .tab-btn{
@@ -647,11 +648,12 @@ transition: .15s;
    font-weight: var(--font-medium);
    padding: 12px 0 ;
    border-radius: 25px;
-   cursor: pointer;
    transition: all .3s;
 }
 .resume-tabs .tab-btn:hover{
-   color: var(--hover-color)
+   color: var(--hover-color);
+   cursor: pointer;
+
 }
 .resume-tabs .tab-btn i{
    font-size: var(--xlarge-font-size);
