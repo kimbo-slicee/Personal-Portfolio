@@ -1,6 +1,10 @@
 /* =====================================================
    Resume section tabs and tab contents
 ===================================================== */
+const resumeTabs=document.querySelector(".resume-tabs")
+const resumePortfolioTabBtns=resumeTabs.querySelectorAll(".tab-btn");
+console.log(resumePortfolioTabBtns)
+
 
 /* =====================================================
    Service modal open/close function
