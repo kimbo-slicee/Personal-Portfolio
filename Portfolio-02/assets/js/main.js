@@ -1,34 +1,29 @@
 /* =====================================================
    Resume section tabs and tab contents
 ===================================================== */
-const resumeTabs=document.querySelector(".resume-tabs")
-const resumePortfolioTabBtn=resumeTabs.querySelectorAll(".tab-btn");
-const resumeTabContents=document.querySelectorAll(".resume-tab-content")
-resumePortfolioTabBtn.forEach((btn,i)=>{
-    btn.addEventListener("click",(e)=>{
-        if(!e.target.className.includes("active")){
-            e.target.classList.add("active")
-            resumePortfolioTabBtn.forEach(btn=>btn!==e.target?btn.classList.remove("active"):"")
-            resumeSection(i)
-        }
-    })
-})
-// show section
-const resumeSection=(i)=>{
-    resumeTabContents[i].style.display="flex";
-    resumeTabContents[i].classList.add("active")
-    resumeTabContents.forEach((content)=>{
-       if(content!==resumeTabContents[i]){
-           content.style.display="none";
-           content.classList.remove("active")
-       }
-    })
-}
-/*
-*
-*
-*
-* */
+const resumeTabs = document.querySelector(".resume-tabs");
+const resumePortfolioTabBtn = resumeTabs.querySelectorAll(".tab-btn");
+const resumeTabContents = document.querySelectorAll(".resume-tab-content");
+
+resumePortfolioTabBtn.forEach((btn, index) => {
+    btn.addEventListener("click", () => activateTab(index));
+});
+
+const activateTab = (index) => {
+    // Deactivate all tabs
+    resumePortfolioTabBtn.forEach((btn) => btn.classList.remove("active"));
+
+    // Hide all sections
+    resumeTabContents.forEach((content) => content.classList.remove("active", "visible"));
+
+    // Activate the selected tab
+    resumePortfolioTabBtn[index].classList.add("active");
+
+    // Show the selected section
+    resumeTabContents[index].classList.add("active");
+    setTimeout(() => resumeTabContents[index].classList.add("visible"), 50);
+};
+
 /* =====================================================
    Service modal open/close function
 ===================================================== */
