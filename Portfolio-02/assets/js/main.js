@@ -33,7 +33,6 @@ const serviceCard=serviceCardWithModal.querySelector(".service-card");
 const serviceBackDrop=serviceCardWithModal.querySelector(".service-modal-backdrop");
 const serviceModel=serviceCardWithModal.querySelector(".service-modal");
 const modalCloseBtn=serviceCardWithModal.querySelector(".modal-close-btn");
-console.log(modalCloseBtn)
 serviceCard.addEventListener("click",()=>{
     serviceBackDrop.style.display="flex";
     setTimeout(()=>{
@@ -60,7 +59,6 @@ modalCloseBtn.addEventListener("click",()=>{
 document.addEventListener("DOMContentLoaded",()=>{
     const portfolioTabs=document.querySelector(".portfolio-tabs");
     const portfolioTabBtns=portfolioTabs.querySelectorAll(".tab-btn");
-    console.log(portfolioTabBtns)
     const cardsWithModals=document.querySelectorAll(".portfolio-container .card-with-modal");
     portfolioTabBtns.forEach((tabBtn)=>{
         tabBtn.addEventListener("click",()=>{
@@ -99,7 +97,7 @@ portfolioCardWithModals.forEach(portfolioCardWithModal=>{
     const portfolioCard=portfolioCardWithModal.querySelector(".portfolio-card");
     const portfolioBackdrop=portfolioCardWithModal.querySelector(".portfolio-modal-backdrop");
     const portfolioModal=portfolioCardWithModal.querySelector(".portfolio-modal");
-    const modalCloseBtn=portfolioCardWithModal.querySelector(".modal-close-btnx");
+    const modalCloseBtn=portfolioCardWithModal.querySelector(".modal-close-btn");
     portfolioCard.addEventListener("click",()=>{
         portfolioBackdrop.style.display="flex";
         setTimeout(()=>{
@@ -110,6 +108,7 @@ portfolioCardWithModals.forEach(portfolioCardWithModal=>{
 
         },300)
     })
+    console.log(modalCloseBtn)
     modalCloseBtn.addEventListener("click",()=>{
         setTimeout(()=>{
             portfolioBackdrop.style.display="none";
@@ -125,11 +124,39 @@ portfolioCardWithModals.forEach(portfolioCardWithModal=>{
 /* =====================================================
    Testimonial Swiper
 ===================================================== */
+let swiper = new Swiper(".client-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 
 /* =====================================================
    Send/Receive emails from contact form - EmailJS
 ===================================================== */
-
+(function() {
+    emailjs.init({
+        publicKey: "rveiSv-6DyLzfu1UO",
+    });
+})();
+const contactFormAlert=document.querySelector(".contact-form-alert");
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // these IDs from the previous steps
+    emailjs.sendForm('contact_service', 'contact_form', this)
+        .then(() => {
+            console.log('SUCCESS!');
+        }, (error) => {
+            console.log('FAILED...', error);
+        });
+});
 /* =====================================================
    Shrink the height of the header on scroll
 ===================================================== */

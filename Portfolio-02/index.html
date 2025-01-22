@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Design a Responsive Modern Personal Portfolio Website - Html, Css & Javascript</title>
   <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/swiper.bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -435,7 +436,7 @@
       </div>
       <div class="section-content">
         <div class="portfolio-container">
-          <div class="card-with-modal web-design ">
+          <div class="card-with-modal web-design">
             <div class="portfolio-card">
               <div class="card-img">
                 <img src="assets/images/portfolio%20images/portfolio-img-01.jpg" alt="project image"/>
@@ -459,46 +460,10 @@
               </div>
             </div>
           </div>
-          <div class="card-with-modal ui-design">
-            <div class="portfolio-card">
-              <div class="card-img">
-                <img src="assets/images/portfolio%20images/portfolio-img-02.jpg" alt="project image"/>
-              </div>
-              <div class="card-info">
-                <span>UI/UX Design</span>
-                <h3>Submarine</h3>
-                <i class="ri-arrow-right-up-line card-btn"></i>
-              </div>
-            </div>
-          </div>
           <div class="card-with-modal photoshop">
             <div class="portfolio-card">
               <div class="card-img">
-                <img src="assets/images/portfolio%20images/portfolio-img-03.jpg" alt="project image"/>
-              </div>
-              <div class="card-info">
-                <span>Templates</span>
-                <h3>Seven Studio</h3>
-                <i class="ri-arrow-right-up-line card-btn"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card-with-modal templates">
-            <div class="portfolio-card">
-              <div class="card-img">
-                <img src="assets/images/portfolio%20images/portfolio-img-04.jpg" alt="project image"/>
-              </div>
-              <div class="card-info">
-                <span>Photoshop</span>
-                <h3>Dynamic</h3>
-                <i class="ri-arrow-right-up-line card-btn"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card-with-modal ui-design">
-            <div class="portfolio-card">
-              <div class="card-img">
-                <img src="assets/images/portfolio%20images/portfolio-img-05.jpg" alt="project image"/>
+                <img src="assets/images/portfolio%20images/portfolio-img-01.jpg" alt="project image"/>
               </div>
               <div class="card-info">
                 <span>Web Design</span>
@@ -506,35 +471,47 @@
                 <i class="ri-arrow-right-up-line card-btn"></i>
               </div>
             </div>
-          </div>
-          <div class="card-with-modal photoshop">
-            <div class="portfolio-card">
-              <div class="card-img">
-                <img src="assets/images/portfolio%20images/portfolio-img-06.jpg" alt="project image"/>
-              </div>
-              <div class="card-info">
-                <span>Web Design</span>
-                <h3>Dynamic</h3>
-                <i class="ri-arrow-right-up-line card-btn"></i>
+            <div class="portfolio-modal-backdrop">
+              <div class="portfolio-modal">
+                <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="assets/images/portfolio%20images/portfolio-img-01.jpg" alt="">
+                  </div>
+                  <h4 class="modal-title">Lorem ipsum</h4>
+                  <p class="description">Lorem ipsum............</p>
+                </div>
               </div>
             </div>
           </div>
           <div class="card-with-modal web-design">
             <div class="portfolio-card">
               <div class="card-img">
-                <img src="assets/images/portfolio%20images/portfolio-img-07.jpg" alt="project image"/>
+                <img src="assets/images/portfolio%20images/portfolio-img-01.jpg" alt="project image"/>
               </div>
               <div class="card-info">
                 <span>Web Design</span>
                 <h3>Dynamic</h3>
                 <i class="ri-arrow-right-up-line card-btn"></i>
+              </div>
+            </div>
+            <div class="portfolio-modal-backdrop">
+              <div class="portfolio-modal">
+                <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="assets/images/portfolio%20images/portfolio-img-01.jpg" alt="">
+                  </div>
+                  <h4 class="modal-title">Lorem ipsum</h4>
+                  <p class="description">Lorem ipsum............</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="card-with-modal templates">
+          <div class="card-with-modal web-design">
             <div class="portfolio-card">
               <div class="card-img">
-                <img src="assets/images/portfolio%20images/portfolio-img-08.jpg" alt="project image"/>
+                <img src="assets/images/portfolio%20images/portfolio-img-01.jpg" alt="project image"/>
               </div>
               <div class="card-info">
                 <span>Web Design</span>
@@ -542,6 +519,116 @@
                 <i class="ri-arrow-right-up-line card-btn"></i>
               </div>
             </div>
+            <div class="portfolio-modal-backdrop">
+              <div class="portfolio-modal">
+                <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="assets/images/portfolio%20images/portfolio-img-01.jpg" alt="">
+                  </div>
+                  <h4 class="modal-title">Lorem ipsum</h4>
+                  <p class="description">Lorem ipsum............</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-with-modal web-design">
+            <div class="portfolio-card">
+              <div class="card-img">
+                <img src="assets/images/portfolio%20images/portfolio-img-01.jpg" alt="project image"/>
+              </div>
+              <div class="card-info">
+                <span>Web Design</span>
+                <h3>Dynamic</h3>
+                <i class="ri-arrow-right-up-line card-btn"></i>
+              </div>
+            </div>
+            <div class="portfolio-modal-backdrop">
+              <div class="portfolio-modal">
+                <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="assets/images/portfolio%20images/portfolio-img-01.jpg" alt="">
+                  </div>
+                  <h4 class="modal-title">Lorem ipsum</h4>
+                  <p class="description">Lorem ipsum............</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-with-modal web-design">
+            <div class="portfolio-card">
+              <div class="card-img">
+                <img src="assets/images/portfolio%20images/portfolio-img-01.jpg" alt="project image"/>
+              </div>
+              <div class="card-info">
+                <span>Web Design</span>
+                <h3>Dynamic</h3>
+                <i class="ri-arrow-right-up-line card-btn"></i>
+              </div>
+            </div>
+            <div class="portfolio-modal-backdrop">
+              <div class="portfolio-modal">
+                <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="assets/images/portfolio%20images/portfolio-img-01.jpg" alt="">
+                  </div>
+                  <h4 class="modal-title">Lorem ipsum</h4>
+                  <p class="description">Lorem ipsum............</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials">
+        <div class="section-title">
+          <h3>Awesome Clients</h3>
+          <p>Words From Clients</p>
+        </div>
+        <div class="section-content">
+          <div class="swiper client-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="client-image">
+                    <img src="assets/images/client%20images/client-img-01.jpg" alt=""/>
+                </div>
+                <div class="client-details">
+                  <h3>Aria Collins</h3>
+                  <span>Marketing Manger</span>
+                  <p>Hi,I'm Aira Collins and I Designer & developer ...........</p>
+                  <p>Hi,I'm Aira Collins and I Designer & developer ...........</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="client-image">
+                    <img src="assets/images/client%20images/client-img-02.jpg" alt=""/>
+                </div>
+                <div class="client-details">
+                  <h3>Aria Collins</h3>
+                  <span>Marketing Manger</span>
+                  <p>Hi,I'm Aira Collins and I Designer & developer ...........</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="client-image">
+                    <img src="assets/images/client%20images/client-img-03.jpg" alt=""/>
+                </div>
+                <div class="client-details">
+                  <h3>Aria Collins</h3>
+                  <span>Marketing Manger</span>
+                  <p>Hi,I'm Aira Collins and I Designer & developer ...........</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next">
+            <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div class="swiper-button-prev">
+            <i class="ri-arrow-left-s-line"></i>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -549,12 +636,103 @@
   </div>
 
   <!--========== Contact Me ==========-->
+  <section class="section nav-menu-section">
+   <div class="container sub-container">
+     <div class="section-title">
+       <h3>Contact Me</h3>
+       <p>Get In Touch</p>
+     </div>
+     <div class="section-content">
+       <div class="contact-container">
+            <div class="contact-info">
+              <h3>Contact Info</h3>
+              <ul class="contact-details">
+                <li class="contact-item">
+                  <div class="contact-icon">
+                    <i class="ri-mail-send-fill"></i>
+                  </div>
+                  <div class="contact-method">
+                      <span>E-mail</span>
+                      <h4>info@sue.ayers.com</h4>
+                      <a href="mailto:someone@example.com" target="_blank">Send
+                        <i class="ri-arrow-right-up-line"></i></a>
+                  </div>
+                </li>
+                <li class="contact-item">
+                  <div class="contact-icon">
+                    <i class="ri-messenger-fill"></i>
+                  </div>
+                  <div class="contact-method">
+                      <span>Messenger</span>
+                      <h4>Mohammed el Aouri</h4>
+                      <a href="https://m.me/PAGE-NAME?ref=REF-PARAMETER-INFORMATION" target="_blank">Send<i class="ri-arrow-right-up-line"></i></a>
+                  </div>
+                </li>
+                <li class="contact-item">
+                  <div class="contact-icon">
+                    <i class="ri-whatsapp-line"></i>
+                  </div>
+                  <div class="contact-method">
+                      <span>WhatsUp</span>
+                      <h4>+212 656 311 922</h4>
+                      <a href=" https://wa.me/whatsappphonenumber?text=urlencodedtext" target="_blank">Send<i class="ri-arrow-right-up-line"></i></a>
+                  </div>
+                </li>
+              </ul>
+              <h3>Social Info</h3>
+              <ul class="contact-social-links">
+                <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                <li><a href="#"><i class="ri-twitter-x-fill"></i></a></li>
+                <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+              </ul>
+            </div>
+            <div class="contact-form-container">
+              <h2>Let's Work <span>together.</span></h2>
+              <p>Please Fill out the Form on this section to contact with me. Or call between 9:00 a.m and 8:00 ,
+                Monday through Friday.</p>
+              <form action="" method="POST" id="contact-form">
+                <div class="input-group">
+                  <input type="text" name="Full-name" placeholder="Name*" required>
+                </div>
+                <div class="input-group">
+                  <input type="email" name="email" placeholder="Email*" required>
+                </div>
+                <div class="input-group">
+                  <input type="text" name="Subject" placeholder="Your Subject" required>
+                </div>
+                <div class="input-group">
+                  <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="input-group send-message">
+                    <button class="main-btn fill-btn submit-btn" name="submit" type="submit">Send Message</button>
+                    <div
+                            class="contact-form-alert"><span>Your Message Sent Successfully !</span><i
+                            class="ri-checkbox-circle-fill"></i></div>
+                </div>
+              </form>
+            </div>
+       </div>
+     </div>
+   </div>
+  </section>
 
   <!--========== Footer ==========-->
+  <footer class="footer">
+    <div class="container">
+      <div class="inner">
+        <div class="logo">
+            <a href="#home"><span>Mohammed</span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!--========== Swiper JS ==========-->
+  <script src="./assets/js/swiper-bundle.min.js"></script>
 
   <!--========== EmailJS ==========-->
+
+  <script src="./assets/js/email.min.js"></script>
 
   <!--========== Main javascript ==========-->
   <script src="./assets/js/main.js"></script>
