@@ -219,19 +219,60 @@ window.addEventListener("scroll",()=>{
 })
 
 // Hide bottom navigation menu on click menu-hide-btn.
+menuHideBtn.addEventListener("click",()=>{
+  bottomNav.classList.toggle("active");
+  menuHideBtn.classList.toggle("active");
+  menuShowBtn.classList.toggle("active");
 
+})
+menuShowBtn.addEventListener("click",()=>{
+    bottomNav.classList.toggle("active");
+    menuHideBtn.classList.add("active");
+    menuShowBtn.classList.toggle("active")
+})
 
 // Show bottom navigation menu on click menu-show-btn.
+window.addEventListener("scroll",()=>{
+    const toTopBtn=document.querySelector(".to-top-btn")
+    toTopBtn.classList.toggle("active",window.scrollY>0);
+    const scrollInDicatorBar=document.querySelector(".scroll-indicator-bar");
+    const pageScroll=document.body.scrollTop ||document.documentElement.scrollTop;
+    const height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    scrollInDicatorBar.style.height=(pageScroll / height) * 100 + "%"
+})
 
 /* =====================================================
    To-top-button with scroll indicator bar
 ===================================================== */
 
+
 /* =====================================================
    Customized cursor on mousemove
 ===================================================== */
+const cursor=document.querySelector(".cursor");
+const cursorDot=document.querySelector(".cursor-dot");
+const cursorCircle=document.querySelector(".cursor-circle")
+document.addEventListener("mousemove",(e)=>{
+    let x=e.clientX;
+    let y =e.clientY;
+    cursorDot.style.top=y+"px"
+    cursorDot.style.left=x+"px"
+    cursorCircle.style.top=y+"px"
+    cursorCircle.style.left=x+"px"
+})
 
 // Cursor effects on hover website elements.
+const cursorHoverLinks=document.querySelectorAll("body a, .theme-btn,.main-btn,.portfolio-card,.swiper-button-next,.swiper-button-prev , .swiper-pagination-bullet,.service-card ,.contact-social-links li, .contact-form .submit-btn ,.menu-show-btn, .menu-hide-btn")
+cursorHoverLinks.forEach(cursorHoverLink=>{
+    cursorHoverLink.addEventListener("mousemove",()=>{
+        cursorDot.classList.add("large");
+        cursorCircle.style.display="none"
+    })
+    cursorHoverLink.addEventListener("mouseout",()=>{
+        cursorDot.classList.remove("large");
+        cursorCircle.style.display="block"
+    })
+})
 
 /* =====================================================
    Website dark/light theme

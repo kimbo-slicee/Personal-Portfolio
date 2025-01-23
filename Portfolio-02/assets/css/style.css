@@ -175,9 +175,79 @@ body{
    background: var(--scrollbar-thumb-hover);
 }
 /* ========== Customized cursor ========== */
+.cursor{
+   z-index: var(--z-max);
+   position:fixed;
+   pointer-events:none;
+}
+.cursor-dot{
+   position: absolute;
+   background: var(--primary-color);
+   width: 5px;
+   height: 5px;
+   border-radius: 50%;
+   transform: translate(-50%,-50%);
+}
+.cursor-dot.large{
+   background: hsl(var(--hue) var(--sat) var(--light) / .35);
+   width: 75px;
+   height: 75px;
+}
+
+.cursor-circle {
+   position: absolute;
+   border: 2px solid var(--primary-color);
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   opacity: .5;
+   transform: translate(-50%,-50%);
+
+
+}
+
 
 /* ========== To top button with scroll indicator bar ========== */
+.to-top-btn{
+   z-index: var(--z-fixed);
+   position: fixed;
+   background:hsl(var(--hue) 54% 74%/.2);
+   height: 100px;
+   width: 2px;
+   bottom: 25px;
+   right: 30px;
+   cursor: pointer;
+   transition: all .3s ease;
+}
+.to-top-btn a{
+   color: var(--color-01);
+   transition: .3s;
+}
+.to-top-btn a:hover{
+   color: var(--hover-color);
+}
+.to-top-btn a span{
+   position: absolute;
+   left: 0;
+   bottom: 155px;
+   transform: rotateZ(90deg);
+   transform-origin: left;
+   font-size: .85rem;
+   text-transform: uppercase;
+   white-space: nowrap;
 
+}
+.to-top-btn .scroll-indicator-bar{
+   position: absolute;
+   background:var(--color-01);
+   width: 2px;
+   height: auto;
+   opacity: .5;
+}
+.to-top-btn.active{
+   color: var(--color-01);
+   transition: .3s;
+}
 /* ========== Buttons ========== */
 .main-btn{
    width:fit-content;
