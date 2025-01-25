@@ -206,7 +206,7 @@ window.addEventListener("scroll",()=>{
         clearTimeout(navTimeout);
         navTimeout=setTimeout(scrollStopped,2500)
     }
-    if(window.scrollY>10){
+    if(window.scrollY>10 || window.scrollY < 10){
         menuHideBtn.classList.add("active")
         function scrollStopped() {
             bottomNav.classList.remove("active")
@@ -231,19 +231,17 @@ menuShowBtn.addEventListener("click",()=>{
 })
 
 // Show bottom navigation menu on click menu-show-btn.
+/* =====================================================
+   To-top-button with scroll indicator bar
+===================================================== */
 window.addEventListener("scroll",()=>{
     const toTopBtn=document.querySelector(".to-top-btn")
     toTopBtn.classList.toggle("active",window.scrollY>0);
     const scrollInDicatorBar=document.querySelector(".scroll-indicator-bar");
-    const pageScroll=document.body.scrollTop ||document.documentElement.scrollTop;
+    const pageScroll=document.body.scrollTop || document.documentElement.scrollTop;
     const height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
     scrollInDicatorBar.style.height=(pageScroll / height) * 100 + "%"
 })
-
-/* =====================================================
-   To-top-button with scroll indicator bar
-===================================================== */
-
 
 /* =====================================================
    Customized cursor on mousemove
@@ -302,3 +300,34 @@ document.addEventListener("DOMContentLoaded",()=>{
 // Common reveal options to create reveal animations.
 
 // Target elements and specify options to create reveal animations.
+// script.js
+// const container = document.getElementById("snowfall-container");
+// function createSnowflake() {
+//     const snowflake = document.createElement("div");
+//     snowflake.classList.add("snowflake");
+//
+//     // Random size between 3px and 10px
+//     const size = Math.random() * 7 + 3;
+//     snowflake.style.width = `${size}px`;
+//     snowflake.style.height = `${size}px`;
+//
+//     // Random horizontal position
+//     snowflake.style.left = `${Math.random() * 100}vw`;
+//
+//     // Random animation duration and delay
+//     const duration = Math.random() * 5 + 3; // 3s to 8s
+//     const delay = Math.random() * -5; // Negative delay for staggered start
+//     snowflake.style.animationDuration = `${duration}s`;
+//     snowflake.style.animationDelay = `${delay}s`;
+//
+//     // Append snowflake to container
+//     container.appendChild(snowflake);
+//
+//     // Remove snowflake after animation ends
+//     setTimeout(() => {
+//         snowflake.remove();
+//     }, duration * 1000);
+// }
+//
+// // Create multiple snowflakes at intervals
+// setInterval(createSnowflake, 200);
