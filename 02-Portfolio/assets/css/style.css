@@ -149,6 +149,7 @@ body{
    color: var(--color-04);
    background-color: var(--body-color);
    transition: .3s;
+   overflow-x: hidden;
 }
 
 /* =========================================

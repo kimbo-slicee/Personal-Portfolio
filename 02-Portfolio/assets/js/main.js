@@ -296,38 +296,77 @@ document.addEventListener("DOMContentLoaded",()=>{
 /* =====================================================
    ScrollReveal JS animations
 ===================================================== */
-
 // Common reveal options to create reveal animations.
-
+ScrollReveal({
+    distance:"60px",
+    duration:2500,
+    delay:400,
+})
+ScrollReveal().reveal(".avatar-img",{delay: 100,origin:'top'});
+ScrollReveal().reveal(".avatar-info,.section-title",{delay: 300,origin:'top'});
+ScrollReveal().reveal(".home-social, .home-scroll-btn",{delay: 600,origin:'bottom'});
+ScrollReveal().reveal(".about-image",{delay: 700,origin:'top'});
+ScrollReveal().reveal(".about-info,.footer,.logo",{delay: 300,origin:'bottom'});
+ScrollReveal().reveal(".pro-card,.about-buttons,.main-btn,.resume-tabs,.tab-btn",
+    {delay: 500,origin:'right',interval:200});
+ScrollReveal().reveal("#resume, .section-content",{delay: 700,origin:'bottom'});
+ScrollReveal().reveal(".service-card",{delay: 300,origin:'bottom',interval: 300});
+ScrollReveal().reveal(".service-card,.portfolio-card,.contact-item,.contact-social-links li,.footer-menu .menu-item",{delay: 300,origin:'bottom',interval: 300});
+ScrollReveal().reveal(".client-swiper,.contact-form-container",{delay: 700,origin:'right'});
+ScrollReveal().reveal(".contact-info h3",{delay: 100,origin:'bottom',interval:300});
 // Target elements and specify options to create reveal animations.
 // script.js
-// const container = document.getElementById("snowfall-container");
-// function createSnowflake() {
-//     const snowflake = document.createElement("div");
-//     snowflake.classList.add("snowflake");
-//
-//     // Random size between 3px and 10px
-//     const size = Math.random() * 7 + 3;
-//     snowflake.style.width = `${size}px`;
-//     snowflake.style.height = `${size}px`;
-//
-//     // Random horizontal position
-//     snowflake.style.left = `${Math.random() * 100}vw`;
-//
-//     // Random animation duration and delay
-//     const duration = Math.random() * 5 + 3; // 3s to 8s
-//     const delay = Math.random() * -5; // Negative delay for staggered start
-//     snowflake.style.animationDuration = `${duration}s`;
-//     snowflake.style.animationDelay = `${delay}s`;
-//
-//     // Append snowflake to container
-//     container.appendChild(snowflake);
-//
-//     // Remove snowflake after animation ends
-//     setTimeout(() => {
-//         snowflake.remove();
-//     }, duration * 1000);
-// }
-//
-// // Create multiple snowflakes at intervals
-// setInterval(createSnowflake, 200);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const container = document.getElementById("snowfall-container");
+function createSnowflake() {
+    const snowflake = document.createElement("div");
+    snowflake.classList.add("snowflake");
+
+    // Random size between 3px and 10px
+    const size = Math.random() * 7 + 3;
+    snowflake.style.width = `${size}px`;
+    snowflake.style.height = `${size}px`;
+
+    // Random horizontal position
+    snowflake.style.left = `${Math.random() * 100}vw`;
+
+    // Random animation duration and delay
+    const duration = Math.random() * 5 + 3; // 3s to 8s
+    const delay = Math.random() * -5; // Negative delay for staggered start
+    snowflake.style.animationDuration = `${duration}s`;
+    snowflake.style.animationDelay = `${delay}s`;
+
+    // Append snowflake to container
+    container.appendChild(snowflake);
+
+    // Remove snowflake after animation ends
+    setTimeout(() => {
+        snowflake.remove();
+    }, duration * 1000);
+}
+
+// Create multiple snowflakes at intervals
+setInterval(createSnowflake, 200);
