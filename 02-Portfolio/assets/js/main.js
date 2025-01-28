@@ -316,30 +316,6 @@ ScrollReveal().reveal(".client-swiper,.contact-form-container",{delay: 700,origi
 ScrollReveal().reveal(".contact-info h3",{delay: 100,origin:'bottom',interval:300});
 // Target elements and specify options to create reveal animations.
 // script.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const container = document.getElementById("snowfall-container");
 function createSnowflake() {
     const snowflake = document.createElement("div");
@@ -370,3 +346,4 @@ function createSnowflake() {
 
 // Create multiple snowflakes at intervals
 setInterval(createSnowflake, 200);
+/*==========================Random Color================================*/
