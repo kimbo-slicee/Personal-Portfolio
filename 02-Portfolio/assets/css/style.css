@@ -222,16 +222,17 @@ body{
 }
 .cursor-dot{
    position: absolute;
-   background: var(--primary-color);
+   background:var(--primary-color);
    width: 5px;
    height: 5px;
    border-radius: 50%;
    transform: translate(-50%,-50%);
 }
 .cursor-dot.large{
-   background: hsl(var(--hue) var(--sat) var(--light) / .35);
+   background: hsl(var(--hue) var(--sat) var(--light) / 0.75);
    width: 75px;
    height: 75px;
+   border: none;
 }
 .cursor-circle {
    position: absolute;
@@ -244,41 +245,11 @@ body{
    transition-property:top,left;
    transition-duration:.09s , .09s;
 }
-
-/*====================snow animation=======================*/
-#snowfall-container {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100vw;
-   height: 100vh;
-   pointer-events: none; /* Avoid interference with other content */
-   z-index: 10000;
+.cursor-dot.large{
+   background-color: hsl(var(--hue) var(--sat) var(--light)/.25);
+   width: 50px;
+   height: 50px;
 }
-
-.snowflake {
-   position: absolute;
-   width: 8px;
-   height: 8px;
-   background-color: var(--primary-color);
-   border-radius: 50%;
-   box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-   animation: fall linear infinite;
-}
-
-@keyframes fall {
-   0% {
-      transform: translateY(-100%);
-      opacity: 1;
-   }
-   100% {
-      transform: translateY(100vh);
-      opacity: 0;
-   }
-}
-
-
-
 /* ========== To top button with scroll indicator bar ========== */
 .to-top-btn{
    z-index: var(--z-fixed);
@@ -691,7 +662,7 @@ transition: .15s;
    font-weight: var(--font-semi-bold);
 }
 .avatar-info .my-name{
-   color: var(--color-02);
+   color: var(--color-01);
    font-size: var(--h1-font-size);
    font-weight: var(--font-bold);
 }
@@ -817,7 +788,7 @@ transition: .15s;
    flex-wrap: wrap;
    column-gap: 30px;
    row-gap: 30px;
-   margin-bottom: 100px;
+   margin-bottom: 120px;
    cursor: pointer;
 }
 
@@ -855,7 +826,7 @@ transition: .15s;
    position: relative;
    width:100%;
    justify-content: center;
-   margin-bottom: 25px;
+   margin-bottom: 30px;
    display: none;
    opacity: 0;
    transform: translatex(-20px);
@@ -875,7 +846,7 @@ transition: .15s;
 .education .resume-line{
    background: var(--primary-color);
    width: 2px;
-   height: 380px;
+   height: 255px;
 }
 .resume-items{
    position: absolute;
@@ -927,7 +898,6 @@ transition: .15s;
 .resume-items .item .info p{
    color: var(--color-04);
    font-size: var(--small-font-size);
-   /*white-space: nowrap;*/
    margin-bottom: 18px;
 }
 .resume-items .item .info span{
@@ -1046,7 +1016,7 @@ transition: .15s;
    color: var(--color-02);
    font-size: var(--h4-font-size);
    font-weight: var(--font-semi-bold);
-   white-space: nowrap;
+   white-space:pre-wrap;
    max-width: 150px;
    margin-top: 20px;
    margin-bottom: 25px;
@@ -1616,9 +1586,9 @@ display: none;
    Media Queries (max-width: 1600px)
 ========================================= */
 @media screen and (max-width: 1600px){
-   .cursor{
-      display: none;
-   }
+   /*.cursor{*/
+   /*   display: none;*/
+   /*}*/
    .container{
       max-width: 1075px;
    }
@@ -1823,7 +1793,7 @@ display: none;
       font-size: 3.25rem;
    }
    .service-info h4{
-      white-space: pre-wrap;
+      white-space: normal;
       max-width: unset;
    }
    .service-modal{
@@ -2036,3 +2006,14 @@ display: none;
    }
 
 }
+
+/* BackGround Animation  */
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+
