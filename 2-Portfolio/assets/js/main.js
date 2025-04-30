@@ -300,8 +300,8 @@ ScrollReveal({
     duration:250,
     delay:200,
 })
-// ScrollReveal().reveal(".avatar-img",{delay: 100,origin:'top'});
-// ScrollReveal().reveal(".avatar-info,.section-title",{delay: 200,origin:'top'});
+// ScrollReveal().reveal(".avatar-img",{delay: 300,origin:'top'});
+// ScrollReveal().reveal(".avatar-info,.section-title",{delay:300,origin:'top'});
 // ScrollReveal().reveal(".home-social, .home-scroll-btn",{delay: 400,origin:'bottom'});
 // ScrollReveal().reveal(".about-image",{delay: 700,origin:'top'});
 // ScrollReveal().reveal(".about-info,.footer,.logo",{delay: 300,origin:'bottom'});
