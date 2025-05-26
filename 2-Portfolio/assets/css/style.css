@@ -1,271 +1,6 @@
-/* =========================================Google Fonts========================================= */
-   @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* =========================================CSS Variables========================================= */
-:root{
-   /* ========== Main colors (HSL - hue, saturation, and lightness) ========== */
-
-   /* Blue - hsl(217, 85%, 74%); */
-   /* Purple - hsl(245, 54%, 74%); */
-   /* Teal - hsl(181, 47%, 49%); */
-   /* Yellow - hsl(65, 60%, 70%); */
-   /* Green - hsl(162, 60%, 65%); */
-   /* Red - hsl(356, 67%, 70%); */
-   /* Pink - hsl(330, 73%, 72%); */
-
-   --hue:217;
-   --sat:85%;
-   --light:74%;
-
-   --primary-color: hsl(var(--hue) var(--sat) var(--light));  /* primary */
-   --white-color: hsl(var(--hue) 45% 98%); /* white */
-   --dark-color:hsl(var(--hue) 26% 12%) ; /* dark */
-
-   /* ======= Changeable colors for dark/light themes ======= */
-   --color-01: hsl(var(--hue) var(--sat) var(--light)); /* primary to dark */
-   --color-02:hsl(var(--hue) 45% 98%) ; /* white to dark */
-   --color-03:hsl(var(--hue) 26% 12%) ; /* dark to white */
-   --color-04:hsl(var(--hue) 0% 62%) ; /* light-graygray to dark-gray */
-   --color-05:hsl(var(--hue) 26% 12%) ; /* dark to primary */
-
-   --body-color:hsl(250 26% 13%) ; /* dark to white */
-   --hover-color:hsl(var(--hue) var(--sat) calc(var(--light) - 7%)) ;
-
-   /* ======= Background colors ======= */
-   --bottom-nav-bg:hsl(var(--hue) 32% 25% / .65) ;
-   --card-bg:linear-gradient(120deg,hsl(var(--hue) 54% 74% / .15),hsl(var(--hue) 54% 74% /.05)) ;
-   --modal-backdrop-bg:hsl(var(--hue) 54% 74% / .1 ) ;
-   --footer-bg:linear-gradient(360deg,hsl(var(--hue) 54% 74% / .15),hsl(var(--hue) 54% 74% /.1)) ;
-
-   --scrollbar-color:hsl(var(--hue) 25% 20%) ;
-   --scrollbar-thumb:hsl(var(--hue) var(--sat) var(--light)) ;
-   --scrollbar-thumb-hover:hsl(var(--hue) var(--sat) calc(var(--light) - 7%)) ;
-
-   /* ======= Font and typography ======= */
-   --body-font-family:"Inter", sans-serif ;
-
-   /* ======= Font sizes ======= */
-   --h1-font-size:2.85rem ;
-   --h2-font-size:2.25rem ;
-   --h3-font-size:1.97rem ;
-   --h4-font-size:1.43rem ;
-   --h5-font-size:1.13rem ;
-
-   --xlarge-font-size:1.48rem ;
-   --large-font-size:1.23rem ;
-   --medium-font-size:1.18rem ;
-   --base-font-size:1.1rem ;
-   --small-font-size:1.07rem ;
-   --tiny-font-size:.98rem ;
-
-   /* ======= Font weights ======= */
-   --font-light:300 ;
-   --font-regular:400 ;
-   --font-medium:500 ;
-   --font-semi-bold:600 ;
-   --font-bold:700 ;
-
-   /* ======= Layering order(z-index) ======= */
-   --z-minus:-1 ;
-   --z-base:0 ;
-   --z-low:1 ;
-   --z-high:10 ;
-   --z-content:100 ;
-   --z-tooltip:1000 ;
-   --z-fixed:1100 ;
-   --z-overlay:1110 ;
-   --z-modal:1990 ;
-   --z-max:9999;
-}
-
-/* ======= Light theme ======= */
-.light-theme{
-   /* ======= Changeable colors for dark/light themes ======= */
-   --color-01: hsl(var(--hue) 26% 12%);
-   --color-02:hsl(var(--hue) 26% 12%) ;
-   --color-03:hsl(var(--hue) 45% 98%) ;
-   --color-04:hsl(var(--hue) 9% 46%) ;
-   --color-05:hsl(var(--hue) var(--sat) var(--light)) ;
-   --body-color:hsl(var(--hue) 45% 98%);
-   /* ======= Background colors ======= */
-   --bottom-nav-bg:hsl(var(--hue) 32% 85% / .65) ;
-   --card-bg:hsl(0 0% 100%);
-   --modal-backdrop-bg:hsl(var(--hue) 50% 12% / .5) ;
-   --footer-bg:linear-gradient(360deg,hsl(var(--hue) var(--sat) var(--light)),hsl(var(--hue) var(--sat) var(--light)/.75)) ;
-   --scrollbar-color:hsl(var(--hue) 9% 60%) ;
-   --scrollbar-thumb:hsl(var(--hue) 9% 25%) ;
-   --scrollbar-thumb-hover:hsl(var(--hue) 9% 17%);
-   .bottom-nav .menu-hide-btn{
-      box-shadow: 0 2px 4px hsl(0,0%,1%,.35);
-   }
-   .pro-card,.skill-card,.service-card,.portfolio-card,.contact-form-container{
-      box-shadow: 0 2px 8px hsl(0,0%,1%,.05);
-   }
-   .contact-icon,.contact-social-links li{
-      box-shadow: 0 2px 4px hsl(0,0%,1%,.25);
-   }
-   .footer .copy-right{
-      color: hsl(var(--hue) 26% 30%);
-   }
-   .footer .copy-right a{
-      color: hsl(var(--hue) 26% 30%);
-   }
-   .footer .copy-right a:hover{
-      color: hsl(var(--hue) 0% 0%);
-   }
-   .to-top-btn{
-      background: hsl(var(--hue) 26% 12% / .2);
-   }
-}
-
-
-/* =========================================
-   Reset / Normalize
-========================================= */
-*{
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
-   font-family: var(--body-font-family);
-}
-ul,li{
-   list-style: none;
-}
-a{
-   color:var(--color-04);
-   text-decoration: none;
-   cursor: pointer;
-}
-
-
-/* =========================================
-   Base Styles
-========================================= */
-html{
-   scroll-behavior: smooth;
-   caret-color: transparent;
-}
-body{
-   color: var(--color-04);
-   background-color: var(--body-color);
-   transition: .3s;
-   overflow-x: hidden;
-}
-.video-bg-container {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   overflow: hidden;
-   z-index: -1; /* Push behind content */
-}
-
-.bg-video {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-}
-
-
-/* =========================================
-   Reusable Styles
-========================================= */
-.section{
-   position: relative;
-   overflow: hidden;
-}
-.container{
-   margin-left: auto;
-   margin-right:auto;
-   max-width: 80%;
-}
-.sub-container{
-   padding-top: 7em;
-   padding-bottom: 5em;
-}
-.wrapper{
-   position: relative;
-   width: 100%;
-   height: 100%;
-}
-.section-title{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   margin-bottom: 95px;
-}
-.section-title h3{
-   color: var(--color-01);
-   font-size: var(--h3-font-size);
-   font-weight: var(--font-bold);
-   margin-bottom: 10px;
-}
-.section-title p{
-   color:var(--color-04);
-   font-size: var(--base-font-size);
-   font-weight: var(--font-regular);
-}
-.section-content{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   column-gap: 75px;
-}
-
 /* =========================================
    Components
 ========================================= */
-
-/* ========== Page scroll bar ========== */
-::-webkit-scrollbar{
-   width: 10px;
-   background: var(--scrollbar-color);
-}
-::-webkit-scrollbar-thumb{
-   background: var(--scrollbar-thumb);
-   border-radius: 25px;
-}
-::-webkit-scrollbar-thumb:hover{
-   background: var(--scrollbar-thumb-hover);
-}
-/* ========== Customized cursor ========== */
-.cursor{
-   z-index: var(--z-max);
-   position:fixed;
-   pointer-events:none;
-}
-.cursor-dot{
-   position: absolute;
-   background:var(--primary-color);
-   width: 5px;
-   height: 5px;
-   border-radius: 50%;
-   transform: translate(-50%,-50%);
-}
-.cursor-dot.large{
-   background: hsl(var(--hue) var(--sat) var(--light) / 0.75);
-   width: 75px;
-   height: 75px;
-   border: none;
-}
-.cursor-circle {
-   position: absolute;
-   border: 2px solid var(--primary-color);
-   width: 30px;
-   height: 30px;
-   border-radius: 50%;
-   opacity: .5;
-   transform: translate(-50%,-50%);
-   transition-property:top,left;
-   transition-duration:.09s , .09s;
-}
-.cursor-dot.large{
-   background-color: hsl(var(--hue) var(--sat) var(--light)/.25);
-   width: 50px;
-   height: 50px;
-}
 /* ========== To top button with scroll indicator bar ========== */
 .to-top-btn{
    z-index: var(--z-fixed);
@@ -353,42 +88,42 @@ body{
 /* =========================================
    Header
 ========================================= */
-.header{
-   z-index:var(--z-fixed);
-   position:relative;
-   width:100%;
-   top:0;
-   left: 0;
-   padding-top: 30px;
-   transition: .3s ease;
-}
-.header .shrink{
-   background: var(--body-color);
-   padding: 12px 0;
-}
-.header .inner{
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-}
-.logo a{
-   color:var(--color-01);
-   font-size: 2.6rem;
-   font-weight: var(--font-semi-bold);
-   letter-spacing: -3px;
-   transition: .3s;
-}
-.logo a:hover{
-   color:var(--hover-color);
-   text-shadow: 0 0 30px var(--primary-color);
-}
-.header-btn{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   column-gap: 25px;
-}
+/*.header{*/
+/*   z-index:var(--z-fixed);*/
+/*   position:relative;*/
+/*   width:100%;*/
+/*   top:0;*/
+/*   left: 0;*/
+/*   padding-top: 30px;*/
+/*   transition: .3s ease;*/
+/*}*/
+/*.header .shrink{*/
+/*   background: var(--body-color);*/
+/*   padding: 12px 0;*/
+/*}*/
+/*.header .inner{*/
+/*   width: 100%;*/
+/*   display: flex;*/
+/*   justify-content: space-between;*/
+/*   align-items: center;*/
+/*}*/
+/*.logo a{*/
+/*   color:var(--color-01);*/
+/*   font-size: 2.6rem;*/
+/*   font-weight: var(--font-semi-bold);*/
+/*   letter-spacing: -3px;*/
+/*   transition: .3s;*/
+/*}*/
+/*.logo a:hover{*/
+/*   color:var(--hover-color);*/
+/*   text-shadow: 0 0 30px var(--primary-color);*/
+/*}*/
+/*.header-btn{*/
+/*   display: flex;*/
+/*   justify-content: center;*/
+/*   align-items: center;*/
+/*   column-gap: 25px;*/
+/*}*/
 
 /* ========== Dark/Light theme buttons ========== */
  .theme-btn{
@@ -599,7 +334,7 @@ transition: .15s;
 }
 
 /* =========================================
-   Home
+   Hero
 ========================================= */
 .home-container{
    height:100vh;

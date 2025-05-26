@@ -1,0 +1,36 @@
+.header{
+    z-index:var(--z-fixed);
+    position:relative;
+    width:100%;
+    top:0;
+    left: 0;
+    padding-top: 30px;
+    transition: .3s ease;
+}
+.header .shrink{
+    background: var(--body-color);
+    padding: 12px 0;
+}
+.header .inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a{
+    color:var(--color-01);
+    font-size: 2.6rem;
+    font-weight: var(--font-semi-bold);
+    letter-spacing: -3px;
+    transition: .3s;
+}
+.logo a:hover{
+    color:var(--hover-color);
+    text-shadow: 0 0 30px var(--primary-color);
+}
+.header-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}
