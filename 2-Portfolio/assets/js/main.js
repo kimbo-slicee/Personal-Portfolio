@@ -148,67 +148,23 @@
 // ===================================================== */
 //
 // // Each bottom navigation menu items active on page scroll.
-// window.addEventListener("scroll",()=>{
-//     const NavMeshSections=document.querySelectorAll(".nav-menu-section");
-//     const scrollY=window.pageYOffset
-//     NavMeshSections.forEach(navMenuSection=>{
-//         let sectionHeight=navMenuSection.offsetHeight;
-//         let sectionTop=navMenuSection.offsetTop-50
-//         let id =navMenuSection.getAttribute("id")
-//         if(scrollY>sectionTop && scrollY<=sectionTop + sectionHeight){
-//             document.querySelector(".bottom-nav .menu li a[href*="+id+"]").classList.add("current")
-//         }else {
-//             document.querySelector(".bottom-nav .menu li a[href*="+id+"]").classList.remove("current")
-//         }
-//     })
-// })
-//
-// // Javascript to show bottom navigation menu on Hero(page load).
-// window.addEventListener("DOMContentLoaded",()=>{
-//     const bottomNav=document.querySelector(".bottom-nav");
-//     bottomNav.classList.toggle("active",window.scrollY<10)
-// })
-//
-// // Javascript to show/hide bottom navigation menu on Hero(scroll).
-// const bottomNav=document.querySelector(".bottom-nav");
-// const menuHideBtn=document.querySelector(".menu-hide-btn");
-// const menuShowBtn=document.querySelector(".menu-show-btn");
-// let navTimeout;
-// window.addEventListener("scroll",()=>{
-//     bottomNav.classList.add("active");
-//     menuShowBtn.classList.remove("active")
-//     if(window.scrollY < 10){
-//         menuHideBtn.classList.remove("active")
-//         function scrollStopped() {
-//             bottomNav.classList.add("active")
-//         }
-//         clearTimeout(navTimeout);
-//         navTimeout=setTimeout(scrollStopped,2500)
-//     }
-//     if(window.scrollY>10 || window.scrollY < 10){
-//         menuHideBtn.classList.add("active")
-//         function scrollStopped() {
-//             bottomNav.classList.remove("active")
-//             menuShowBtn.classList.add("active")
-//         }
-//         clearTimeout(navTimeout);
-//         navTimeout=setTimeout(scrollStopped,2500)
-//     }
-// })
-//
-// // Hide bottom navigation menu on click menu-hide-btn.
-// menuHideBtn.addEventListener("click",()=>{
-//   bottomNav.classList.toggle("active");
-//   menuHideBtn.classList.toggle("active");
-//   menuShowBtn.classList.toggle("active");
-//
-// })
-// menuShowBtn.addEventListener("click",()=>{
-//     bottomNav.classList.toggle("active");
-//     menuHideBtn.classList.add("active");
-//     menuShowBtn.classList.toggle("active")
-// })
-//
+window.addEventListener("scroll",()=>{
+    const NavMeshSections=document.querySelectorAll(".nav-menu-section");
+    const scrollY=window.pageYOffset
+    NavMeshSections.forEach(navMenuSection=>{
+        let sectionHeight=navMenuSection.offsetHeight;
+        let sectionTop=navMenuSection.offsetTop-50
+        let id =navMenuSection.getAttribute("id")
+        if(scrollY>sectionTop && scrollY<=sectionTop + sectionHeight){
+            document.querySelector(".bottom-nav .menu li a[href*="+id+"]").classList.add("current")
+        }else {
+            document.querySelector(".bottom-nav .menu li a[href*="+id+"]").classList.remove("current")
+        }
+    })
+})
+
+// Javascript to show bottom navigation menu on Hero(page load).
+
 // // Show bottom navigation menu on click menu-show-btn.
 // /* =====================================================
 //    To-top-button with scroll indicator bar
@@ -289,12 +245,12 @@
 // // ScrollReveal().reveal(".avatar-info,.section-title",{delay:300,origin:'top'});
 // // ScrollReveal().reveal(".Hero-social, .Hero-scroll-btn",{delay: 400,origin:'bottom'});
 // // ScrollReveal().reveal(".about-image",{delay: 700,origin:'top'});
-// // ScrollReveal().reveal(".about-info,.footer,.logo",{delay: 300,origin:'bottom'});
+// // ScrollReveal().reveal(".about-info,.Footer,.logo",{delay: 300,origin:'bottom'});
 // // ScrollReveal().reveal(".pro-card,.about-buttons,.main-btn,.resume-tabs,.tab-btn",
 // //     {delay: 500,origin:'right',interval:200});
 // // ScrollReveal().reveal("#resume, .section-content",{delay: 700,origin:'bottom'});
 // // ScrollReveal().reveal(".service-card",{delay: 300,origin:'bottom',interval: 300});
-// // ScrollReveal().reveal(".service-card,.portfolio-card,.contact-item,.contact-social-links li,.footer-menu .menu-item",{delay: 300,origin:'bottom',interval: 300});
+// // ScrollReveal().reveal(".service-card,.portfolio-card,.contact-item,.contact-social-links li,.Footer-menu .menu-item",{delay: 300,origin:'bottom',interval: 300});
 // // ScrollReveal().reveal(".client-swiper,.contact-form-container",{delay: 700,origin:'right'});
 // // ScrollReveal().reveal(".contact-info h3",{delay: 100,origin:'bottom',interval:300});
 // /*==========================BackGround Animation================================*/
