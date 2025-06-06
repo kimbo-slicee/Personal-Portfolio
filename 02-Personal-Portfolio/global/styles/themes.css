@@ -1,0 +1,39 @@
+/* ======= Light theme ======= */
+[data-theme="light"]{
+    /* ============================== Changeable colors for dark/light themes ============================= */
+    --color-01: hsl(var(--hue) 26% 12%);
+    --color-02:hsl(var(--hue) 26% 12%) ;
+    --color-03:hsl(var(--hue) 45% 98%) ;
+    --color-04:hsl(var(--hue) 9% 46%) ;
+    --color-05:hsl(var(--hue) var(--sat) var(--light)) ;
+    --body-color:hsl(var(--hue) 45% 98%);
+    /* ======= Background colors ======= */
+    --bottom-nav-bg:hsl(var(--hue) 32% 85% / .65) ;
+    --card-bg:hsl(0 0% 100%);
+    --modal-backdrop-bg:hsl(var(--hue) 50% 12% / .5) ;
+    --footer-bg:linear-gradient(360deg,hsl(var(--hue) var(--sat) var(--light)),hsl(var(--hue) var(--sat) var(--light)/.75)) ;
+    --scrollbar-color:hsl(var(--hue) 9% 60%) ;
+    --scrollbar-thumb:hsl(var(--hue) 9% 25%) ;
+    --scrollbar-thumb-hover:hsl(var(--hue) 9% 17%);
+    .bottom-nav .menu-hide-btn{
+        box-shadow: 0 2px 4px hsl(0,0%,1%,.35);
+    }
+    .pro-card,.skill-card,.service-card,.portfolio-card,.contact-form-container{
+        box-shadow: 0 2px 8px hsl(0,0%,1%,.05);
+    }
+    .contact-icon,.contact-social-links li{
+        box-shadow: 0 2px 4px hsl(0,0%,1%,.25);
+    }
+    .footer .copy-right{
+        color: hsl(var(--hue) 26% 30%);
+    }
+    .footer .copy-right a{
+        color: hsl(var(--hue) 26% 30%);
+    }
+    .footer .copy-right a:hover{
+        color: hsl(var(--hue) 0% 0%);
+    }
+    .to-top-btn{
+        background: hsl(var(--hue) 26% 12% / .2);
+    }
+}

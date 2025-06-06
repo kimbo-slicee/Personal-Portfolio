@@ -1,0 +1,12 @@
+{
+  "about": [
+    {
+      "title":"Turning Ideas into Interactive Digital Products",
+      "description": "I'm Mohamed El Aouri, a creative Full-Stack Web Developer and content creator. I specialize in crafting performant and elegant applications using modern technologies like React, Node.js, MongoDB, and Next.js.\n\nMy work blends frontend precision with backend logic — often enhanced by animations via Framer Motion and 3D visuals using Three.js. I build real-world projects, contribute to open source, and maintain a full JavaScript course on GitHub.\n\nCurrently pursuing a CS degree \uD83C\uDF93, I’ve already created over 50+ JavaScript projects, written technical blog posts, and designed apps from the ground up. I'm actively looking for a company where I can grow, collaborate, and make an impact.\n\n✍\uFE0F Fun fact: I love writing about advanced JS topics like the event loop, eval, and execution contexts — and I often teach them through interactive code examples.",
+      "pro-card-info":[{
+        "counter": "",
+        "experience":""
+      }]
+    }
+  ]
+}

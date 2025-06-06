@@ -1,0 +1,31 @@
+[
+  {
+    "category": "Templates",
+    "subcategories": ["HTML", "CSS", "JS"],
+    "projects": [
+      {
+        "title": "E-Commerce Template",
+        "image": "../assets/screenshots/Front-End/e-commerce-web-app/hero-section.png",
+        "description": "This is a fully responsive modern website built to showcase clean design principles,   responsive layouts, and smooth UI/UX experiences across all devices. The design is elegant and minimalistic, with well-structured sections like Hero, Services, About, Projects, and Contact.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "demoLink": "https://your-demo-link.com",
+        "sourceCode": "https://github.com/your-repo"
+      }
+    ]
+  },
+  {
+    "category": "Front-End",
+    "subcategories": ["ReactJs", "NextJs", "Vanilla JS", "TypeScript"],
+    "projects": []
+  },
+  {
+    "category": "Back-End",
+    "subcategories": ["NodeJs", "Express", "PHP", "Laravel", "Spring"],
+    "projects": []
+  },
+  {
+    "category": "Full-Stack",
+    "subcategories": ["MERN", "Laravel + Vue", "Spring Boot + React"],
+    "projects": []
+  }
+]

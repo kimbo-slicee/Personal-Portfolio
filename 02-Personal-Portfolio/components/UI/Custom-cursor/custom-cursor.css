@@ -1,0 +1,36 @@
+/* ========== Customized cursor ========== */
+.cursor{
+    z-index: var(--z-max);
+    position:fixed;
+    pointer-events:none;
+}
+.cursor-dot{
+    position: absolute;
+    background:var(--color-01);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+}
+.cursor-dot.large{
+    background: hsl(var(--hue) var(--sat) var(--light) / 0.75);
+    width: 75px;
+    height: 75px;
+    border: none;
+}
+.cursor-circle {
+    position: absolute;
+    border: 2px solid var(--color-01);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: .5;
+    transform: translate(-50%,-50%);
+    transition-property:top,left;
+    transition-duration:.09s , .09s;
+}
+.cursor-dot.large{
+    background-color: hsl(var(--hue) var(--sat) var(--light)/.25);
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,192 @@
+.header{
+    z-index:var(--z-fixed);
+    position:relative;
+    width:100%;
+    top:0;
+    left: 0;
+    padding-top: 30px;
+    transition: .3s ease;
+}
+.header .shrink{
+    background: var(--body-color);
+    padding: 12px 0;
+}
+.header .inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a{
+    color:var(--color-01);
+    font-size: 2.6rem;
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 1px;
+    transition: .3s;
+}
+.logo a:hover{
+text-shadow:0 0 5px var(--color-01),0 0 30px var(--color-01);
+    -webkit-box-reflect: above 0.2em linear-gradient(transparent, var(--color-01));
+
+}
+.header-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}
+.translate-btn a i{
+    margin-left: 10px;
+}
+.theme-btn{
+    position: relative;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    width: 27px;
+    cursor: pointer;
+}
+.theme-btn i{
+    position: absolute;
+    color: var(--color-01);
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.theme-btn:hover i{
+    color: var(--hover-color);
+    transform: rotate(-15deg);
+}
+.theme-btn.active-sun-icon .sun-icon
+,.theme-btn .moon-icon{
+    opacity: 0;
+    transition: .3s;
+}
+.theme-btn.active-sun-icon .moon-icon
+,.theme-btn .sun-icon{
+    opacity: 1;
+    transition: .3s;
+}
+/* From Uiverse.io by Cksunandh */
+/*.custom-radio-group {*/
+/*    --transDur: 0.3s;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    padding: 1em;*/
+/*}*/
+
+/*.custom-radio-group form {*/
+/*    display: flex;*/
+/*    gap: 0.1em;*/
+/*    max-width:50%;*/
+/*    margin: auto;*/
+/*    padding: 0 1em;*/
+/*}*/
+
+/*.custom-radio-group .radio-label {*/
+/*    width: 100px;*/
+/*    position: relative;*/
+/*    display: block;*/
+/*    text-align: center;*/
+/*    cursor: pointer;*/
+/*    -webkit-tap-highlight-color: transparent;*/
+/*}*/
+
+/*.custom-radio-group .radio-input {*/
+/*    background-image: linear-gradient(*/
+/*            var(--color-01) 33%,*/
+/*            #414751 58%,*/
+/*            #837b52,*/
+/*            #c5baa1,*/
+/*            #c3adaa*/
+/*    );*/
+/*    border-radius: 0;*/
+/*    box-shadow:*/
+/*            0.1em 0 0 #2726267f inset,*/
+/*            -0.1em 0 0 #27262600 inset,*/
+/*            0 0.1em 0 #afa490 inset,*/
+/*            0 -0.1em 0 #ffffff3f,*/
+/*            0 0.2em 0.5em #0000007f,*/
+/*            0 -0.1em 0 #926086 inset,*/
+/*            -0.1em -0.2em 0 #ffffff7f inset;*/
+/*    cursor: pointer;*/
+/*    display: block;*/
+/*    margin-bottom: 0.5em;*/
+/*    width: 100%;*/
+/*    height: 0.8em;*/
+/*    transition: box-shadow var(--transDur) ease-in-out;*/
+/*    -webkit-appearance: none;*/
+/*    -moz-appearance: none;*/
+/*    appearance: none;*/
+/*}*/
+
+/*.custom-radio-group .radio-input:checked {*/
+/*    background-image: linear-gradient(*/
+/*            #ffffff 33%,*/
+/*            #414751 58%,*/
+/*            #827a7b,*/
+/*            #c0b6ac,*/
+/*            #c3adaa*/
+/*    );*/
+/*    box-shadow:*/
+/*            0.1em 0 0 #272626af inset,*/
+/*            -0.1em 0 0 #272626 inset,*/
+/*            0 0.1em 0 #847a62 inset,*/
+/*            0 -0.1em 0 #ffffff3f,*/
+/*            0 0.1em 0 #ffffff7f,*/
+/*            0 -0.1em 0 #722257 inset,*/
+/*            -0.1em -0.2em 0 #ffffff7f inset;*/
+/*}*/
+
+/*.custom-radio-group .radio-input:checked + span {*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.custom-radio-group .radio-input:focus {*/
+/*    outline: transparent;*/
+/*}*/
+
+/*.custom-radio-group .radio-input + span {*/
+/*    opacity: 0.65;*/
+/*    transition: opacity var(--transDur) ease-in-out;*/
+/*}*/
+
+/*!* First and last input specific styles *!*/
+/*.custom-radio-group .radio-label:first-child .radio-input {*/
+/*    border-radius: 0.4em 0 0 0.4em;*/
+/*}*/
+
+/*.custom-radio-group .radio-label:last-child .radio-input {*/
+/*    border-radius: 0 0.4em 0.4em 0;*/
+/*}*/
+
+/*@media (prefers-color-scheme: dark) {*/
+/*    .custom-radio-group .radio-input {*/
+/*        background-image: linear-gradient(*/
+/*                #ffffff 33%,*/
+/*                #414751 58%,*/
+/*                #837b52,*/
+/*                #c5baa1,*/
+/*                #c3adaa*/
+/*        );*/
+/*        box-shadow:*/
+/*                0.1em 0 0 #2726267f inset,*/
+/*                -0.1em 0 0 #27262600 inset,*/
+/*                0 0.1em 0 #afa490 inset,*/
+/*                0 -0.1em 0 #0000001f,*/
+/*                0 0.2em 0.5em #0000007f,*/
+/*                0 -0.1em 0 #926086 inset,*/
+/*                -0.1em -0.2em 0 #ffffff7f inset;*/
+/*    }*/
+
+/*    .custom-radio-group .radio-input:checked {*/
+/*        background-image: linear-gradient(*/
+/*                #ffffff 33%,*/
+/*                #414751 58%,*/
+/*                #827a7b,*/
+/*                #c0b6ac,*/
+/*                #c3adaa*/
+/*        );*/
+/*    }*/
+/*}*/
