@@ -14,23 +14,15 @@
 <body>
     <div class="wrapper">
         <div class="cover cover-left"></div>
-        <div class="cover cover-right turn"></div>
+        <div class="cover cover-right"></div>
         <div class="book">
             <div class="book-page page-left">
                 <div class="profile-page">
                     <!--If you want use this portfolio remove this cube and but your picture in img tag -->
-                    <div class="cube-container">
-                        <div class="cube-loader">
-                            <div class="cube-top"></div>
-                            <div class="cube-wrapper">
-                                <span style="--i:0" class="cube-span"></span>
-                                <span style="--i:1" class="cube-span"></span>
-                                <span style="--i:2" class="cube-span"></span>
-                                <span style="--i:3" class="cube-span"></span>
-                            </div>
-                        </div>
+                    <div class="cover-image">
+                        <img src="assets/images/Hero.png" alt="hero-image" width="200px" height="200px">
                     </div>
-                    <h1>Mohammed El aouri</h1>
+                    <h1>Mohammed</h1>
                     <h3>Web Developer</h3>
                     <div class="social-media">
                         <ul>
@@ -54,10 +46,10 @@
                 </div>
             </div>
             <!--Page 1 and 2-->
-            <div class="book-page page-right" id="turn-1">
+            <div class="book-page page-right turn"  id="page-1">
                 <div class="page-front">
                     <h1 class="title">work Experience</h1>
-                <div class="work-box">
+                    <div class="work-box">
                         <div class="work-content">
                             <span class="year"><i class='bxr  bx-calendar-alt'></i> 2020-2021</span>
                             <h3>Web Developer - Company</h3>
@@ -74,108 +66,192 @@
                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                         </div>
                 </div>
-                    <div class="pagination">
+                    <div class="pagination right" data-page="page-1">
                         <span class="page-number">1</span>
-                        <button>
+                        <button class="next-btn">
                             <i class='bx bx-chevron-right'></i>
                         </button>
                     </div>
             </div>
                 <div class="page-back">
-                    <h1 class="title">
-                        Education
-                    </h1>
+                    <h1 class="title">Education</h1>
+                    <div class="work-box">
+                        <div class="work-content">
+                            <span class="year"><i class='bxr  bx-calendar-alt'></i> 2020-2021</span>
+                            <h3>Master Degree</h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        </div>
+                        <div class="work-content">
+                            <span class="year"><i class='bxr  bx-calendar-alt'></i> 2021-2022</span>
+                            <h3>Bachelor Degree</h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        </div>
+                        <div class="work-content">
+                            <span class="year"><i class='bxr  bx-calendar-alt'></i> 2022-2023</span>
+                            <h3>High School Diploma</h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        </div>
+                </div>
+                    <div class="pagination" data-page="page-1">
+                        <button class="next-btn">
+                            <i class='bx bx-chevron-left'></i>
+                        </button>
+                        <span class="page-number">2</span>
+                    </div>
+                </div>
+            </div>
+            <!--Page 3 to 4-->
+            <div class="book-page page-right turn"  id="page-2">
+                <div class="page-front services">
+                    <h1 class="title">My Services</h1>
+                    <div class="services-box">
+                        <div class="services-content">
+                            <i class="bx bx-code-alt"></i>
+                            <h3>Web Development</h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                        <div class="services-content">
+                            <i class="bx bx-paint"></i>
+                            <h3>UI/UX Design</h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                        <div class="services-content">
+                            <i class='bxr  bx-mobile-alt'></i>
+                            <h3>Mobile App </h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                        <div class="services-content">
+                            <i class='bxr bx-donate-heart'></i>
+                            <h3>Technical Support</h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="pagination right" data-page="page-2">
+                        <span class="page-number">3</span>
+                        <button class="next-btn">
+                            <i class='bx bx-chevron-right'></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="page-back skills">
+                    <h1 class="title">My Skills</h1>
+                    <div class="skills-box">
+                        <h3>Front End</h3>
+                        <div class="content">
+                            <span><i class="bxl bx-html5"></i>Html</span>
+                            <span><i class="bxl bx-css3"></i>Css</span>
+                            <span><i class='bxl bx-javascript'></i>JavaScript</span>
+                            <span><i class='bxl bx-typescript'></i>TypeScript</span>
+                            <span><i class='bxl bx-react'></i>Reactjs</span>
+                            <span><i class='bxl bx-bootstrap'></i>BootStrap</span>
+                            <span><i class='bxl bx-tailwind-css'></i>Tailwind</span>
+                        </div>
+                    </div>
+                    <div class="skills-box">
+                        <h3>Back-End</h3>
+                        <div class="content">
+                            <span><i class="bxl bx-python"></i> Python</span>
+                            <span><i class="bxl bx-java"></i> Java</span>
+                            <span><i class="bxl bx-php"></i> php</span>
+                            <span><i class="bxl bx-nodejs"></i> Node</span>
+                        </div>
+                    </div>
+                    <div class="skills-box">
+                        <h3>UI/UX</h3>
+                        <div class="content">
+                            <span><i class="bxl bx-figma"></i> Figma</span>
+                            <span><i class="bxl bx-adobe"></i> Photoshop</span>
+                            <span><i class="bxl bx-canva"></i> Canva</span>
+                        </div>
+                    </div>
+                    <div class="pagination" data-page="page-2">
+                        <button class="next-btn">
+                            <i class='bx bx-chevron-left'></i>
+                        </button>
+                        <span class="page-number">4</span>
+                    </div>
+                </div>
+            </div>
+            <!--Page 5 to 6-->
+            <div class="book-page page-right turn"  id="page-3">
+                <div class="page-front">
+                    <h1 class="title">Latest Projects</h1>
+                    <div class="portfolio-box">
+                        <div class="project-image">
+                            <img src="assets/images/projects.jpeg" alt="project-image">
+                        </div>
+                        <div class="project-details">
+                            <div class="project-title">
+                                <h3>Project Name</h3>
+                                 <a href="#">Live preview</a>
+                            </div>
+                            <div class="project-description">
+                                <p>
+                                    This is a sample project description. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                    <br>
+                                    <strong>Project Features:</strong> Responsive Design, Cross-Browser Compatibility, SEO Optimized, Fast Loading Speed.
+                                </p>
+                                <div class="techno-used">
+                                    <strong>Technology Used:</strong>
+                                   <ul>
+                                        <li><i class='bxl bx-html5'></i>Html</li>
+                                        <li><i class='bxl bx-css3'></i>Css</li>
+                                        <li><i class='bxl bx-javascript'></i>JavaScript</li>
+                                        <li><i class='bxl bx-react'></i>Reactjs</li>
+                                        <li><i class='bxl bx-nodejs'></i>Nodejs</li>
+                                        <li><i class='bxl bx-mongodb'></i>MongoDB</li>
+                                   </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-box">
+                           <a href="#" class="btn">Source Code</a>
+                           <a href="#" class="btn">More Projects</a>
+                        </div>
+                    </div>
+                    <div class="pagination right" data-page="page-3">
+                        <span class="page-number">5</span>
+                        <button class="next-btn">
+                            <i class='bx bx-chevron-right'></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="page-back" >
+                    <h1 class="title">Contact Me</h1>
+                    <div class="contact-form">
+                        <form class="contact">
+                            <div class="input-box">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="pagination" data-page="page-3">
+                        <button class="next-btn">
+                            <i class='bx bx-chevron-left'></i>
+                        </button>
+                        <span class="page-number">6</span>
+                    </div>
+                    <div class="profile-button">
+                        <span>Profile</span>
+                        <i class='bxr  bx-user'></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<style>
-    .cube-container{
-        width: 100%;
-        height: 30%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-
-    }
-    .cube-loader {
-        position: relative;
-        width: 75px;
-        height: 75px;
-        transform-style: preserve-3d;
-        transform: rotateX(-30deg);
-        animation: animate 4s linear infinite;
-    }
-
-    @keyframes animate {
-        0% {
-            transform: rotateX(-30deg) rotateY(0);
-        }
-
-        100% {
-            transform: rotateX(-30deg) rotateY(360deg);
-        }
-    }
-
-    .cube-loader .cube-wrapper {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transform-style: preserve-3d;
-    }
-
-    .cube-loader .cube-wrapper .cube-span {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transform: rotateY(calc(90deg * var(--i))) translateZ(37px);
-        background: linear-gradient(
-                to bottom,
-                hsl(330, 3.13%, 25.1%) 0%,
-                hsl(177.27, 21.71%, 32.06%) 5.5%,
-                hsl(176.67, 34.1%, 36.88%) 12.1%,
-                hsl(176.61, 42.28%, 40.7%) 19.6%,
-                hsl(176.63, 48.32%, 43.88%) 27.9%,
-                hsl(176.66, 53.07%, 46.58%) 36.6%,
-                hsl(176.7, 56.94%, 48.91%) 45.6%,
-                hsl(176.74, 62.39%, 50.91%) 54.6%,
-                hsl(176.77, 69.86%, 52.62%) 63.4%,
-                hsl(176.8, 76.78%, 54.08%) 71.7%,
-                hsl(176.83, 83.02%, 55.29%) 79.4%,
-                hsl(176.85, 88.44%, 56.28%) 86.2%,
-                hsl(176.86, 92.9%, 57.04%) 91.9%,
-                hsl(176.88, 96.24%, 57.59%) 96.3%,
-                hsl(176.88, 98.34%, 57.93%) 99%,
-                hsl(176.89, 99.07%, 58.04%) 100%
-        );
-    }
-
-    .cube-top {
-        position: absolute;
-        width: 75px;
-        height: 75px;
-        background: hsl(330, 3.13%, 25.1%) 0;
-        transform: rotateX(90deg) translateZ(37px);
-        transform-style: preserve-3d;
-    }
-
-    .cube-top::before {
-        content: '';
-        position: absolute;
-        /* u can choose any size */
-        width: 75px;
-        height: 75px;
-        background: hsl(176.61, 42.28%, 40.7%) 19.6%;
-        transform: translateZ(-90px);
-        filter: blur(10px);
-        box-shadow:
-                0 0 10px #323232,
-                0 0 20px hsla(176.61, 42.28%, 40.7%, 0.196),
-                0 0 30px #323232,
-                0 0 40px hsla(176.61, 42.28%, 40.7%, 0.196);
-
-    }
-
-</style>
 </html>
