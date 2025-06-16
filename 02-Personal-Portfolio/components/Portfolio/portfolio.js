@@ -155,7 +155,25 @@ const iniPortFolio = async () => {
     });
 
     //display card backdrop
+    /*Using Medium RSS(Really Simple Syndication)*/
+    const fetchArticles = async () => {
+        try {
+            const response = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mohammedelaouri");
+            const data = await response.json();
 
+            // Limit to latest 5 articles
+            const articles = data.items.slice(0, 9).map(item => ({
+                image:item.content.match(/<img[^>]+src="([^">]+)"/)[1] || "https://via.placeholder.com/150",
+                title: item.title,
+                link: item.link,
+                pubDate: item.pubDate,
+            }));
+            console.log(articles); // Now you can use this for rendering
+            return articles;
+        } catch (err) {
+            console.error("Failed to fetch Medium articles:", err);
+        }
+    };
 };
 
 export default iniPortFolio;
