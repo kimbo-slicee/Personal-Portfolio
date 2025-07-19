@@ -1,71 +1,63 @@
-/*Add pagination functionality*/
-const pagination = document.querySelectorAll('.pagination button');
-pagination.forEach((ele,index)=>{
-    ele.addEventListener("click",()=>{
-        const pageNumber= ele.parentElement.getAttribute("data-page");
-        const currentPage=document.getElementById(pageNumber);
-        // check if current page contain turn class that's mean's we click on previous btn if not we click on the
-        // next btn
-        if(currentPage.classList.contains("turn")){
-                currentPage.classList.remove("turn");
-                setTimeout(()=>{
-                    currentPage.style.zIndex=String(20 - index);
-                },500)
-        }else{
-                currentPage.classList.add("turn");
-            setTimeout(()=>{
-                currentPage.style.zIndex=String(20 + index);
-            },500)
-        }
+const frontCoverFrontFace = document.querySelector('.front-cover > .front-face '),
+    frontCoverBackFace = document.querySelector('.front-cover > .back-face'),
+    pageAFront = document.querySelector('.page-A-front'),
+    pageABack = document.querySelector('.page-A-back'),
+    pageBFront = document.querySelector('.page-B-front'),
+    pageBBack = document.querySelector('.page-B-back'),
+    pageCFront = document.querySelector('.page-C-front'),
+    pageCBack = document.querySelector('.page-C-back'),
+    pageDFront=document.querySelector(".page-D-front"),
+    pageDBack=document.querySelector(".page-D-back"),
+    pageEFront=document.querySelector(".page-E-front"),
+    pageEBack=document.querySelector(".page-E-back"),
+    bookContainer = document.querySelector('.book-container')
 
-    })
-})
-/*Handel ClickOn Contact Me*/
-const contactMeBtn= document.querySelector(".contact-me");
-const pages = document.querySelectorAll(".book-page.page-right");
-contactMeBtn.addEventListener("click",()=>{
-    pages.forEach((page,index)=>{
-        setTimeout(()=>{
-            page.classList.add("turn");
-            setTimeout(()=>{
-                page.style.zIndex=String(20 + index);
-            },500)
-        },(index+1)*200+100);
-    })
-})
+let angle = '-180deg'
 
-/*Handel Reverse index Function*/
-let totalPages = pages.length;
-let pageNumber =0;
-function reverseIndex() {
-    pageNumber--;
-    if (pageNumber < 0) {
-        pageNumber = totalPages - 1;
-    }
+const pageOrientation = () =>{
+    bookContainer.getBoundingClientRect().width > bookContainer.getBoundingClientRect().height ? angle = '-180deg' : angle = '180deg'
+    console.log(angle)
 }
-const backProfileBtn= document.querySelector(".profile-button");
-backProfileBtn.addEventListener("click",()=>{
-    pages.forEach((_,index)=>{
-        setTimeout(()=>{
-            reverseIndex();
-            pages[pageNumber].classList.remove("turn");
-            setTimeout(()=>{
-                pages[pageNumber].style.zIndex=String(1000 - index);
-            },500)
-        },(index+1)*200+100);
-    })
+
+pageOrientation()
+
+frontCoverFrontFace.addEventListener('click', () => {
+    document.documentElement.style.setProperty('--rotate-front-cover', angle)
+    document.documentElement.style.setProperty('--translate', '100%')
 })
-/*handel animation*/
-const wrapper = document.querySelector(".wrapper");
-wrapper.addEventListener("animationend",()=>{
-const rightCover= document.querySelector(".cover.cover-right")
-    rightCover.classList.remove("turn");
-    rightCover.style.zIndex="0";
-    pages.forEach(((page,index)=>{
-        setTimeout(()=>{
-        page.classList.remove("turn");
-        page.style.zIndex=String(1000 - index);
-        },(index+1)*200+100);
-    }));
-});
+frontCoverBackFace.addEventListener('click', () => {
+    document.documentElement.style.setProperty('--rotate-front-cover', '0deg')
+    document.documentElement.style.setProperty('--translate', '50%')
+    document.documentElement.style.setProperty('--z-index-front-cover', '20')
+    document.documentElement.style.setProperty('--z-index-A', '15')
+})
+/*flip the first page*/
+pageAFront.addEventListener('click', () => {
+    document.documentElement.style.setProperty('--rotate-A', angle)
+    document.documentElement.style.setProperty('--z-index-A', '25')
+})
+
+pageABack.addEventListener('click', () => {
+    document.documentElement.style.setProperty('--rotate-A', '0deg')
+    document.documentElement.style.setProperty('--z-index-A', '25')
+    document.documentElement.style.setProperty('--z-index-B', '10')
+})
+
+pageBFront.addEventListener('click', () => {
+    document.documentElement.style.setProperty('--rotate-B', angle)
+    document.documentElement.style.setProperty('--z-index-B', '25')
+})
+pageBBack.addEventListener('click', () => {
+    document.documentElement.style.setProperty('--rotate-B', '0deg');
+    document.documentElement.style.setProperty('--z-index-A', '25')
+    document.documentElement.style.setProperty('--z-index-B', '25')
+})
+
+// Listen for resize changes
+window.addEventListener("resize", function() {
+    pageOrientation()
+}, false);
+
+
+
 

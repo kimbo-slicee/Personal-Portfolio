@@ -13,5 +13,6 @@
     <orderEntry type="library" name="devicon" level="application" />
     <orderEntry type="library" name="scrollreveal" level="application" />
     <orderEntry type="library" name="animejs" level="application" />
+    <orderEntry type="library" name="chart.js" level="application" />
   </component>
 </module>

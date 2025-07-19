@@ -1,73 +1,108 @@
-import {
-    animate,
-    createTimer,
-    createDraggable,
-    createAnimatable,
-    utils,
-} from 'https://assets.codepen.io/1137/anime.esm.min.js';
 const initAbout = () => {
+    // Import Chart.js
+    const mainColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--color-01')
+        .trim();
+    /*Custom plugin*/
 
-    // Select carousel container
-    const [$carousel] = utils.$('.carousel');
-    $carousel.innerHTML += $carousel.innerHTML; // Duplicate content for infinite effect
+    // const createChart = (ctx, { type, labels, label, data, bgColor, borderColor = 'transparent' }, customOptions = {}) => {
+    //     // Register the custom plugin
+    //     return new Chart(ctx, {
+    //         type,
+    //         data: {
+    //             labels,
+    //             datasets: [{
+    //                 label,
+    //                 data,
+    //                 backgroundColor: bgColor,
+    //                 borderColor,
+    //                 borderWidth: 1
+    //             }]
+    //         },
+    //         options: {
+    //             responsive: true,
+    //             maintainAspectRatio: false, // allow full scaling
+    //             plugins: {
+    //                 legend: { display: false }
+    //             },
+    //             scales: type === 'radar' ? {
+    //                 r: {
+    //                     ticks: {
+    //                         display:false
+    //                     },
+    //                     grid: {
+    //                         color: mainColor,
+    //                         drawOnChartArea: false
+    //                     },
+    //                     angleLines: {
+    //                         color: mainColor
+    //                     },
+    //                     pointLabels: {
+    //                         color: mainColor
+    //                     }
+    //                 }
+    //             } : { // only use scales for non-radar charts
+    //                 x: {
+    //                     ticks: {
+    //                         color: mainColor ,
+    //                         autoSkip: true,
+    //                         maxTicksLimit: 10, // limit the number of ticks on x-axis
+    //                     },
+    //                     grid: {
+    //                         color: "transparent",
+    //                         drawOnChartArea: false
+    //                     },
+    //                     border: { color: mainColor }
+    //                 },
+    //                 y: {
+    //                     ticks: { color: mainColor },
+    //                     grid: {
+    //                         color: "transparent",
+    //                         drawOnChartArea: false
+    //                     },
+    //                     border: { color: mainColor }
+    //                 }
+    //             },
+    //             ...customOptions // merge any additional user-defined options
+    //         }
+    //     });
+    // };
 
-    const carouselItems = utils.$('.carousel-item');
+// 🟢 Example 1: Horizontal Bar Chart (Frontend Skills)
+//     createChart(document.getElementById('chartLanguages-frontend'), {
+//         type: 'radar',
+//         labels: ['HTML', 'CSS', 'JS', 'TS','Bootstrap','Tailwind', 'React','Next.js',],
+//         label: 'Frontend',
+//         data: [80, 70, 50, 30, 50, 50, 50, 20],
+//         bgColor: mainColor
+//     });
 
-    // Helper to calculate full width
-    const getTotalWidth = (total, $el) => {
-        const style = getComputedStyle($el);
-        const margins = parseInt(style.marginLeft) + parseInt(style.marginRight);
-        return total + $el.offsetWidth + margins;
-    };
+// 🟢 Example 2: Radar Chart (Backend Skills)
+//     createChart(document.getElementById('chartLanguages-backend'), {
+//         type: 'bar',
+//         labels: ['Node', 'PHP', 'Laravel', 'MongoDB', 'Spring'],
+//         label: 'Backend',
+//         data: [80, 70, 65, 75, 60],
+//         bgColor: mainColor,
+//         borderColor: mainColor
+//     });
 
-    const carousel = {
-        width: carouselItems.reduce(getTotalWidth, 0),
-        speedX: 2.5,
-        wheelX: 0,
-        wheelY: 0
-    };
 
-    // Create smooth animatable transform with wrap
-    const animatable = createAnimatable($carousel, {
-        x: 0,
-        modifier: v => utils.wrap(v, -carousel.width / 2, 0)
-    });
-    const { x } = animatable;
+// // Example 3: Doughnut Chart (Tools)
+//     createChart(document.getElementById('chartTools'), {
+//         type: 'doughnut',
+//         labels: ['Git', 'VSCode', 'Figma', 'Postman'],
+//         label: 'Tools',
+//         data: [90, 85, 70, 80],
+//         bgColor: [
+//             'rgba(255, 99, 132, 0.3)',
+//             'rgba(54, 162, 235, 0.3)',
+//             'rgba(255, 206, 86, 0.3)',
+//             'rgba(75, 192, 192, 0.3)'
+//         ]
+//     });
 
-    // Make draggable
-    const draggable = createDraggable(carousel, {
-        trigger: '#infinite-carousel',
-        y: false,
-        onGrab: () => animate(carousel, { speedX: 0, duration: 500 }),
-        onRelease: () => animate(carousel, { speedX: 2.5, duration: 500 }),
-        onResize: () => carousel.width = carouselItems.reduce(getTotalWidth, 0),
-        releaseStiffness: 20,
-    });
 
-    // Continuous timer to move
-    createTimer({
-        onUpdate: () => {
-            x(x() - carousel.speedX + draggable.deltaX - carousel.wheelX - carousel.wheelY);
-        }
-    });
-
-    // Mouse wheel smooth support
-    const wheelDeltaAnim = animate(carousel, {
-        wheelY: 0,
-        wheelX: 0,
-        duration: 500,
-        autoplay: false,
-        ease: 'out(4)'
-    });
-
-    function onWheel(e) {
-        e.preventDefault();
-        carousel.wheelY = utils.lerp(carousel.wheelY, e.deltaY, 0.2);
-        carousel.wheelX = utils.lerp(carousel.wheelX, e.deltaX, 0.2);
-        wheelDeltaAnim.refresh().restart();
-    }
-
-    $carousel.addEventListener('wheel', onWheel, { passive: false });
 };
 
 export default initAbout;

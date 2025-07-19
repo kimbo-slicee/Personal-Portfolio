@@ -2,7 +2,13 @@
   "about": [
     {
       "title":"Turning Ideas into Interactive Digital Products",
-      "description": "I'm Mohamed El Aouri, a creative Full-Stack Web Developer and content creator. I specialize in crafting performant and elegant applications using modern technologies like React, Node.js, MongoDB, and Next.js.\n\nMy work blends frontend precision with backend logic — often enhanced by animations via Framer Motion and 3D visuals using Three.js. I build real-world projects, contribute to open source, and maintain a full JavaScript course on GitHub.\n\nCurrently pursuing a CS degree \uD83C\uDF93, I’ve already created over 50+ JavaScript projects, written technical blog posts, and designed apps from the ground up. I'm actively looking for a company where I can grow, collaborate, and make an impact.\n\n✍\uFE0F Fun fact: I love writing about advanced JS topics like the event loop, eval, and execution contexts — and I often teach them through interactive code examples.",
+      "description": [
+        "I’m <strong>Mohammed El Aouri</strong>, a creative and self-driven <strong>Full-Stack Web Developer</strong> with a strong foundation in modern development tools like\n<strong>React.js</strong>, <strong>Node.js</strong>, <strong>Java Spring</strong>, and <strong>Laravel</strong>With a background in both <strong>web and mobile development</strong>\nI blend clean code, performance-first thinking, and user-centered design\n to build reliable, scalable digital products",
+        "Over the past few years, I’ve completed <strong>50+ real-world JavaScript projects</strong>, contributed to open source, and published technical content across platforms like\n<a href=\"https://medium.com/@mohammedelaouri\" target=\"_blank\" rel=\"noopener noreferrer\">Medium</a> and <strong>Dev.to</strong>.\nI also maintain a growing open-source\n<a href=\"https://github.com/kimbo-slicee/JavaScript-Course\" target=\"_blank\" rel=\"noopener noreferrer\">JavaScript course on GitHub</a>,\nand I’m currently working on a complete <strong>Python course</strong> aimed at beginners.\n<span class=\"read-more\" data-text-initial=\"Copy to clipboard\">...</span>",
+        "I hold a <strong>Specialized Technician Diploma in Digital Development</strong>, with hands-on experience building applications using\n <strong>Java Spring/Angular</strong> and <strong>Laravel/React</strong> during internships and training. I’m now preparing to launch a\n   <strong>YouTube channel</strong> to share tutorials, dev tips, and project breakdowns in a clear and engaging way.",
+        "I’m passionate about continuous learning, clean architecture, and contributing to teams that value creativity, collaboration, and growth.\nI'm ready to bring value, energy, and innovation to your team."
+
+      ],
       "pro-card-info":[{
         "counter": "",
         "experience":""

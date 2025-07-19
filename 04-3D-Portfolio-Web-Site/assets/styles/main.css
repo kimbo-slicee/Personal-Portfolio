@@ -1,0 +1,561 @@
+/* === FONTS === */
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Berkshire+Swash&family=Lora:ital@0;1&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap");
+/* === GLOBAL VARIABLES === */
+/* === ROOT VARIABLES === */
+:root {
+    --rotate-front-cover: 0deg;
+    --rotate-back-cover: 0deg;
+    --rotate-A: 0deg;
+    --rotate-B: 0deg;
+    --rotate-C: 0deg;
+    --rotate-D: 0deg;
+    --rotate-E: 0deg;
+
+    --translate: 50%;
+
+    --z-index-front-cover: 20;
+    --z-index-A: 15;
+    --z-index-B: 10;
+    --z-index-C: 5;
+    --z-index-D: 1;
+    --z-index-back-cover: 0;
+
+    --cover-color: hsl(150deg, 100%, 15%);
+    --page-first-color: hsl(36, 48%, 80%);
+    --page-second-color: hsl(36, 48%, 70%);
+    --page-last-color: hsl(36, 48%, 25%);
+}
+
+/* === RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2:not(.front-cover > .front-face h2) {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #777;
+}
+
+h3:not(.front-cover > .front-face h3) {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+/* === BASE STYLES === */
+.book-container {
+    min-height: 100vh;
+    width: 100vw;
+    background: radial-gradient(circle at center, black, #1a1a1a);
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+}
+
+.book {
+    position: relative;
+    width: min(100vw, 1000px);
+    height: min(60vw, 600px);
+    perspective: min(300vw, 3000px);
+}
+
+.page-container {
+    position: absolute;
+    width: min(50vw, 500px);
+    height: 100%;
+    cursor: pointer;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    padding: min(10px, 1vw) min(15px, 1.5vw);
+    background: linear-gradient(90deg, var(--page-first-color) 90%, var(--page-second-color), var(--page-last-color));
+    font-size: min(16px, 1.6vw);
+    backface-visibility: hidden;
+}
+.page.front {
+    background: linear-gradient(-90deg, var(--page-first-color) 80%, var(--page-second-color), var(--page-last-color));
+}
+
+/* === PAGE SHAPES === */
+.front {
+    border-radius: 5px 15px 15px 5px;
+}
+
+.back {
+    border-radius: 15px 5px 5px 15px;
+    transform: rotateY(180deg);
+}
+
+/* === COVER STYLES === */
+.front-cover {
+    transform: translate(var(--translate)) rotateY(var(--rotate-front-cover));
+    z-index: var(--z-index-front-cover);
+}
+
+.back-cover {
+    transform: translate(var(--translate)) rotateY(var(--rotate-back-cover));
+    z-index: calc(var(--z-index-back-cover) - 1);
+}
+
+.front-cover > .front-face,
+.back-cover > .back-face {
+    background: var(--cover-color) url("https://zupimages.net/up/21/47/zxra.png") no-repeat center/contain;
+}
+
+.front-cover > .back-face,
+.back-cover > .front-face {
+    background: var(--cover-color);
+}
+
+.front-cover > .front-face {
+    font-family: 'Alice', serif;
+    color: #ffcc00;
+}
+
+.front-cover > .front-face * {
+    position: absolute;
+    text-align: center;
+}
+
+.front-cover > .front-face h1 {
+    font-size: min(56px, 5.6vw);
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 5px 2.5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.front-cover > .front-face h2 {
+    font-size: min(24px, 2.4vw);
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.front-cover > .front-face h3 {
+    font-size: min(16px, 1.6vw);
+    font-style: italic;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* === PAGE Z-INDEX === */
+.page-A {
+    transform: translate(var(--translate)) rotateY(var(--rotate-A));
+    z-index: var(--z-index-A);
+}
+
+.page-B {
+    transform: translate(var(--translate)) rotateY(var(--rotate-B));
+    z-index: var(--z-index-B);
+}
+.page-C {
+    transform: translate(var(--translate)) rotateY(var(--rotate-C));
+    z-index: var(--z-index-C);
+}
+
+/* === PAGE CONTENT === */
+.page-content {
+    padding: 4rem;
+    text-align: center;
+}
+
+.book-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.book-subtitle {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.book-quote {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.book-quote .book-author {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.pagination {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    font-family: 'Merriweather', serif;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* === ABOUT ME === */
+
+
+.about-me .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.about-me .social-links a {
+    display: flex;
+    padding: 0.4rem;
+    border: 1px solid #333;
+    border-radius: 50%;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.about-me .social-links a:hover {
+    color: var(--page-second-color);
+    background: #000;
+}
+
+.about-me p,
+.timeline p {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.2rem;
+}
+
+.about-me .contact button {
+    font-family: 'Merriweather', serif;
+    background: transparent;
+    border: 1px solid #1a1a1a;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.about-me .contact button:first-child {
+    background: #1a1a1a;
+    color: var(--page-second-color);
+}
+
+.about-me .contact button:first-child:hover {
+    background: transparent;
+    color: #1a1a1a;
+}
+
+.about-me .contact button:last-child:hover {
+    background: #1a1a1a;
+    color: var(--page-second-color);
+}
+.buttonDownload {
+    display: inline-block;
+    position: relative;
+    padding: 15px 25px;
+    /*background-color: #1a1a1a;*/
+    /*color: var(--page-first-color);*/
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 0.9em;
+    text-align: center;
+    text-indent: 15px;
+    border: none;
+}
+
+.buttonDownload:hover {
+    color: #1a1a1a;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 52%;
+}
+
+.buttonDownload:before {
+    width: 10px;
+    height: 2px;
+    border-style: solid;
+    border-width: 0 2px 2px;
+}
+
+.buttonDownload:after {
+    width: 0;
+    height: 0;
+    margin-left: 3px;
+    margin-top: -7px;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: transparent;
+    border-top-color: var(--page-first-color);
+    animation: downloadArrow 1s linear infinite;
+    animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+    border-color: #1a1a1a;
+}
+
+.buttonDownload:hover:after {
+    border-top-color: #1a1a1a;
+    animation-play-state: running;
+}
+
+@keyframes downloadArrow {
+    0% {
+        margin-top: -7px;
+        opacity: 1;
+    }
+
+    0.001% {
+        margin-top: -15px;
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 2px;
+        opacity: 0.4;
+    }
+}
+
+/* === WORK EXPERIENCE === */
+.page-B .page-content,.page-C .page-content { /*refactoring in the feature*/
+    padding: .5rem;
+    text-align: left;
+}
+
+.timeline {
+    border-left: 2px solid #1a1a1a;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.timeline .timeline-item {
+    position: relative;
+}
+
+.timeline .timeline-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.55rem;
+    width: 15px;
+    height: 15px;
+    background: #1a1a1a;
+    border-radius: 50%;
+}
+
+.timeline .timeline-item .timeline-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.timeline .timeline-item .timeline-date svg{
+    margin-right: 0.5rem;
+    color: #333;
+}
+.timeline .timeline-item .timeline-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.timeline .timeline-item .timeline-title span {
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 15px;
+}
+.timeline .timeline-item{
+
+}
+.timeline .timeline-item ul li{
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+/*========SKILLS========*/
+.skills .front-end h2,
+.skills .back-end h2,
+.skills .data-base h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: #777777;
+    text-align: center;
+    margin:0 !important;
+}
+.skills .carousel{
+    display: flex;
+    overflow-x: hidden;
+    cursor: grab;
+    mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            rgb(0, 0, 0) 10%,
+            black 90%,
+            transparent 100%
+    );
+
+}
+.skills .carousel-items {
+    display: flex;
+    gap: 1rem;
+    padding:0.5rem;
+}
+.skills .carousel-items .card{
+    width: 120px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: #1a1a1a;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: var(--page-first-color);
+    border: 2px solid #1a1a1a;
+    transition: border 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.skills .carousel-items .card:hover{
+    border: 2px solid var(--page-second-color);
+    box-shadow: 2px 4px 0 #0000, 0 0 0 6px var(--page-second-color);
+    background-color: #1a1a1a;
+    color: var(--page-second-color);
+}
+.skills .carousel-items .card .icon-container svg {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0.5rem;
+    fill: var(--page-second-color);
+}
+.card:hover,
+.card:focus-within {
+
+}
+
+
+
+
+
+
+
+
+
+
+/*@media only screen and (max-width: 767px) and (orientation: portrait) {*/
+/*    .book {*/
+/*        width: 100vw;*/
+/*        height: 50vh;*/
+/*    }*/
+
+/*    .page-container {*/
+/*        position: absolute;*/
+/*        height: inherit;*/
+/*        width: 100vw;*/
+/*        transform-origin: top;*/
+/*    }*/
+
+/*    .page-A {*/
+/*        transform: translateY(calc(-50% + var(--translate))) rotateX(var(--rotate-A));*/
+/*    }*/
+
+/*    .page-B {*/
+/*        transform: translateY(calc(-50% + var(--translate))) rotateX(var(--rotate-B));*/
+/*    }*/
+
+/*    .page-C {*/
+/*        transform: translateY(calc(-50% + var(--translate))) rotateX(var(--rotate-C));*/
+/*    }*/
+
+/*    .front {*/
+/*        border-radius: 5px 5px 15px 15px;*/
+/*    }*/
+
+/*    .back {*/
+/*        border-radius: 15px 15px 5px 5px;*/
+/*        transform: rotateX(180deg);*/
+/*    }*/
+
+/*    .front-cover > .front-face,*/
+/*    .page-C-back {*/
+/*        background-image: none;*/
+/*    }*/
+
+/*    .page-A-back,*/
+/*    .page-B-back {*/
+/*        background: linear-gradient(180deg, var(--page-first-color) 50%, var(--page-second-color), var(--page-last-color));*/
+/*    }*/
+
+/*    .page-B-front,*/
+/*    .page-C-front {*/
+/*        background: linear-gradient(180deg, var(--page-last-color), var(--page-second-color), var(--page-first-color) 50%);*/
+/*    }*/
+
+/*    .front-cover > .front-face h1 {*/
+/*        font-size: 7.5vh;*/
+/*    }*/
+/*    .front-cover > .front-face h2 {*/
+/*        font-size: 3vh;*/
+/*    }*/
+/*    .front-cover > .front-face h3 {*/
+/*        font-size: 2vh;*/
+/*    }*/
+
+/*    .page-A-back,*/
+/*    .page-B,*/
+/*    .page-C-front {*/
+/*        line-height: 2vh;*/
+/*        font-size: 1.6vh;*/
+/*    }*/
+/*    .page-A-back p,*/
+/*    .page-B p,*/
+/*    .page-C-front p {*/
+/*        margin-bottom: 0.5vh;*/
+/*    }*/
+/*    .page-A-back p::first-letter,*/
+/*    .page-B p::first-letter,*/
+/*    .page-C-front p::first-letter {*/
+/*        font-size: 2.4vh;*/
+/*    }*/
+/*}*/
