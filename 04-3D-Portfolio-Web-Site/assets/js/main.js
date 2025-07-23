@@ -1,63 +1,52 @@
-const frontCoverFrontFace = document.querySelector('.front-cover > .front-face '),
-    frontCoverBackFace = document.querySelector('.front-cover > .back-face'),
-    pageAFront = document.querySelector('.page-A-front'),
-    pageABack = document.querySelector('.page-A-back'),
-    pageBFront = document.querySelector('.page-B-front'),
-    pageBBack = document.querySelector('.page-B-back'),
-    pageCFront = document.querySelector('.page-C-front'),
-    pageCBack = document.querySelector('.page-C-back'),
-    pageDFront=document.querySelector(".page-D-front"),
-    pageDBack=document.querySelector(".page-D-back"),
-    pageEFront=document.querySelector(".page-E-front"),
-    pageEBack=document.querySelector(".page-E-back"),
-    bookContainer = document.querySelector('.book-container')
-
-let angle = '-180deg'
-
-const pageOrientation = () =>{
-    bookContainer.getBoundingClientRect().width > bookContainer.getBoundingClientRect().height ? angle = '-180deg' : angle = '180deg'
-    console.log(angle)
-}
-
-pageOrientation()
-
-frontCoverFrontFace.addEventListener('click', () => {
-    document.documentElement.style.setProperty('--rotate-front-cover', angle)
-    document.documentElement.style.setProperty('--translate', '100%')
+const pages=document.querySelectorAll(".page-container");
+pages.forEach((page,index)=>{
+    page.style.zIndex=String(pages.length - index -1);
+    page.addEventListener("click", (e)=>{
+        if(page.classList.contains("front-cover") && index===0){
+            document.documentElement.style.setProperty("--translate-x", "100%");
+            if(!page.classList.contains("flip")){
+                page.classList.add("flip");
+                page.style.zIndex=String(pages.length+index);
+            }else{
+                document.documentElement.style.setProperty("--translate-x", "50%");
+                page.classList.remove("flip");
+                page.style.zIndex=String(pages.length - index);
+            }
+        }else if(page.classList.contains("back-cover")){
+            document.documentElement.style.setProperty("--translate-x", "150%");
+            if(!page.classList.contains("flip")){
+                page.classList.add("flip");
+                page.style.zIndex=String(pages.length+index);
+            }else{
+                document.documentElement.style.setProperty("--translate-x", "100%");
+                page.classList.remove("flip");
+                // Delay the zIndex change to allow the flip animation to complete
+                // before changing the zIndex back to its original value.
+                setTimeout(()=>{
+                    page.style.zIndex=String(pages.length - index);
+                },100 + index * 100);
+            }
+        }else{
+            if(e.target.classList.contains("btn")) return; // Ignore clicks on buttons
+                if(!page.classList.contains("flip")){
+                page.classList.add("flip");
+                page.style.zIndex=String(pages.length+index);
+            }else{
+                page.classList.remove("flip");
+                setTimeout(()=>{
+                page.style.zIndex=String(pages.length - index);
+                },200 + index *100);
+            }
+        }
+    })
 })
-frontCoverBackFace.addEventListener('click', () => {
-    document.documentElement.style.setProperty('--rotate-front-cover', '0deg')
-    document.documentElement.style.setProperty('--translate', '50%')
-    document.documentElement.style.setProperty('--z-index-front-cover', '20')
-    document.documentElement.style.setProperty('--z-index-A', '15')
-})
-/*flip the first page*/
-pageAFront.addEventListener('click', () => {
-    document.documentElement.style.setProperty('--rotate-A', angle)
-    document.documentElement.style.setProperty('--z-index-A', '25')
-})
-
-pageABack.addEventListener('click', () => {
-    document.documentElement.style.setProperty('--rotate-A', '0deg')
-    document.documentElement.style.setProperty('--z-index-A', '25')
-    document.documentElement.style.setProperty('--z-index-B', '10')
-})
-
-pageBFront.addEventListener('click', () => {
-    document.documentElement.style.setProperty('--rotate-B', angle)
-    document.documentElement.style.setProperty('--z-index-B', '25')
-})
-pageBBack.addEventListener('click', () => {
-    document.documentElement.style.setProperty('--rotate-B', '0deg');
-    document.documentElement.style.setProperty('--z-index-A', '25')
-    document.documentElement.style.setProperty('--z-index-B', '25')
-})
-
-// Listen for resize changes
-window.addEventListener("resize", function() {
-    pageOrientation()
-}, false);
-
-
-
-
+// Add event listener for the download Cv button
+const downloadCvButton = document.querySelector(".download-cv");
+downloadCvButton.addEventListener("click", () => {
+        const a = document.createElement("a");
+        a.setAttribute("download", "");
+        a.href = "assets/files/CV.file"; // Path to your CV file
+        a.download = "CV.file"; // Name of the downloaded file
+        document.body.appendChild(a);
+        a.click();
+});

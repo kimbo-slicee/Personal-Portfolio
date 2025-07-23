@@ -1,29 +1,13 @@
 /* === FONTS === */
 @import url("https://fonts.googleapis.com/css2?family=Alice&family=Berkshire+Swash&family=Lora:ital@0;1&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap");
-/* === GLOBAL VARIABLES === */
-/* === ROOT VARIABLES === */
+/*=== GLOBAL VARIABLES ===*/
+/*=== ROOT VARIABLES ===*/
 :root {
-    --rotate-front-cover: 0deg;
-    --rotate-back-cover: 0deg;
-    --rotate-A: 0deg;
-    --rotate-B: 0deg;
-    --rotate-C: 0deg;
-    --rotate-D: 0deg;
-    --rotate-E: 0deg;
-
-    --translate: 50%;
-
-    --z-index-front-cover: 20;
-    --z-index-A: 15;
-    --z-index-B: 10;
-    --z-index-C: 5;
-    --z-index-D: 1;
-    --z-index-back-cover: 0;
-
     --cover-color: hsl(150deg, 100%, 15%);
     --page-first-color: hsl(36, 48%, 80%);
     --page-second-color: hsl(36, 48%, 70%);
     --page-last-color: hsl(36, 48%, 25%);
+    --translate-x: 50%;
 }
 
 /* === RESET === */
@@ -54,6 +38,7 @@ h3:not(.front-cover > .front-face h3) {
     margin-bottom: 1rem;
     color: #555;
 }
+
 /* === BASE STYLES === */
 .book-container {
     min-height: 100vh;
@@ -63,7 +48,6 @@ h3:not(.front-cover > .front-face h3) {
     place-content: center;
     overflow: hidden;
 }
-
 .book {
     position: relative;
     width: min(100vw, 1000px);
@@ -79,6 +63,7 @@ h3:not(.front-cover > .front-face h3) {
     transform-origin: left;
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out;
+    transform: translateX(var(--translate-x)) ;
 }
 
 .page {
@@ -107,15 +92,6 @@ h3:not(.front-cover > .front-face h3) {
 }
 
 /* === COVER STYLES === */
-.front-cover {
-    transform: translate(var(--translate)) rotateY(var(--rotate-front-cover));
-    z-index: var(--z-index-front-cover);
-}
-
-.back-cover {
-    transform: translate(var(--translate)) rotateY(var(--rotate-back-cover));
-    z-index: calc(var(--z-index-back-cover) - 1);
-}
 
 .front-cover > .front-face,
 .back-cover > .back-face {
@@ -142,7 +118,7 @@ h3:not(.front-cover > .front-face h3) {
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-shadow: 5px 2.5px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: 5px 2px 0 rgba(0, 0, 0, 0.25);
 }
 
 .front-cover > .front-face h2 {
@@ -161,19 +137,6 @@ h3:not(.front-cover > .front-face h3) {
 }
 
 /* === PAGE Z-INDEX === */
-.page-A {
-    transform: translate(var(--translate)) rotateY(var(--rotate-A));
-    z-index: var(--z-index-A);
-}
-
-.page-B {
-    transform: translate(var(--translate)) rotateY(var(--rotate-B));
-    z-index: var(--z-index-B);
-}
-.page-C {
-    transform: translate(var(--translate)) rotateY(var(--rotate-C));
-    z-index: var(--z-index-C);
-}
 
 /* === PAGE CONTENT === */
 .page-content {
@@ -219,7 +182,6 @@ h3:not(.front-cover > .front-face h3) {
 
 /* === ABOUT ME === */
 
-
 .about-me .social-links {
     display: flex;
     justify-content: center;
@@ -251,109 +213,29 @@ h3:not(.front-cover > .front-face h3) {
     margin-bottom: 1.2rem;
 }
 
-.about-me .contact button {
+.btn{
     font-family: 'Merriweather', serif;
     background: transparent;
     border: 1px solid #1a1a1a;
     border-radius: 5px;
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
-    cursor: pointer;
     transition: background-color 0.5s ease, color 0.5s ease;
+    margin-top: .5rem;
 }
 
-.about-me .contact button:first-child {
+.btn:first-child {
     background: #1a1a1a;
     color: var(--page-second-color);
 }
 
-.about-me .contact button:first-child:hover {
+.btn:first-child:hover {
     background: transparent;
     color: #1a1a1a;
 }
-
-.about-me .contact button:last-child:hover {
-    background: #1a1a1a;
-    color: var(--page-second-color);
-}
-.buttonDownload {
-    display: inline-block;
-    position: relative;
-    padding: 15px 25px;
-    /*background-color: #1a1a1a;*/
-    /*color: var(--page-first-color);*/
-    font-family: sans-serif;
-    text-decoration: none;
-    font-size: 0.9em;
-    text-align: center;
-    text-indent: 15px;
-    border: none;
-}
-
-.buttonDownload:hover {
-    color: #1a1a1a;
-}
-
-.buttonDownload:before, .buttonDownload:after {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 15px;
-    top: 52%;
-}
-
-.buttonDownload:before {
-    width: 10px;
-    height: 2px;
-    border-style: solid;
-    border-width: 0 2px 2px;
-}
-
-.buttonDownload:after {
-    width: 0;
-    height: 0;
-    margin-left: 3px;
-    margin-top: -7px;
-    border-style: solid;
-    border-width: 4px 4px 0 4px;
-    border-color: transparent;
-    border-top-color: var(--page-first-color);
-    animation: downloadArrow 1s linear infinite;
-    animation-play-state: paused;
-}
-
-.buttonDownload:hover:before {
-    border-color: #1a1a1a;
-}
-
-.buttonDownload:hover:after {
-    border-top-color: #1a1a1a;
-    animation-play-state: running;
-}
-
-@keyframes downloadArrow {
-    0% {
-        margin-top: -7px;
-        opacity: 1;
-    }
-
-    0.001% {
-        margin-top: -15px;
-        opacity: 0.4;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        margin-top: 2px;
-        opacity: 0.4;
-    }
-}
-
 /* === WORK EXPERIENCE === */
-.page-B .page-content,.page-C .page-content { /*refactoring in the feature*/
+.page-B .page-content,.page-C .page-content,.page-D .page-content
+{
     padding: .5rem;
     text-align: left;
 }
@@ -473,89 +355,218 @@ h3:not(.front-cover > .front-face h3) {
 .card:focus-within {
 
 }
+/*Charts Styling*/
+.chart{
+    width: 100%;
+    padding: 1rem;
+    height: 240px;
+    margin-bottom: 10px;
+    position: relative;
 
+}
+.chart canvas{
+    margin-inline: auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.chart h2{
+    text-align: center;
+}
+.chart-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*===============Latest Project Section===================*/
+.latest-project h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.latest-project .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.latest-project .project .project-image {
+    width: 90%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.latest-project .project .project-image img{
+    width: 100%;
+    object-fit: cover;
+}
+.project .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5px;
+    width: 90%;
+}
+.project .project-title {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 1.5rem;
+    color: #333;
+}
+.project .header a {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+.project .header svg{
+    width: 15px;
+    height: 15px;
+    fill: #1a1a1a;
+    margin-left: 0.2rem;
+}
 
+.project  .project-description {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-top: 0.5rem;
+    width: 90%;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+/*======Service========*/
+.services{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 1rem;
+}
+.services > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: .5rem;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.services > div:hover{
+    background-color: #1a1a1a;
+    color: var(--page-second-color);
+}
+.services > div:hover > .btn{
+    background-color: var(--page-second-color);
+    color: #1a1a1a;
+}
+.services > div > svg {
+    fill: #1a1a1a;
+    height: 30px;
+    width: 30px;
+}
+.services > div:hover > svg {
+    fill: var(--page-second-color);
+}
+.services > div > h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+.services > div > .btn {
+    background-color: #1a1a1a;
+    color: var(--page-second-color);
+}
+/*===========Contact Me Form Styling===========*/
+.contact-me {
+    padding: 1rem;
+    width: 100%;
+}
+.contact-me form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 10px;
+    /*border: 2px solid #1a1a1a;*/
+}
+.contact-me form input,
+.contact-me form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #1a1a1a;
+    border-radius: 5px;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    color: #333;
+    background-color: transparent;
+}
+.contact-me form input::placeholder, form textarea::placeholder {
+    color: #000000;
+}
+.contact-me form textarea{
+    height: 150px;
+    resize: none;
+}
+.contact-me form button {
+    background-color: transparent;
+    color: #1a1a1a;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    border: 2px solid #1a1a1a;
+    width: 50%;
+}
+.contact-me form button:hover {
+    background-color: #1a1a1a;
+    color: var(--page-second-color);
+}
+/* === PAGE FLIP ANIMATION === */
+/*js added classes */
+.flip {
+    transform: translateX(var(--translate-x)) rotateY(-180deg);
+}
+/*========Responsive Design=======*/
+/* Mobile */
+@media (max-width: 600px) {
+    .book {
+        width: 100vw;
+        height: 100vh;
+    }
+    .page-container {
+        width: 100%;
+        transform-origin: center;
+        transform: translateX(0);
+        overflow-y: scroll;
+        perspective: none;
 
-
-
-
-
-
-
-
-/*@media only screen and (max-width: 767px) and (orientation: portrait) {*/
-/*    .book {*/
-/*        width: 100vw;*/
-/*        height: 50vh;*/
-/*    }*/
-
-/*    .page-container {*/
-/*        position: absolute;*/
-/*        height: inherit;*/
-/*        width: 100vw;*/
-/*        transform-origin: top;*/
-/*    }*/
-
-/*    .page-A {*/
-/*        transform: translateY(calc(-50% + var(--translate))) rotateX(var(--rotate-A));*/
-/*    }*/
-
-/*    .page-B {*/
-/*        transform: translateY(calc(-50% + var(--translate))) rotateX(var(--rotate-B));*/
-/*    }*/
-
-/*    .page-C {*/
-/*        transform: translateY(calc(-50% + var(--translate))) rotateX(var(--rotate-C));*/
-/*    }*/
-
-/*    .front {*/
-/*        border-radius: 5px 5px 15px 15px;*/
-/*    }*/
-
-/*    .back {*/
-/*        border-radius: 15px 15px 5px 5px;*/
-/*        transform: rotateX(180deg);*/
-/*    }*/
-
-/*    .front-cover > .front-face,*/
-/*    .page-C-back {*/
-/*        background-image: none;*/
-/*    }*/
-
-/*    .page-A-back,*/
-/*    .page-B-back {*/
-/*        background: linear-gradient(180deg, var(--page-first-color) 50%, var(--page-second-color), var(--page-last-color));*/
-/*    }*/
-
-/*    .page-B-front,*/
-/*    .page-C-front {*/
-/*        background: linear-gradient(180deg, var(--page-last-color), var(--page-second-color), var(--page-first-color) 50%);*/
-/*    }*/
-
-/*    .front-cover > .front-face h1 {*/
-/*        font-size: 7.5vh;*/
-/*    }*/
-/*    .front-cover > .front-face h2 {*/
-/*        font-size: 3vh;*/
-/*    }*/
-/*    .front-cover > .front-face h3 {*/
-/*        font-size: 2vh;*/
-/*    }*/
-
-/*    .page-A-back,*/
-/*    .page-B,*/
-/*    .page-C-front {*/
-/*        line-height: 2vh;*/
-/*        font-size: 1.6vh;*/
-/*    }*/
-/*    .page-A-back p,*/
-/*    .page-B p,*/
-/*    .page-C-front p {*/
-/*        margin-bottom: 0.5vh;*/
-/*    }*/
-/*    .page-A-back p::first-letter,*/
-/*    .page-B p::first-letter,*/
-/*    .page-C-front p::first-letter {*/
-/*        font-size: 2.4vh;*/
-/*    }*/
-/*}*/
+    }
+    .page {
+        padding: 1rem;
+        font-size: 1rem;
+        border-radius: 0;
+    }
+    .front-cover > .front-face,
+    .back-cover > .back-face {
+        background-image:none;
+    }
+    .front-cover > .front-face h1 {
+        font-size: 2.5rem;
+    }
+    .front-cover > .front-face h2 {
+        font-size: 1.5rem;
+    }
+    .front-cover > .front-face h3 {
+        font-size: 1rem;
+    }
+}
