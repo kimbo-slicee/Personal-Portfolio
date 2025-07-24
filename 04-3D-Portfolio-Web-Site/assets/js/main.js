@@ -1,4 +1,9 @@
 const pages=document.querySelectorAll(".page-container");
+const book=document.querySelector(".book");
+window.addEventListener("resize", ()=>{
+    // Recalculate the z-index of each page based on the current number of pages
+    console.log(book.getBoundingClientRect().width)
+})
 pages.forEach((page,index)=>{
     page.style.zIndex=String(pages.length - index -1);
     page.addEventListener("click", (e)=>{
