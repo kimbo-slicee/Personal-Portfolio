@@ -32,7 +32,7 @@ pages.forEach((page,index)=>{
                 },100 + index * 100);
             }
         }else{
-            if(e.target.classList.contains("btn")) return; // Ignore clicks on buttons
+            if(!e.target.classList.contains("page")) return; // Ignore clicks on buttons
                 if(!page.classList.contains("flip")){
                 page.classList.add("flip");
                 page.style.zIndex=String(pages.length+index);

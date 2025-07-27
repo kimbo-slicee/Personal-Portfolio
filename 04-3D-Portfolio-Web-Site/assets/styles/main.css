@@ -8,10 +8,33 @@
     --page-second-color: hsl(36, 48%, 70%);
     --page-last-color: hsl(36, 48%, 25%);
     --translate-x: 50%;
+    /**/
+    --clr-bg: #222;
+    --clr-primary: #f5f5f5;
+    --clr-secondary: #075985;
+    --clr-cta: rgb(175, 208, 84);
+    --base-rotation: 0deg;
+    --full-circle: 360deg;
+    --radius: 13vw;
+    --duration: 200ms;
+    --cards-container-size: calc(var(--radius) );
+    --cards-container-padding: 2rem;
+    --border-color: transparent;
+    --label-offset: calc(var(--radius) * -1 - 1rem);
+    --label-size: 30px;
+    --label-color: #1a1a1a;
+    --label-color-hover: var(--page-second-color);
+    --label-line-h: 0;
+    --label-line-h-current: 2rem;
+    --label-dot-size: 10px;
+    --title-top: 2rem;
+    --title-offset-y: 10px;
+    --info-top: 2.5rem;
+    --info-width: min(70%, 250px);
+    --info-offset-y: 30px;
 }
-
 /* === RESET === */
-* {
+*,*:before,*:after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,25 +43,37 @@
 }
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
+    font-size: clamp(2rem, 5vw + 1rem, 2.5rem);
+    line-height: 1.2;
 }
-
-h2:not(.front-cover > .front-face h2) {
+h2,h3{
+    font-size: min(.5rem, 3vw + 1rem);
+}
+/*======================Scape the heading of the covers pages==========================*/
+h2:not(.front-cover .front-face h2) {
     font-family: 'Merriweather', serif;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 3vw + .5rem, 1.5rem);
+    margin: .5rem .128rem;
     color: #777;
 }
-
-h3:not(.front-cover > .front-face h3) {
+h3:not(.front-cover .front-face h3) {
     font-family: 'Lora', serif;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 3vw + .2rem, 1.2rem);
+    margin: .5rem .128rem;
     color: #555;
+    /*color: #333;*/
 }
-
+svg {
+    fill: #1a1a1a;
+    transition: fill 0.3s;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+a:hover svg {
+    fill: var(--page-second-color);
+}
 /* === BASE STYLES === */
 .book-container {
     min-height: 100vh;
@@ -92,7 +127,6 @@ h3:not(.front-cover > .front-face h3) {
 }
 
 /* === COVER STYLES === */
-
 .front-cover > .front-face,
 .back-cover > .back-face {
     background: var(--cover-color) url("https://zupimages.net/up/21/47/zxra.png") no-repeat center/contain;
@@ -106,6 +140,7 @@ h3:not(.front-cover > .front-face h3) {
 .front-cover > .front-face {
     font-family: 'Alice', serif;
     color: #ffcc00;
+
 }
 
 .front-cover > .front-face * {
@@ -113,7 +148,7 @@ h3:not(.front-cover > .front-face h3) {
     text-align: center;
 }
 
-.front-cover > .front-face h1 {
+.front-cover .front-face h1 {
     font-size: min(56px, 5.6vw);
     top: 35%;
     left: 50%;
@@ -121,22 +156,21 @@ h3:not(.front-cover > .front-face h3) {
     text-shadow: 5px 2px 0 rgba(0, 0, 0, 0.25);
 }
 
-.front-cover > .front-face h2 {
-    font-size: min(24px, 2.4vw);
+.front-cover .front-face h2 {
+    font-size: min(24px, 4vw);
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.front-cover > .front-face h3 {
-    font-size: min(16px, 1.6vw);
+.front-cover .front-face h3 {
+    font-size: min(16px, 3.5vw);
     font-style: italic;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-/* === PAGE Z-INDEX === */
 
 /* === PAGE CONTENT === */
 .page-content {
@@ -181,7 +215,6 @@ h3:not(.front-cover > .front-face h3) {
 }
 
 /* === ABOUT ME === */
-
 .about-me .social-links {
     display: flex;
     justify-content: center;
@@ -234,64 +267,73 @@ h3:not(.front-cover > .front-face h3) {
     color: #1a1a1a;
 }
 /* === WORK EXPERIENCE === */
-.page-B .page-content,.page-C .page-content,.page-D .page-content
+.page-B .page-content
+,.page-C .page-content
+,.page-D .page-content
 {
     padding: .5rem;
     text-align: left;
 }
-
 .timeline {
     border-left: 2px solid #1a1a1a;
     padding: 0 1rem;
     width: 100%;
 }
-
-.timeline .timeline-item {
+.timeline .timeline-items {
     position: relative;
+    padding-left: .5rem;
 }
-
-.timeline .timeline-item:before {
-    content: '';
+.timeline .timeline-items:before {
+    content: '\1F5B3';
     position: absolute;
     top: 0;
-    left: -1.55rem;
-    width: 15px;
-    height: 15px;
-    background: #1a1a1a;
+    left: -2.2rem;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-}
-
-.timeline .timeline-item .timeline-date {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: #333;
+    background-color: #1a1a1a;
+    color: var(--page-second-color);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 18px;
 }
-.timeline .timeline-item .timeline-date svg{
-    margin-right: 0.5rem;
-    color: #333;
+.timeline-date{
+    background-color: #1a1a1a;
+    position: relative;
+    padding: 0 0.5rem ;
 }
-.timeline .timeline-item .timeline-title {
-    font-family: 'Merriweather', serif;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+.timeline-date span{
+    color: var(--page-second-color);
 }
-.timeline .timeline-item .timeline-title span {
-    color: #1a1a1a;
-    font-weight: bold;
-    font-size: 15px;
-}
-.timeline .timeline-item{
-
+.timeline-date:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1.7%;
+    clear: both;
+    background-color: transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid #1a1a1a;
 }
 .timeline .timeline-item ul li{
     font-family: 'Lora', serif;
     font-size: 1rem;
     margin-bottom: 0.5rem;
     color: #555;
+}
+/*===========Eduction============*/
+#education{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+#education .timeline-items:before{
+    content: '\1F393';
 }
 /*========SKILLS========*/
 .skills .front-end h2,
@@ -423,13 +465,6 @@ h3:not(.front-cover > .front-face h3) {
     display: flex;
     align-items: center;
 }
-.project .header svg{
-    width: 15px;
-    height: 15px;
-    fill: #1a1a1a;
-    margin-left: 0.2rem;
-}
-
 .project  .project-description {
     font-family: 'Merriweather', serif;
     font-size: 1rem;
@@ -537,44 +572,109 @@ h3:not(.front-cover > .front-face h3) {
     transform: translateX(var(--translate-x)) rotateY(-180deg);
 }
 /*========Responsive Design=======*/
-/* Mobile */
-@media (max-width: 600px) {
+/* Phones */
+@media (max-width: 576px) {
+    body {
+        font-size: 1.125rem; /* 18px */
+    }
+    h1 {
+        font-size: 2.5rem; /* 40px */
+    }
     .book-container{
         overflow: hidden scroll;
-        height: 100vh;
-        width: 100%;
+        display: block;
+        height: auto;
     }
     .book {
-        width: 100%;
-        height: 100vh;
+        height: auto;
+        transform: none;
+        display: block;
         perspective: none;
     }
-    .page-container {
+    .page-container{
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        transform: translateX(0) rotateY(0);
+        transform-origin: center;
+        transform: translateX(0);
+        cursor: none;
+        display: block;
         position: relative;
-        cursor: pointer;
-       transition: none;
+        height: auto;
     }
-
-    .page{
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        backface-visibility: visible;
+    .page-container > *{
+        border-radius: 0;
     }
-    .front-cover,.back-cover{
+    .cover{
+        min-height: 100svh;
         background-color: var(--cover-color);
     }
-    .page.front{
-        border-radius: 0;
+    .front-cover>.back-face
+    ,.back-cover>.front-face {
+        display: none;
+    }
+
+    .page {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        border-bottom: 1px solid #777777;
+        position: relative;
+        transform: none;
+        height: auto;
+        box-shadow: none;
+        backface-visibility: visible;
+    }
+
+    .page-container:not(.cover)>*{
+    background: linear-gradient(-90deg, var(--page-first-color) 80%, var(--page-second-color), var(--page-last-color));
     }
     .page.back{
-        border-radius: 0;
-        transform: none;
+        transform: rotateY(0deg);
+        position: static;
+    }
+    .front-face, .back-face {
+        transform: none !important;
+    }
+
+    .cover.front-cover,
+    .cover.back-cover {
+        display: flex;
+        height: auto;
+    }
+
+    .page-content {
+        padding: 1.5rem;
+    }
+
+    .pagination {
+        position: static;
+        margin-top: 1rem;
+        text-align: right;
+    }
+    .pagination{
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .page-content{
+        padding: 5rem 1rem;
+        text-align: center;
+    }
 }
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+
 }
+
+/* Laptops */
+@media (min-width: 769px) and (max-width: 992px) { }
+
+/* Desktops */
+@media (min-width: 993px) { }
