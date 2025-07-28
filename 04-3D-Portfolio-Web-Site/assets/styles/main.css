@@ -336,7 +336,10 @@ a:hover svg {
     content: '\1F393';
 }
 /*========SKILLS========*/
- .front-end h2, .back-end h2,
+#skills{
+}
+ .front-end h2,
+ .back-end h2,
  .data-base h2{
     font-family: 'Playfair Display', serif;
     font-size: 1rem;
@@ -671,6 +674,10 @@ a:hover svg {
     .page-content{
         padding: 5rem 1rem;
         text-align: center;
+    }
+    /*Skills*/
+    .skills .card{
+
     }
 }
 
