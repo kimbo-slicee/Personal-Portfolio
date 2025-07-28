@@ -336,16 +336,15 @@ a:hover svg {
     content: '\1F393';
 }
 /*========SKILLS========*/
-.skills .front-end h2,
-.skills .back-end h2,
-.skills .data-base h2{
+ .front-end h2, .back-end h2,
+ .data-base h2{
     font-family: 'Playfair Display', serif;
     font-size: 1rem;
     color: #777777;
     text-align: center;
     margin:0 !important;
 }
-.skills .carousel{
+.carousel{
     display: flex;
     overflow-x: hidden;
     cursor: grab;
@@ -358,12 +357,12 @@ a:hover svg {
     );
 
 }
-.skills .carousel-items {
+.carousel-items {
     display: flex;
     gap: 1rem;
     padding:0.5rem;
 }
-.skills .carousel-items .card{
+ .carousel-items .card{
     width: 120px;
     height: 110px;
     display: flex;
@@ -374,28 +373,35 @@ a:hover svg {
     font-size: 1.2rem;
     border-radius: 10px;
     color: #1a1a1a;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     background-color: var(--page-first-color);
     border: 2px solid #1a1a1a;
     transition: border 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease, color 0.5s ease;
     -webkit-user-select: none;
     user-select: none;
 }
-.skills .carousel-items .card:hover{
+.carousel-items .card:hover{
     border: 2px solid var(--page-second-color);
     box-shadow: 2px 4px 0 #0000, 0 0 0 6px var(--page-second-color);
     background-color: #1a1a1a;
     color: var(--page-second-color);
 }
-.skills .carousel-items .card .icon-container svg {
+.carousel-items .card .icon-container svg {
     width: 30px;
     height: 30px;
-    margin-bottom: 0.5rem;
+    fill: #1a1a1a;
+    transition: fill 0.3s ease;
+}
+#php svg path {
     fill: var(--page-second-color);
+}
+#php:hover svg path {
+    fill: #1a1a1a;
 }
 .card:hover,
 .card:focus-within {
-
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px, rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 /*Charts Styling*/
 .chart{
