@@ -8,9 +8,9 @@ function lerp(a, b, t) {
 }
 
 const carouselStates = Array.from(carousels).map(() => ({
-    hasPointer: false,
+    isDragging: false,
     lastX: null,
-    scrollDelta: 0
+    scrollDelta: 0,
 }));
 
 function updateScroll() {
@@ -18,7 +18,7 @@ function updateScroll() {
         const state = carouselStates[index];
         carousel.scrollBy({ left: state.scrollDelta });
 
-        if (state.hasPointer || prefersReducedMotion.matches) {
+        if (state.isDragging || prefersReducedMotion.matches) {
             state.scrollDelta = 0;
         } else {
             state.scrollDelta = lerp(state.scrollDelta, 0, 0.045);
@@ -31,26 +31,29 @@ function updateScroll() {
 carousels.forEach((carousel, index) => {
     const state = carouselStates[index];
 
-    // Prevent default touch scroll behavior
     carousel.addEventListener("pointerdown", (event) => {
-        event.preventDefault();
-        state.hasPointer = true;
+        event.preventDefault(); // Prevent native scroll
+        state.isDragging = true;
         state.lastX = event.clientX;
+
+        // 🔑 Capture the pointer to receive move/up events even if the finger moves outside the element
+        carousel.setPointerCapture(event.pointerId);
     });
 
     carousel.addEventListener("pointermove", (event) => {
-        if (state.hasPointer) {
-            event.preventDefault();
-            if (state.lastX !== null) {
-                state.scrollDelta = state.lastX - event.clientX;
-            }
-            state.lastX = event.clientX;
+        if (!state.isDragging) return;
+
+        event.preventDefault(); // Prevent native scroll
+        if (state.lastX !== null) {
+            state.scrollDelta = state.lastX - event.clientX;
         }
+        state.lastX = event.clientX;
     });
 
-    window.addEventListener("pointerup", () => {
-        state.hasPointer = false;
+    carousel.addEventListener("pointerup", (event) => {
+        state.isDragging = false;
         state.lastX = null;
+        carousel.releasePointerCapture(event.pointerId);
     });
 
     carousel.addEventListener("wheel", (event) => {
@@ -73,8 +76,9 @@ carousels.forEach((carousel, index) => {
     });
 });
 
-// Duplicate items for infinite loop
+// Duplicate content
 const carouselItems = document.querySelectorAll(".carousel-items");
+
 for (let i = 0; i < carouselDuplicates; i++) {
     carouselItems.forEach((item) => {
         const duplicate = item.cloneNode(true);
@@ -84,10 +88,11 @@ for (let i = 0; i < carouselDuplicates; i++) {
     });
 }
 
-// Initial scroll offset to center the carousel
+// Center on load
 carousels.forEach((carousel) => {
     const carouselContent = carousel.querySelector(".carousel-items");
     carousel.scrollLeft += carouselContent.offsetWidth * carouselDuplicates;
 });
 
+// Start scroll loop
 requestAnimationFrame(updateScroll);

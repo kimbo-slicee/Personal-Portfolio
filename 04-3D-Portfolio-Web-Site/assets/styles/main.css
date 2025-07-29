@@ -1,6 +1,5 @@
 /* === FONTS === */
 @import url("https://fonts.googleapis.com/css2?family=Alice&family=Berkshire+Swash&family=Lora:ital@0;1&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap");
-/*=== GLOBAL VARIABLES ===*/
 /*=== ROOT VARIABLES ===*/
 :root {
     --cover-color: hsl(150deg, 100%, 15%);
@@ -8,30 +7,6 @@
     --page-second-color: hsl(36, 48%, 70%);
     --page-last-color: hsl(36, 48%, 25%);
     --translate-x: 50%;
-    /**/
-    --clr-bg: #222;
-    --clr-primary: #f5f5f5;
-    --clr-secondary: #075985;
-    --clr-cta: rgb(175, 208, 84);
-    --base-rotation: 0deg;
-    --full-circle: 360deg;
-    --radius: 13vw;
-    --duration: 200ms;
-    --cards-container-size: calc(var(--radius) );
-    --cards-container-padding: 2rem;
-    --border-color: transparent;
-    --label-offset: calc(var(--radius) * -1 - 1rem);
-    --label-size: 30px;
-    --label-color: #1a1a1a;
-    --label-color-hover: var(--page-second-color);
-    --label-line-h: 0;
-    --label-line-h-current: 2rem;
-    --label-dot-size: 10px;
-    --title-top: 2rem;
-    --title-offset-y: 10px;
-    --info-top: 2.5rem;
-    --info-width: min(70%, 250px);
-    --info-offset-y: 30px;
 }
 /* === RESET === */
 *,*:before,*:after {
@@ -43,15 +18,15 @@
 }
 h1 {
     font-family: 'Playfair Display', serif;
-    margin-bottom: 1rem;
     text-align: center;
     font-size: clamp(2rem, 5vw + 1rem, 2.5rem);
     line-height: 1.2;
+    margin-bottom: .5rem;
 }
 h2,h3{
     font-size: min(.5rem, 3vw + 1rem);
 }
-/*======================Scape the heading of the covers pages==========================*/
+/*======================Based Styles==========================*/
 h2:not(.front-cover .front-face h2) {
     font-family: 'Merriweather', serif;
     font-size: clamp(1.5rem, 3vw + .5rem, 1.5rem);
@@ -74,7 +49,7 @@ svg {
 a:hover svg {
     fill: var(--page-second-color);
 }
-/* === BASE STYLES === */
+/*=================Book Styles=================*/
 .book-container {
     min-height: 100vh;
     width: 100vw;
@@ -335,7 +310,7 @@ a:hover svg {
 #education .timeline-items:before{
     content: '\1F393';
 }
-/*========SKILLS========*/
+/*===================================SKILLS Section================================*/
 #skills{
 }
  .front-end h2,
@@ -359,6 +334,7 @@ a:hover svg {
             transparent 100%
     );
 
+
 }
 .carousel-items {
     display: flex;
@@ -378,16 +354,18 @@ a:hover svg {
     color: #1a1a1a;
     box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     background-color: var(--page-first-color);
-    border: 2px solid #1a1a1a;
+    border: .5px solid #1a1a1a;
     transition: border 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease, color 0.5s ease;
     -webkit-user-select: none;
     user-select: none;
 }
-.carousel-items .card:hover{
+.carousel-items .card:hover,
+.carousel-items .card:focus {
     border: 2px solid var(--page-second-color);
-    box-shadow: 2px 4px 0 #0000, 0 0 0 6px var(--page-second-color);
     background-color: #1a1a1a;
     color: var(--page-second-color);
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px, rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .carousel-items .card .icon-container svg {
     width: 30px;
@@ -401,28 +379,18 @@ a:hover svg {
 #php:hover svg path {
     fill: #1a1a1a;
 }
-.card:hover,
-.card:focus-within {
-    outline: none;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px, rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-/*Charts Styling*/
+
+/*=====================Skill OverView Section===============================*/
 .chart{
     width: 100%;
     padding: 1rem;
     height: 240px;
-    margin-bottom: 10px;
     position: relative;
 
 }
 .chart canvas{
     margin-inline: auto;
     position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.chart h2{
-    text-align: center;
 }
 .chart-container{
     width: 100%;
@@ -430,157 +398,18 @@ a:hover svg {
     align-items: center;
     justify-content: center;
 }
-/*===============Latest Project Section===================*/
-.latest-project h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-.latest-project .project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-.latest-project .project .project-image {
-    width: 90%;
-    max-width: 600px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-.latest-project .project .project-image img{
-    width: 100%;
-    object-fit: cover;
-}
-.project .header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 5px;
-    width: 90%;
-}
-.project .project-title {
-    font-family: 'Berkshire Swash', cursive;
-    font-size: 1.5rem;
-    color: #333;
-}
-.project .header a {
-    font-family: 'Merriweather', serif;
-    font-size: 1rem;
-    color: #1a1a1a;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    display: flex;
-    align-items: center;
-}
-.project  .project-description {
-    font-family: 'Merriweather', serif;
-    font-size: 1rem;
-    color: #555;
-    text-align: center;
-    margin-top: 0.5rem;
-    width: 90%;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-/*======Service========*/
-.services{
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    gap: 1rem;
-}
-.services > div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: .5rem;
-    border-radius: 10px;
-    transition: background-color 0.5s ease, color 0.5s ease;
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-}
-.services > div:hover{
-    background-color: #1a1a1a;
-    color: var(--page-second-color);
-}
-.services > div:hover > .btn{
-    background-color: var(--page-second-color);
-    color: #1a1a1a;
-}
-.services > div > svg {
-    fill: #1a1a1a;
-    height: 30px;
-    width: 30px;
-}
-.services > div:hover > svg {
-    fill: var(--page-second-color);
-}
-.services > div > h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-}
-.services > div > .btn {
-    background-color: #1a1a1a;
-    color: var(--page-second-color);
-}
-/*===========Contact Me Form Styling===========*/
-.contact-me {
-    padding: 1rem;
-    width: 100%;
-}
-.contact-me form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 0 auto;
-    padding: 1rem;
-    border-radius: 10px;
-    /*border: 2px solid #1a1a1a;*/
-}
-.contact-me form input,
-.contact-me form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #1a1a1a;
-    border-radius: 5px;
-    font-family: 'Merriweather', serif;
-    font-size: 1rem;
-    color: #333;
-    background-color: transparent;
-}
-.contact-me form input::placeholder, form textarea::placeholder {
-    color: #000000;
-}
-.contact-me form textarea{
-    height: 150px;
-    resize: none;
-}
-.contact-me form button {
-    background-color: transparent;
-    color: #1a1a1a;
-    padding: 0.8rem;
-    border-radius: 5px;
-    font-family: 'Merriweather', serif;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.5s ease, color 0.5s ease;
-    border: 2px solid #1a1a1a;
-    width: 50%;
-}
-.contact-me form button:hover {
-    background-color: #1a1a1a;
-    color: var(--page-second-color);
-}
+
+/*=========================Projects Section================================*/
+
+/*===========================Services Section=============================*/
+/*===========================ContactMe Section===========================*/
+
 /* === PAGE FLIP ANIMATION === */
 /*js added classes */
 .flip {
     transform: translateX(var(--translate-x)) rotateY(-180deg);
 }
-/*========Responsive Design=======*/
+/*========================Responsive Design==========================*/
 /* Phones */
 @media (max-width: 576px) {
     body {
@@ -675,10 +504,6 @@ a:hover svg {
         padding: 5rem 1rem;
         text-align: center;
     }
-    /*Skills*/
-    .skills .card{
-
-    }
 }
 
 /* Tablets */
@@ -690,4 +515,6 @@ a:hover svg {
 @media (min-width: 769px) and (max-width: 992px) { }
 
 /* Desktops */
-@media (min-width: 993px) { }
+@media (min-width: 993px) {
+
+}

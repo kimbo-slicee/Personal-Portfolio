@@ -50,8 +50,8 @@ const downloadCvButton = document.querySelector(".download-cv");
 downloadCvButton.addEventListener("click", () => {
         const a = document.createElement("a");
         a.setAttribute("download", "");
-        a.href = "assets/files/CV.file"; // Path to your CV file
-        a.download = "CV.file"; // Name of the downloaded file
+        a.href = "assets/pdf/Mohammed.pdf"; // Replace with the actual path to your PDF file
+        a.download = "Mohammed_El_Aouri_Resume.file"; // Set the desired file name
         document.body.appendChild(a);
         a.click();
 });
