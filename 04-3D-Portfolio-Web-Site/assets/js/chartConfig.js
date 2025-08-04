@@ -1,101 +1,114 @@
-const mainColor= '#1a1a1a'; // Main color for the charts
-const createChart = (ctx, { type, labels, label, data, bgColor, borderColor = 'transparent' }, customOptions = {}) => {
-    // Register the custom plugin
-    return new Chart(ctx, {
-        type,
-        data: {
-            labels,
-            datasets: [{
-                label,
-                data,
-                backgroundColor: bgColor,
-                borderColor,
-                borderWidth: 1,
-                borderRadius: 5,
-                pointBackgroundColor: '#E4D1B4FF',
-                pointBorderColor: mainColor,
-            }]
+let ctx = document.getElementById("canvas").getContext("2d");
+
+let barChartData = {
+    labels: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+    datasets: [
+        {
+            label: "BackEnd",
+            type: 'line',
+            data: [200, 500, 2300, 1855, 2096, 1686, 1805, 1405, 1564, 1230, 1258, 1266],
+            fill: false,
+            backgroundColor: "rgba(255,255,255,0.5)",
+            borderColor: "rgba(255,255,255,0.5)",
+            yAxisID: 'y1'
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false, // allow full scaling
-            plugins: {
-                legend: { display: false }
-            },
-            scales: type === 'radar' ? {
-                r: {
-                    ticks: {
-                        display:false
-                    },
-                    grid: {
-                        color: mainColor,
-                        drawOnChartArea: false
-                    },
-                    angleLines: {
-                        color: mainColor
-                    },
-                    pointLabels: {
-                        color: mainColor
-                    }
-                }
-            } : { // only use scales for non-radar charts
-                x: {
-                    ticks: {
-                        color: mainColor ,
-                        autoSkip: true,
-                        maxTicksLimit: 10, // limit the number of ticks on x-axis
-                    },
-                    grid: {
-                        color: "transparent",
-                        drawOnChartArea: false
-                    },
-                    border: { color: mainColor }
-                },
-                y: {
-                    ticks: { color: mainColor },
-                    grid: {
-                        color: "transparent",
-                        drawOnChartArea: false
-                    },
-                    border: { color: mainColor }
-                }
-            },
-            ...customOptions // merge any additional user-defined options
-        }
-    });
+        {
+            label: "FrontEnd",
+            type: 'line',
+            data: [1913, 1604, 2111, 1643, 1463, 1574, 1357, 1538, 1564, 1561, 1632, 1665],
+            fill: false,
+            backgroundColor: "rgba(155,152,152,0.98)",
+            yAxisID: 'y1'
+        },
+        {
+            type: 'bar',
+            label: "FrontEnd",
+            data: [10,12,-14,-16,18,-20,22,24,26,28,30,32],
+            fill: false,
+            backgroundColor: "#777",
+            borderColor: "#777",
+            yAxisID: 'y2'
+        },
+
+        {
+            type: 'bar',
+            label: "BackEnd",
+            data: [-8, -44, -16, -11, -30, -7, -25, 9, 0, 27, 30, 32],
+            fill: false,
+            backgroundColor:"rgba(199,191,191,1)",
+            borderColor:"rgba(255,255,255,1)",
+            yAxisID: 'y2'
+        },
+
+    ]
 };
 
-// 🟢 Example 1: Horizontal Bar Chart (Frontend Skills)
-    createChart(document.getElementById('chartLanguages-frontend'), {
-        type: 'radar',
-        labels: ['HTML', 'CSS', 'JS', 'TS','Bootstrap','Tailwind', 'React','Next.js','Node', 'PHP', 'Laravel', 'Java', 'Spring'],
-        data: [90, 85, 80, 75, 70, 65, 80, 75, 60, 70, 65, 30, 20],
-        bgColor: mainColor
-    })
+new Chart(ctx, {
+    type: 'bar',
+    data: barChartData,
+    options: {
+        responsive: false,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Frontend & Backend Skills with Growth Potential'
+            },
+            legend: {
+                position: 'top'
+            }
+        },
+        tooltips: {
+            mode: 'label'
+        },
+        elements: {
+            line: {
+                fill: false
+            }
+        },
+        scales: {
+            x: [{
+                scaleLabel: {
+                    display: false,
+                    labelString: 'Dates'
+                },
+                display: false,
+                gridLines: {
+                    display: false
+                },
+                labels: {
+                    show: true,
+                }
+            }],
+            y1:
+                {
+                    position:"left",
+                    type: "linear",
+                    display: true,
+                    id: "y1",
+                    gridLines: {
+                        display: true
+                    },
+                    labels: {
+                        show: true,
 
-// 🟢 Example 2: Radar Chart (Backend Skills)
-    createChart(document.getElementById('data-bases'), {
-        type: 'bar',
-        labels: ['MYSQL', 'PostgreSQL', 'MongoDB', 'SQLite', 'Firebase'],
-        label: 'Databases',
-        data: [50, 30, 50, 60, 50],
-        fill: false,
-        bgColor: mainColor,
-        borderColor: mainColor,
-        borderWidth: 1
+                    }
+                },
+            y2:{
+                position:"right",
+                type: "linear",
+                display: true,
+                id: "y2",
+                grid: {
+                    drawOnChartArea: false
+                },
+                gridLines: {
+                    display: false
+                },
+                labels: {
+                    show: true,
 
-    });
-
-    // Example 3: Doughnut Chart (Tools)
-//     createChart(document.getElementById('dataBases'), {
-//         type: 'doughnut',
-//         labels: ['Git', 'VSCode', 'Figma', 'Postman'],
-//         label: 'Tools',
-//         data: [90, 85, 70, 80],
-//         bgColor: [
-//             'rgba(255, 99, 132, 0.3)',
-//             'rgba(54, 162, 235, 0.3)',
-//             'rgba(255, 206, 86, 0.3)',
-//             'rgba(75, 192, 192, 0.3)'
-//         ]
-//     });
+                }
+            }
+        }
+    }
+});

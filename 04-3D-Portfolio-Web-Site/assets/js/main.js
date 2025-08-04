@@ -32,7 +32,7 @@ pages.forEach((page,index)=>{
                 },100 + index * 100);
             }
         }else{
-            if(!e.target.classList.contains("page")) return; // Ignore clicks on buttons
+            // if(!e.target.classList.contains("page")) return; // Ignore clicks on buttons
                 if(!page.classList.contains("flip")){
                 page.classList.add("flip");
                 page.style.zIndex=String(pages.length+index);
@@ -55,3 +55,39 @@ downloadCvButton.addEventListener("click", () => {
         document.body.appendChild(a);
         a.click();
 });
+/*=========================Projects ===========================*/
+const list = document.querySelector(".projects-container ul");
+const items = list.querySelectorAll("li");
+const setIndex = (event) => {
+    // for flex
+    // if (event.target.closest('li'))
+    //   for (const item of items)
+    //     item.dataset.active =
+    //       item === event.target.closest('li') ? 'true' : 'false'
+    // for grid
+    const closest = event.target.closest("li");
+    if (closest) {
+        const index = [...items].indexOf(closest);
+        const cols = new Array(list.children.length)
+            .fill()
+            .map((_, i) => {
+                items[i].dataset.active = (index === i).toString();
+                return index === i ? "10fr" : "1fr";
+            })
+            .join(" ");
+        list.style.setProperty("grid-template-columns", cols);
+    }
+};
+list.addEventListener("focus", setIndex, true);
+list.addEventListener("click", setIndex);
+list.addEventListener("pointermove", setIndex);
+const resync = () => {
+    const w = Math.max(
+        ...[...items].map((i) => {
+            return i.offsetWidth;
+        })
+    );
+    list.style.setProperty("--article-width", w);
+};
+window.addEventListener("resize", resync);
+resync();

@@ -8,7 +8,9 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/infinite-Carousel.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <script src="assets/js/chartConfig.js" defer></script>
+
     <title>3D Book Personal portfolio</title>
 </head>
 <body>
@@ -26,6 +28,7 @@
         <!--Portfolio Content-->
         <div class="page-container page-A" >
             <div class = "page front page-A-front">
+            <img src="assets/images/bg.webp" alt="backGround-img">
                 <div class="page-content">
                     <h1 class="book-title">A Journey Through Code & Creativity</h1>
                     <h2 class="book-subtitle">The Personal Portfolio of Mohamed El Aouri</h2>
@@ -37,6 +40,7 @@
                 <div class="pagination">1</div>
             </div>
             <div class="page back page-A-back">
+                <img src="assets/images/bg.webp" alt="backGround-img">
                 <div class="page-content about-me">
                     <h1>About Me</h1>
                     <h2>Mohammed El Aouri</h2>
@@ -109,6 +113,7 @@
         </div>
         <div class="page-container page-B"   >
             <div class = "page front page-B-front">
+                <img src="assets/images/bg.webp" alt="backGround-img">
                 <div class="page-content work-experience">
                     <h1>Work Experience</h1>
                     <div class="timeline">
@@ -117,31 +122,32 @@
                                 <span>Oct 2023 - Mar 2024</span>
                             </h2>
                             <h3 class="timeline-title"> Java / Angular Training — <span>JOBINTECH</span></h3>
-                            <ul>
-                                <li>Create an application to manage student products at UIR.</li>
-                                <li>Responsible for gathering project requirements.</li>
-                                <li>Worked with a team to implement new features and fix bugs.</li>
-                                <li>Gained experience in Agile development methodologies.</li>
-                            </ul>
+                            <div class="timeline-content">
+                                <p>Developed a web application to manage student products at UIR.</p>
+                                <p>Responsible for gathering project requirements.</p>
+                                <p>Worked with a team to implement new features and fix bugs.</p>
+                                <p>Gained experience in Agile development methodologies.</p>
+                            </div>
                         </div>
                         <div class="timeline-items">
                             <h2 class="timeline-date">
                                 <span>Jan 2023 - Mar 2023</span>
                             </h2>
                             <h3 class="timeline-title">Internship — <span>WASSLA DIGITAL AGENCY</span></h3>
-                            <ul>
-                                <li>Created an e-commerce website for selling agency products.</li>
-                                <li>Performed analysis and design using the Merise method.</li>
-                                <li>Created a relational database using MySQL.</li>
-                                <li>Provided necessary REST APIs using the Laravel framework.</li>
-                                <li>Developed the front-end using HTML, CSS, and React.js</li>
-                            </ul>
+                            <div class="timeline-content">
+                                <p>Created an e-commerce website for selling agency products.</p>
+                                <p>Performed analysis and design using the Merise method.</p>
+                                <p>Created a relational database using MySQL.</p>
+                                <p>Provided necessary REST APIs using the Laravel framework.</p>
+                                <p>Developed the front-end using HTML, CSS, and React.js</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pagination">3</div>
             </div>
             <div class = "page back page-B-back">
+                <img src="assets/images/bg.webp" alt="backGround-img">
                 <div class="page-content" id="education">
                     <h1>Eduction</h1>
                     <div class="timeline">
@@ -172,7 +178,9 @@
         </div>
         <div class="page-container page-C" >
             <div class="page front page-C-front">
+            <img src="assets/images/bg.webp" alt="backGround-img">
                 <div class="page-content skills">
+
                     <h1>Technical Skills</h1>
                     <div class="front-end">
                         <h2>Front End</h2>
@@ -508,79 +516,221 @@
                 </div>
                 <div class="pagination">5</div>
             </div>
-            <div class="page back page-C-back" >
+            <div class="page back page-C-back" id="skills-overview">
+                <img src="assets/images/bg.webp" alt="backGround-img">
                 <h1>Skills Overview</h1>
-                    <section class="chart front-end">
-                        <h2>Development</h2>
-                        <canvas id="chartLanguages-frontend"></canvas>
-                    </section>
-                    <section class="chart data-base">
-                        <h2>Data Bases</h2>
-                        <canvas id="data-bases"></canvas>
-                    </section>
-                    <div class="pagination">6</div>
+                <div class="page-content">
+                        <div class="skills-chart">
+                            <canvas id="canvas"></canvas>
+                        </div>
+                        <div class="skills-description">
+                            <h3 class="text-2xl font-bold mb-2">Skills Evolution & Tech Usage</h3>
+                            <p class="text-base text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed">
+                                This chart visualizes the evolution of my front-end and back-end skills based on my actual activity on GitHub.
+                                The data is collected in real-time from my public repositories and represents the number of commits per month and the technologies I used — such as JavaScript, PHP, HTML, CSS, and more.
+                                <br /><br />
+<!--                                Each bar reflects how frequently a specific technology was used, while the connecting lines show the growth trends of my experience across both the front-end and back-end stacks.-->
+<!--                                <strong>This is not dummy data</strong> — it’s directly pulled from GitHub via the GitHub API to give you a transparent look at how I learn and build.-->
+                            </p>
+                        </div>
+                </div>
+                <div class="pagination">6</div>
             </div>
         </div>
-        <div class="page-container page-D" >
+        <div class="page-container page-D">
             <div class="page front page-D-front">
-                <h1>Latest Project</h1>
-                <div class="page-content latest-project">
-                    <div class="project">
-<!--                        <div class="project-image">-->
-<!--                            <img src="https://res.cloudinary.com/dsx0zkwy9/image/upload/v1753032364/home_y4dije.png"-->
-<!--                                 alt="project-image">-->
-<!--                        </div>-->
-                            <div class="header">
-                            <h4 class="project-title">Project Name</h4>
-                             <a>
-                                Live Preview
-                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
-                             </a>
-                            </div>
-                            <div class="project-description">
-                                <p>
-                                    This project is a web application that allows users to manage their tasks efficiently.
-                                    It includes features such as task creation, editing, and deletion, as well as user authentication.
-                                    The application is built using modern web technologies and follows best practices for performance and security.
-                                </p>
-                            </div>
-                            <div class="project-btn">
-                                    <button class="btn" type="button"><span>Source Code</span></button>
-                                    <button class="btn" type="button"><span>More Projects</span></button>
-                            </div>
-
-                    </div>
+                <img src="assets/images/bg.webp" alt="backGround-img">
+                <h1>Latest Projects</h1>
+                <div class="page-content" id="latest-project">
+                <div class="projects-description">
+                    <p>
+                        Over the past few months, I’ve worked on several projects — especially using the <strong>MERN
+                        stack</strong>.
+                        On this page, you’ll find a selection of my latest work.
+                        If you’d like to explore more, feel free to check out my full list of projects on
+                        <a href="https://github.com/kimbo-slicee?tab=repositories" target="_blank">GitHub!</a>
+                    </p>
+                </div>
+                <div class="projects-container">
+                        <ul>
+                            <li data-active="true">
+                                <article>
+                                    <h3>Project Name</h3>
+                                    <p>
+                                        Gain the confidence to build anything you envision, transforming
+                                        motion, interaction, and design principles into second nature.
+                                    </p>
+                                    <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                    >
+                                        <path d="M6 3h12l4 6-10 13L2 9Z" />
+                                        <path d="M11 3 8 9l4 13 4-13-3-6" />
+                                        <path d="M2 9h20" />
+                                    </svg>
+                                    <a href="#">
+                                        <span>Live Preview</span>
+                                    </a>
+                                    <img src="https://picsum.photos/720/720?random=12" alt="" />
+                                </article>
+                            </li>
+                            <li>
+                                <article>
+                                    <h3>Project Name</h3>
+                                    <p>
+                                        Gain the confidence to build anything you envision, transforming
+                                        motion, interaction, and design principles into second nature.
+                                    </p>
+                                    <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                    >
+                                        <path d="M6 3h12l4 6-10 13L2 9Z" />
+                                        <path d="M11 3 8 9l4 13 4-13-3-6" />
+                                        <path d="M2 9h20" />
+                                    </svg>
+                                    <a href="#">
+                                        <span>Live Preview</span>
+                                    </a>
+                                    <img src="https://picsum.photos/720/720?random=12" alt="" />
+                                </article>
+                            </li>
+                            <li>
+                                <article>
+                                    <h3>Project Name</h3>
+                                    <p>
+                                        Gain the confidence to build anything you envision, transforming
+                                        motion, interaction, and design principles into second nature.
+                                    </p>
+                                    <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                    >
+                                        <path d="M6 3h12l4 6-10 13L2 9Z" />
+                                        <path d="M11 3 8 9l4 13 4-13-3-6" />
+                                        <path d="M2 9h20" />
+                                    </svg>
+                                    <a href="#">
+                                        <span>Live Preview</span>
+                                    </a>
+                                    <img src="https://picsum.photos/720/720?random=12" alt="" />
+                                </article>
+                            </li>
+                            <li>
+                                <article>
+                                    <h3>Project Name</h3>
+                                    <p>
+                                        Gain the confidence to build anything you envision, transforming
+                                        motion, interaction, and design principles into second nature.
+                                    </p>
+                                    <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                    >
+                                        <path d="M6 3h12l4 6-10 13L2 9Z" />
+                                        <path d="M11 3 8 9l4 13 4-13-3-6" />
+                                        <path d="M2 9h20" />
+                                    </svg>
+                                    <a href="#">
+                                        <span>Live Preview</span>
+                                    </a>
+                                    <img src="https://picsum.photos/720/720?random=12" alt="" />
+                                </article>
+                            </li>
+                            <li>
+                                <article>
+                                    <h3>Project Name</h3>
+                                    <p>
+                                        Gain the confidence to build anything you envision, transforming
+                                        motion, interaction, and design principles into second nature.
+                                    </p>
+                                    <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                    >
+                                        <path d="M6 3h12l4 6-10 13L2 9Z" />
+                                        <path d="M11 3 8 9l4 13 4-13-3-6" />
+                                        <path d="M2 9h20" />
+                                    </svg>
+                                    <a href="#">
+                                        <span>Live Preview</span>
+                                    </a>
+                                    <img src="https://picsum.photos/720/720?random=12" alt="" />
+                                </article>
+                            </li>
+                            <li>
+                                <article>
+                                    <h3>Project Name</h3>
+                                    <p>
+                                        Gain the confidence to build anything you envision, transforming
+                                        motion, interaction, and design principles into second nature.
+                                    </p>
+                                    <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                    >
+                                        <path d="M6 3h12l4 6-10 13L2 9Z" />
+                                        <path d="M11 3 8 9l4 13 4-13-3-6" />
+                                        <path d="M2 9h20" />
+                                    </svg>
+                                    <a href="#">
+                                        <span>Live Preview</span>
+                                    </a>
+                                    <img src="https://picsum.photos/720/720?random=12" alt="" />
+                                </article>
+                            </li>
+                        </ul>
+                </div>
                 </div>
                 <div class="pagination">7</div>
             </div>
             <div class="page back page-D-back">
+                <img src="assets/images/bg.webp" alt="backGround-img">
                 <h1>Services</h1>
-                <div class="services">
+                <div class="page-content" id="services">
+                    <p class="service-description">
+                        As a passionate full-stack developer, I combine technical precision with creative problem-solving to bring digital ideas to life. Whether you're launching a startup, building an internal tool, or refining an existing product, I offer reliable and scalable web solutions tailored to your needs. Every service below is backed by real experience, clean code, and a commitment to quality.
+                    </p>
+                    <div class="service-cards">
+
+                    </div>
                 </div>
                 <div class="pagination">8</div>
             </div>
         </div>
         <div class="page-container page-E" >
             <div class="page front page-E-front">
+                <img src="assets/images/bg.webp" alt="backGround-img">
                 <h1>Contact Me!</h1>
-                <div class="contact-me">
-                    <form class="contact-me-form">
-                        <div>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div>
-<!--                            <label for="message">Message</label>-->
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                        </div>
-                         <button class="btn">let's Talk</button>
-                    </form>
-                </div>
+
                 <div class="pagination">9</div>
             </div>
             <div class="page back page-E-back">
+                <img src="assets/images/bg.webp" alt="backGround-img">
                 <div class="page-content">
                     <h2>Thank You</h2>
                     <p>
@@ -606,6 +756,5 @@
         </div>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
