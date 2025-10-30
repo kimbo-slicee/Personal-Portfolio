@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3855f66f-1154-437c-af8d-187b831368bc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/.vscode/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/Js/Main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/Style/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/images/iamge_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/images/image_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/images/image_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/images/image_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/images/image_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/images/image_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/images/me.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Html&amp;Css-Portfolio/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/.hintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/.idea/2-Portfolio.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/assets/fonts/Inter-Italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/assets/fonts/Inter-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/assets/fonts/Poppins-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/assets/fonts/Poppins-Italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/assets/fonts/Poppins-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/assets/icons/arrow_left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/assets/icons/arrow_right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/assets/pdf/resume.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/About/about.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/About/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/About/about.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Bottom-bar/bottom-bar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Bottom-bar/bottom-bar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Bottom-bar/bottom-bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Contact/contact.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Contact/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Contact/contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Footer/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Footer/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Footer/footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Header/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Header/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Header/header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Hero/hero.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Hero/hero.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Hero/hero.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Portfolio/portfolio.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Portfolio/portfolio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Portfolio/portfolio.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Resume/resume.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Resume/resume.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Resume/resume.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Services/services.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Services/services.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Services/services.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Testimonials/testimonials.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Testimonials/testimonials.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/Testimonials/testimonials.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/UI/Custom-cursor/custom-cursor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/UI/Custom-cursor/custom-cursor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/UI/Custom-cursor/custom-cursor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/UI/Scroll-Indicator/scroll-indicator.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/UI/Scroll-Indicator/scroll-indicator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/components/UI/Scroll-Indicator/scroll-indicator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/data/about.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/data/portfolio.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/data/resume.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/data/skills.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/data/works.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/global/styles/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/global/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/global/styles/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/global/styles/themes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/global/styles/variables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/locales/ar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/locales/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/locales/fr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/utils/createElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-Personal-Portfolio/utils/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/.idea/portFolio.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/next.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/postcss.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/public/next.svg_Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/public/vercel.svg_Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/app/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/app/favicon.ico_Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/app/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/app/globals.css_Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/app/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/app/layout.tsx_Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/app/page.tsx_Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/icons/arrow-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/icons/arrow-up-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/icons/check-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/icons/chrome.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/icons/css3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/icons/github.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/icons/html5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/icons/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/icons/sparkle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/icons/square-js.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/icons/star.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/ai-startup-landing-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/book-cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/dark-saas-landing-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/grain.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/light-saas-landing-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/memoji-avatar-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/memoji-avatar-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/memoji-avatar-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/memoji-avatar-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/memoji-avatar-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/memoji-computer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/assets/images/memoji-smile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/components/.gitkeep_Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/components/Card.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/components/CardHeader.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/components/HeroOrbit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/components/SectionHeader.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/components/TechIcon.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/components/ToolBoxItems.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/sections/About.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/sections/Contact.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/sections/Footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/sections/Header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/sections/Hero.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/sections/Projects.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/sections/Tape.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/src/sections/Testimonials.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/tailwind.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-Nextjs-Portfolio/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-3D-Portfolio-Web-Site/assets/js/chartConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/../04-3D-Portfolio-Web-Site/assets/js/chartConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-3D-Portfolio-Web-Site/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../04-3D-Portfolio-Web-Site/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-3D-Portfolio-Web-Site/assets/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../04-3D-Portfolio-Web-Site/assets/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-3D-Portfolio-Web-Site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../04-3D-Portfolio-Web-Site/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2raRl2IG4PZ3mZn4uDIbrtA4pzc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.main.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.test.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Han/Desktop/IT/front-end/projects/html-css-js-projects/2-Personal-Portfolio/02-Portfolio&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Han\Desktop\IT\front-end\projects\Portfolio-Web-Sites\02-Personal-Portfolio\assets\icons" />
+      <recent name="C:\Users\Han\Desktop\IT\front-end\projects\Portfolio-Web-Sites\02-Personal-Portfolio\components\UI" />
+      <recent name="C:\Users\Han\Desktop\IT\front-end\projects\Portfolio-Web-Sites\02-Personal-Portfolio\global" />
+      <recent name="C:\Users\Han\Desktop\IT\front-end\projects\Portfolio-Web-Sites\02-Personal-Portfolio/assets" />
+      <recent name="C:\Users\Han\Desktop\IT\front-end\projects\Portfolio-Web-Sites\02-Personal-Portfolio\styles" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3855f66f-1154-437c-af8d-187b831368bc" name="Changes" comment="" />
+      <created>1736795346528</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736795346528</updated>
+      <workItem from="1736795347889" duration="2921000" />
+      <workItem from="1736895850956" duration="10061000" />
+      <workItem from="1736951852392" duration="1196000" />
+      <workItem from="1737061407261" duration="425000" />
+      <workItem from="1737137635887" duration="14153000" />
+      <workItem from="1737213592665" duration="434000" />
+      <workItem from="1737214086654" duration="15552000" />
+      <workItem from="1737295919608" duration="12011000" />
+      <workItem from="1737390028727" duration="15117000" />
+      <workItem from="1737473348139" duration="7211000" />
+      <workItem from="1737553062362" duration="19759000" />
+      <workItem from="1737644791509" duration="3463000" />
+      <workItem from="1737725442046" duration="17499000" />
+      <workItem from="1737813937646" duration="10150000" />
+      <workItem from="1738807084691" duration="918000" />
+      <workItem from="1740530390907" duration="3392000" />
+      <workItem from="1745246261683" duration="14580000" />
+      <workItem from="1745304770707" duration="15182000" />
+      <workItem from="1745679502975" duration="761000" />
+      <workItem from="1748200532996" duration="27114000" />
+      <workItem from="1748371325362" duration="43750000" />
+      <workItem from="1748534694827" duration="12035000" />
+      <workItem from="1748598628688" duration="5198000" />
+      <workItem from="1748626288698" duration="52151000" />
+      <workItem from="1748871588226" duration="50891000" />
+      <workItem from="1749134330832" duration="8271000" />
+      <workItem from="1750011862907" duration="54470000" />
+      <workItem from="1750689838934" duration="21013000" />
+      <workItem from="1750872757888" duration="10343000" />
+      <workItem from="1750949359834" duration="21701000" />
+      <workItem from="1760578464829" duration="1150000" />
+      <workItem from="1760656813473" duration="4565000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

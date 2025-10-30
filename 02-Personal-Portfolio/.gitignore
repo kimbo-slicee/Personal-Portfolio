@@ -1,5 +1,0 @@
-# Ignore all files in the screenshots directory
-assets/screenshots
-assets/images
-# Ignore all files in the images directory
-vendors/particles-js

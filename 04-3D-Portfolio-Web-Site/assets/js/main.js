@@ -32,7 +32,7 @@ pages.forEach((page,index)=>{
                 },100 + index * 100);
             }
         }else{
-            // if(!e.target.classList.contains("page")) return; // Ignore clicks on buttons
+            if(!e.target.classList.contains("page")) return; // Ignore clicks on buttons
                 if(!page.classList.contains("flip")){
                 page.classList.add("flip");
                 page.style.zIndex=String(pages.length+index);
@@ -56,38 +56,96 @@ downloadCvButton.addEventListener("click", () => {
         a.click();
 });
 /*=========================Projects ===========================*/
-const list = document.querySelector(".projects-container ul");
-const items = list.querySelectorAll("li");
-const setIndex = (event) => {
-    // for flex
-    // if (event.target.closest('li'))
-    //   for (const item of items)
-    //     item.dataset.active =
-    //       item === event.target.closest('li') ? 'true' : 'false'
-    // for grid
-    const closest = event.target.closest("li");
-    if (closest) {
-        const index = [...items].indexOf(closest);
-        const cols = new Array(list.children.length)
-            .fill()
-            .map((_, i) => {
-                items[i].dataset.active = (index === i).toString();
-                return index === i ? "10fr" : "1fr";
-            })
-            .join(" ");
-        list.style.setProperty("grid-template-columns", cols);
-    }
-};
-list.addEventListener("focus", setIndex, true);
-list.addEventListener("click", setIndex);
-list.addEventListener("pointermove", setIndex);
-const resync = () => {
-    const w = Math.max(
-        ...[...items].map((i) => {
-            return i.offsetWidth;
-        })
-    );
-    list.style.setProperty("--article-width", w);
-};
-window.addEventListener("resize", resync);
-resync();
+// const list = document.querySelector(".projects-container ul");
+// const items = list.querySelectorAll("li");
+// const setIndex = (event) => {
+//     // for flex
+//     // if (event.target.closest('li'))
+//     //   for (const item of items)
+//     //     item.dataset.active =
+//     //       item === event.target.closest('li') ? 'true' : 'false'
+//     // for grid
+//     const closest = event.target.closest("li");
+//     if (closest) {
+//         const index = [...items].indexOf(closest);
+//         const cols = new Array(list.children.length)
+//             .fill()
+//             .map((_, i) => {
+//                 items[i].dataset.active = (index === i).toString();
+//                 return index === i ? "10fr" : "1fr";
+//             })
+//             .join(" ");
+//         list.style.setProperty("grid-template-columns", cols);
+//     }
+// };
+// list.addEventListener("focus", setIndex, true);
+// list.addEventListener("click", setIndex);
+// list.addEventListener("pointermove", setIndex);
+// const resync = () => {
+//     const w = Math.max(
+//         ...[...items].map((i) => {
+//             return i.offsetWidth;
+//         })
+//     );
+//     list.style.setProperty("--article-width", w);
+// };
+// window.addEventListener("resize", resync);
+// resync();
+/*--------------------Accordion------------*/
+// function activeToggle(){
+//     let d = document,
+//         accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+//         setAria,
+//         setAccordionAria,
+//         touchSupported = ('ontouchstart' in window),
+//         pointerSupported = ('pointerdown' in window);
+//
+//    const skipClickDelay = function(e){
+//         e.preventDefault();
+//         e.target.click();
+//     }
+//
+//     const setAriaAttr = function(el, ariaType, newProperty){
+//         el.setAttribute(ariaType, newProperty);
+//     };
+//     setAccordionAria = function(el1, el2, expanded){
+//         switch(expanded) {
+//             case "true":
+//                 setAriaAttr(el1, 'aria-expanded', 'true');
+//                 setAriaAttr(el2, 'aria-hidden', 'false');
+//                 break;
+//             case "false":
+//                 setAriaAttr(el1, 'aria-expanded', 'false');
+//                 setAriaAttr(el2, 'aria-hidden', 'true');
+//                 break;
+//             default:
+//                 break;
+//         }
+//     };
+//     switchAccordion= function  (e)  {
+//         e.preventDefault();
+//         let thisAnswer = e.target.parentNode.nextElementSibling;
+//         let thisQuestion = e.target;
+//         if(thisAnswer.classList.contains('is-collapsed')) {
+//             setAccordionAria(thisQuestion, thisAnswer, 'true');
+//         } else {
+//             setAccordionAria(thisQuestion, thisAnswer, 'false');
+//         }
+//         thisQuestion.classList.toggle('is-collapsed');
+//         thisQuestion.classList.toggle('is-expanded');
+//         thisAnswer.classList.toggle('is-collapsed');
+//         thisAnswer.classList.toggle('is-expanded');
+//
+//         thisAnswer.classList.toggle('animateIn');
+//     };
+//     for (let i=0,len=accordionToggles.length; i<len; i++) {
+//         if(touchSupported) {
+//             accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+//         }
+//         if(pointerSupported){
+//             accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+//         }
+//         accordionToggles[i].addEventListener('click', switchAccordion, false);
+//     }
+// }
+// activeToggle();
