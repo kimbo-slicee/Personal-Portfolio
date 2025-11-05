@@ -1025,7 +1025,15 @@
    /* =========== resume content stying ========== */
 
    .resume-container{
-      /*position: relative;*/
+      position: relative;
+      overflow: hidden;
+      min-height: 495px;
+      max-width: min(90%,800px);
+      margin-inline: auto;
+      @media (max-width:600px) {
+         min-height: 600px;
+         min-width: 100%;
+      }
    }
 
    .resume-wrapper{
@@ -1146,7 +1154,7 @@
       color:var(--body-bg-color);
       font-size: var(--fs-sm);
       font-weight: var(--fw-bold);
-      border-radius:10px;
+      border-radius:5px;
       padding: 0.2rem 0.6rem;
       justify-self: start;
       @media (max-width:600px) {
@@ -1210,6 +1218,171 @@
    .skill-details{
       text-align: left;
    }
+
+   /*
+   ==========================================================
+      ------------ SERVICES STYLING ---------------
+   ==========================================================
+   */
+
+    .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 250px);
+        align-content: center;
+        justify-content: center;
+        gap: var(--space-xl);
+    }
+
+   .services-card .front{
+      position: relative;
+      background: var(--bg-card);
+      padding: var(--space-lg) var(--space-md);
+      border-radius: 10px;
+      transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+      border-bottom: 3px solid var(--color-primary);
+      text-align: center;
+      backdrop-filter: blur(30px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+   }
+
+   /* .services-card .front:hover {*/
+   /*     transform: translateY(-10px);*/
+   /* }*/
+
+   /*.services-card .front:before{*/
+   /*  content: "";*/
+   /*  position: absolute;*/
+   /*  inset: 0;*/
+   /*  width: 100%;*/
+   /*  height: 100%;*/
+   /*  z-index: var(--z-back);*/
+   /* clip-path: circle(0% at 100% 0%);*/
+   /* transition: clip-path .3s ease-in-out;*/
+   /* background: var(--bg-card);*/
+   /*}*/
+
+   /*.services-card .front:hover:before{*/
+   /*       clip-path: circle(150% at 100% 0%);*/
+   /* }*/
+
+   .services-card .front .service-icon svg{
+        width: 3rem;
+        max-width: 100%;
+        margin-bottom: var(--space-sm);
+   }
+   .services-card .front .service-content h3 {
+        font-size: var(--fs-lg);
+        margin-bottom:var(--space-sm);
+        color: var(--color-white);
+    }
+   .see-more{
+        cursor:pointer;
+   }
+   .see-more svg{
+      width: 1rem;
+   }
+   .see-more p {
+        font-size: var(--fs-sm);
+        color: var(--color-primary);
+         font-weight: var(--fw-medium);
+       &:hover{
+          color: var(--hover-color);
+          text-decoration: underline;
+          text-underline-offset: 4px;
+       }
+    }
+
+   /* ======= Service Modal Styling ======= */
+
+   .service-model-backdrop{
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg-modal);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: var(--z-top);
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+      transform-origin: center;
+   }
+
+   .service-model-backdrop.open{
+        visibility: visible;
+        opacity: 1;
+   }
+
+   .service-model{
+        position: relative;
+        background-color: var(--body-bg-color);
+        padding: var(--space-lg);
+        border-radius: var(--radius-lg);
+        border-bottom: 5px solid var(--color-primary);
+        max-width: 600px;
+        width: 90%;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        display: grid;
+        gap: var(--space-lg);
+        max-height: 500px;
+        overflow-y: auto;
+    }
+
+   .service-model svg{
+        position: absolute;
+        top: var(--space-sm);
+        right: var(--space-sm);
+        width: 1.5rem;
+        cursor: pointer;
+        fill: var(--color-primary);
+        transition: transform .3s ease-in-out, fill .3s ease-in-out;
+   }
+
+   .service-model svg:hover{
+        fill: var(--hover-color);
+        transform: rotate(90deg);
+   }
+   .services-overview{
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: var(--space-sm);
+   }
+   .services-details h4{
+      color: var(--color-primary);
+   }
+   .services-details .services-list{
+     margin-top: var(--space-sm);
+     display: grid;
+     gap: var(--space-sm);
+   }
+
+    .services-details .services-list li{
+       display: flex;
+       align-items: center;
+       gap: var(--space-sm);
+    }
+
+   .services-details .services-list li::before{
+     content: "✔";
+     color: var(--color-primary);
+     font-size: var(--fs-sm);
+   }
+
+
+
+
+
+
+
+
+
+
 }
 /*
 ==========================================================
