@@ -1,0 +1,90 @@
+/* Base styles (mobile first) */
+body {
+   .cta-button{ a{display: none}
+       button{display: block}
+   }
+}
+
+/* Medium devices (tablet) */
+@media (min-width: 768px) {
+    body {
+        .cta-button {
+            a {
+                display: block
+            }
+
+            button {
+                display: none
+            }
+        }
+
+        #hero .hero-content {
+            justify-content: space-between;
+            grid-template-areas:
+                'hero-socials hero-image hero-image hero-scroll'
+                'hero-socials hero-text hero-text hero-scroll';
+
+
+
+        }
+
+        #hero .hero-content .hero-image img {
+            min-width: 300px;
+        }
+        #hero .social-links {
+            display: flex;
+        }
+        #hero .hero-content .hero-text {
+            grid-area: hero-text;
+
+        }
+    }
+}
+
+/* Large devices (desktop) */
+@media (min-width: 1025px) {
+    body {
+        /* ====== Hero Section ====== */
+        #hero .hero-content {
+            justify-content: space-between;
+            grid-template-areas:
+                'hero-socials hero-image hero-image hero-text hero-scroll';
+        }
+        #hero .hero-content .hero-image img {
+            width: 400px;
+        }
+        #hero .hero-content .hero-text {
+            justify-items: flex-start;
+            text-align: left;
+        }
+        #hero .hero-content .hero-text .hero-button {
+            justify-self: flex-start;
+        }
+        #hero .hero-content .social-links {
+            justify-self: left;
+        }
+        #hero .hero-content .mouse-scroll {
+
+        }
+
+        /* ====== ABOUT Section ====== */
+        #about .about-content {
+            grid-template-areas:
+                    'hero-circle about-text'
+                    'hero-circle about-carousel';
+            grid-template-columns: 1fr auto;
+            align-content: center;
+            gap: var(--space-xl);
+        }
+        #about .about-content .about-text {
+            text-align: left;
+        }
+
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1440px) {
+
+
+}

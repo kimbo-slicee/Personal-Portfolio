@@ -1,0 +1,32 @@
+@import "reset.css" layer(reset);
+@import "typography.css" layer(typography);
+@import "variables.css" layer(variables);
+@import "themes.css" layer(themes);
+@import "base.css" layer(base);
+@import "layouts.css" layer(layout);
+@import "components.css" layer(components);
+@import "utilities.css" layer(utilities);
+@import "responsive.css" layer(responsive);
+@import "animations.css" layer(animations);
+
+@layer
+variables,  /* CSS variables for colors, spacing, etc. */
+reset,      /* reset browser defaults */
+typography, /* base fonts, headings, etc. */
+themes,     /* dark/light theme rules */
+base,       /* base elements like body, a, p, etc. */
+layout,     /* structural layout like containers, wrappers */
+components, /* buttons, cards, modals */
+animations, /* animations */
+utilities,  /* helper classes like .text-center, .mt-4 */
+responsive  /* media queries, overrides for small screens */
+;
+
+/* You can add global styles here if needed */
+
+
+
+
+
+
+

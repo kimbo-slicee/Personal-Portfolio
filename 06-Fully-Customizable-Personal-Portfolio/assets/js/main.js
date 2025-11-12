@@ -1,108 +1,128 @@
-/* ====================================================
-     About me Section accordion
-   ===================================================
-*/
+/*carousel code */
+const carouselDuplicates = 2;
 
-/* ====================================================
-   About Me Section Tabs (Accordion)
-==================================================== */
+function lerp(a, b, t) {
+    return a + (b - a) * t;
+}
 
+function getTouchMidpoint(touches) {
+    let midpoint = {
+        x: touches[0].clientX,
+        y: touches[0].clientY
+    };
 
-/* =====================================================
-   Resume section tabs and tab contents
-===================================================== */
-const resumeButtons=document.querySelectorAll(".resume-btn .btn");
-const resumeWrapper=document.querySelectorAll(".resume-wrapper");
+    for (let i = 1; i < touches.length; i++) {
+        midpoint.x = lerp(midpoint.x, touch.clientX, 0.5);
+        midpoint.y = lerp(midpoint.y, touch.clientY, 0.5);
+    }
 
-resumeButtons.forEach((btn,index)=>{
-        btn.addEventListener("click",()=>{
-            resumeButtons.forEach((btn)=>btn.classList.remove("active"));
-            resumeWrapper.forEach((btn)=>btn.classList.remove("active"));
-            btn.classList.add("active");
-            resumeWrapper[index].classList.add("active");
-        })
-})
+    return midpoint;
+}
 
-/* =====================================================
-   Service modal open/close function
-===================================================== */
-const servicesCard=document.querySelectorAll(".services-card .see-more");
-const closeIcon=document.querySelectorAll(".service-model svg");
+const carousel = document.querySelector(".carousel");
+const carouselContent = carousel.querySelector(".carousel-items");
+const prefersReducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+const hasFinePointer = matchMedia("(pointer: fine)");
+let carouselHasMouse = false;
+let carouselTouches = 0;
+let lastMouseX = null;
+let lastTouchX = null;
+let scrollDelta = 0;
+let lastTimestamp = 0;
 
-closeIcon.forEach((icon,index)=>{
-    icon.addEventListener("click",()=>{
-        const backdrop=document.querySelectorAll(".service-model-backdrop")[index];
-        backdrop.classList.remove("open");
-    })
+// An event handler for handling touchend and touchcancel.
+const handleTouchRemove = (event) => {
+    carouselTouches -= event.changedTouches.length;
+    if (carouselTouches <= 0 && !carouselHasMouse) {
+        lastTouchX = null;
+    }
+};
+
+// Calling this with requestAnimationFrame will start the update loop.
+const updateScroll = (timestamp) => {
+    carousel.scrollBy({
+        left: scrollDelta
+    });
+
+    if (carouselHasMouse || carouselTouches > 0 || prefersReducedMotion.matches) {
+        scrollDelta = 0;
+    } else {
+        scrollDelta = lerp(scrollDelta, 0, 0.045);
+    }
+
+    lastTimestamp = timestamp;
+    requestAnimationFrame(updateScroll);
+};
+
+// Handle mouse input.
+carousel.addEventListener("mousedown", (event) => {
+    carouselHasMouse = true;
 });
 
+window.addEventListener("mouseup", (event) => {
+    carouselHasMouse = false;
+    lastMouseX = null;
+});
 
-servicesCard.forEach((card,index)=>{
-    card.addEventListener("click",()=>{
-        const backdrop=document.querySelectorAll(".service-model-backdrop")[index];
-        backdrop.classList.add("open");
+window.addEventListener("mousemove", (event) => {
+    if (carouselHasMouse) {
+        if (lastMouseX !== null) {
+            scrollDelta = lastMouseX - event.x;
+        }
 
-    })
-})
+        lastMouseX = event.x;
+    }
+});
 
-/* =====================================================
-   Portfolio modals, tabs and cards
-===================================================== */
+carousel.addEventListener("wheel", (event) => {
+    if (hasFinePointer.matches && event.shiftKey) {
+        event.preventDefault();
 
-// Filter portfolio cards according to portfolio tabs.
+        const scrollMultiplier = prefersReducedMotion.matches ? 2 : 0.1;
+        scrollDelta += event.deltaY * scrollMultiplier;
+    }
+});
 
-// Open/Close Portfolio modals.
+// Handle touch input.
+carousel.addEventListener("touchstart", (event) => {
+    if (lastTouchX === null) {
+        lastTouchX = getTouchMidpoint(event.touches).x;
+    }
+    carouselTouches += event.changedTouches.length;
+});
 
-/* =====================================================
-   Testimonial Swiper
-===================================================== */
+window.addEventListener("touchmove", (event) => {
+    if (lastTouchX !== null) {
+        const touchMidpoint = getTouchMidpoint(event.touches);
+        scrollDelta = -(touchMidpoint.x - lastTouchX);
+        lastTouchX = touchMidpoint.x;
+    }
+});
 
-/* =====================================================
-   Send/Receive emails from contact form - EmailJS
-===================================================== */
+window.addEventListener("touchend", handleTouchRemove);
+window.addEventListener("touchcancel", handleTouchRemove);
 
-/* =====================================================
-   Shrink the height of the header on scroll
-===================================================== */
+// This is where the infinite scrolling logic comes to play.
+carousel.addEventListener("scroll", (event) => {
+    const carouselRect = carouselContent.getBoundingClientRect();
 
-/* =====================================================
-   Bottom navigation menu
-===================================================== */
+    if (carouselRect.left > window.innerWidth) {
+        carousel.scrollLeft += carouselRect.width;
+    } else if (carouselRect.right < 0) {
+        carousel.scrollLeft -= carouselRect.width;
+    }
+});
 
-// Each bottom navigation menu items active on page scroll.
+// Duplicate the carouselContent on both the front and the back of the carousel to create the illusion.
+for (let i = 0; i < carouselDuplicates; i++) {
+    const carouselDuplicate = carouselContent.cloneNode(true);
+    carouselDuplicate.ariaHidden = true;
+    carousel.prepend(carouselDuplicate);
+    carousel.append(carouselDuplicate.cloneNode(true));
+}
 
-// Javascript to show bottom navigation menu on home(page load).
+// Shift the starting scroll position to the right.
+carousel.scrollLeft += carouselContent.offsetWidth * carouselDuplicates;
 
-// Javascript to show/hide bottom navigation menu on home(scroll).
-
-// Hide bottom navigation menu on click menu-hide-btn.
-
-// Show bottom navigation menu on click menu-show-btn.
-
-/* =====================================================
-   To-top-button with scroll indicator bar
-===================================================== */
-
-/* =====================================================
-   Customized cursor on mousemove
-===================================================== */
-
-// Cursor effects on hover website elements.
-
-/* =====================================================
-   Website dark/light theme
-===================================================== */
-
-// Change theme and save current theme on click the theme button.
-
-// Get saved theme icon and theme on document loaded.
-
-/* =====================================================
-   ScrollReveal JS animations
-===================================================== */
-
-// Common reveal options to create reveal animations.
-
-// Target elements and specify options to create reveal animations.
-
-// Rolling Text Hover Animation
+// Start the update loop.
+requestAnimationFrame(updateScroll);
