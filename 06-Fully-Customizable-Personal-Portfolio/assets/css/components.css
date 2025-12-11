@@ -359,6 +359,7 @@
     gap: var(--space-md);
     padding:1.5rem;
 }
+
 .carousel-item:focus {
     outline: none;
 }
@@ -386,30 +387,19 @@
 
 #resume .resume-buttons {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: var(--space-md);
+    grid-template-columns: repeat(2, auto);
+    gap: var(--space-lg);
     justify-content: center;
 }
 
-@container (max-width: 600px) {
-.resume-buttons {
-    grid-template-columns: repeat(2, auto);
-}
-
-.resume-buttons .btn:last-child {
+#resume .resume-buttons .btn:last-child{
     grid-column: 1 / -1;
     justify-self: center;
 }
-}
 
-
-.resume-container {
+.resume-container{
     position: relative;
-    min-height: 500px;
-    @media (max-width: 600px) {
-        min-height: 600px;
-        min-width: 100%;
-    }
+    margin-block-end: 4.5rem;
 }
 
 .resume-wrapper {
@@ -424,18 +414,6 @@
     transform-origin: center;
     transition: transform 0.75s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 
-}
-
-.resume-wrapper.eduction {
-    transform: translateX(-100%);
-}
-
-.resume-wrapper.experience {
-    transform: translateX(100%);
-}
-
-.resume-wrapper.skills {
-    transform: translateY(-100%);
 }
 
 .resume-wrapper.active {
@@ -456,6 +434,7 @@
 }
 
 /* ---------- Timeline ---------- */
+
 .timeline-bar {
     background-color: var(--color-primary);
     margin-inline: auto;
@@ -463,15 +442,10 @@
     width: 3px;
 }
 
-.resume-wrapper.experience .timeline-bar {
-    min-height: 220px;
-}
-
 .timeline-items {
     position: absolute;
     display: grid;
     gap: 7rem;
-
 }
 
 .timeline-items .timeline-item {
@@ -495,40 +469,27 @@
     position: absolute;
     display: flex;
     align-items: center;
-    gap: var(--space-md);
-    width: 250px;
-    right: 0;
-    @media (max-width: 600px) {
-        width: 150px;
-        right: 15px;
-        flex-direction: column;
-        text-align: center;
-    }
+    gap: .75rem;
+    width: 150px;
+    right: 15px;
 }
 
 .timeline-items .timeline-item.right .item-wrapper {
-    left: 30px;
-    @media (max-width: 600px) {
-        left: 15px;
-    }
+    left: 15px;
 }
 
 .item-wrapper .resume-details {
     display: grid;
-    gap: var(--space-xs);
-    @media (max-width: 600px) {
-        gap: var(--space-md);
-    }
+    gap: var(--space-md);
 }
 
 .item-wrapper .resume-details h2 {
-    font-size: var(--fs-md);
-    text-transform: uppercase;
+    font-size: var(--fs-sm);
     font-weight: var(--fw-bold);
 }
 
 .item-wrapper .resume-details h3 {
-    font-size: var(--fs-xs);
+    font-size: .7rem;
     color: var(--color-white);
 }
 
@@ -540,25 +501,22 @@
     border-radius: 5px;
     padding: 0.2rem 0.6rem;
     justify-self: start;
-    @media (max-width: 600px) {
-        padding: 0.1rem .3rem;
-        justify-self: center;
-    }
 }
 
 
 /* === Skills Section === */
 .resume-wrapper.skills {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: var(--space-xl);
+    gap: var(--space-lg);
 }
 
 .card-header {
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--space-md);
+    font-weight: var(--fw-bold);
 }
 
 .card-header h2 {
@@ -568,13 +526,14 @@
 .card-body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md) var(--space-xl);
+    margin-top: 1.5rem;
+    gap: 1.5rem;
 }
 
 .card-body article {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: var(--space-md);
 }
 
 .card-body article h3 {
@@ -594,6 +553,8 @@
 .skill-details {
     text-align: left;
 }
+/**/
+
 
 
 

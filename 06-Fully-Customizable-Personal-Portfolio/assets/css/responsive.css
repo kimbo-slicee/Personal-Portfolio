@@ -8,7 +8,8 @@ body {
 /* Medium devices (tablet) */
 @media (min-width: 768px) {
     body {
-        .cta-button {
+        /* ====== HERO SECTION ====== */
+        #hero .cta-button {
             a {
                 display: block
             }
@@ -17,17 +18,12 @@ body {
                 display: none
             }
         }
-
         #hero .hero-content {
             justify-content: space-between;
             grid-template-areas:
                 'hero-socials hero-image hero-image hero-scroll'
                 'hero-socials hero-text hero-text hero-scroll';
-
-
-
         }
-
         #hero .hero-content .hero-image img {
             min-width: 300px;
         }
@@ -38,13 +34,63 @@ body {
             grid-area: hero-text;
 
         }
+
+        /* ====== RESUME SECTION ====== */
+        /* ====== ABOUT SECTION ====== */
+        #resume .resume-buttons {
+            grid-template-columns: repeat(3, auto);
+        }
+
+        /* Let buttons size naturally on desktop */
+        #resume .resume-buttons .btn {
+            width: auto;
+        }
+
+        /* Put the last button into the 3rd column */
+        #resume .resume-buttons .btn:last-child {
+            grid-column: 3 / 4 ;
+        }
+
+        #resume .resume-container{
+            margin-top: 5rem;
+        }
+
+        .timeline-items .item-wrapper {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            width: 180px;
+            right: 50px;
+        }
+
+        .timeline-items .timeline-item.right .item-wrapper {
+            left: 50px;
+        }
+
+        .item-wrapper .resume-details {
+            display: grid;
+            gap: var(--space-sm);
+        }
+
+        .item-wrapper .resume-details h2 {
+            font-size: var(--fs-md);
+            font-weight: var(--fw-bold);
+        }
+
+        .item-wrapper .resume-details h3 {
+            font-size: var(--fs-xs);
+            color: var(--color-white);
+        }
     }
+
+
 }
 
 /* Large devices (desktop) */
 @media (min-width: 1025px) {
     body {
-        /* ====== Hero Section ====== */
+        /* ====== Hero SECTION ====== */
         #hero .hero-content {
             justify-content: space-between;
             grid-template-areas:
@@ -67,7 +113,7 @@ body {
 
         }
 
-        /* ====== ABOUT Section ====== */
+        /* ====== ABOUT SECTION ====== */
         #about .about-content {
             grid-template-areas:
                     'hero-circle about-text'
@@ -80,6 +126,10 @@ body {
             text-align: left;
         }
 
+        /* ====== RESUME SECTION ====== */
+        #resume .resume-buttons {
+
+        }
     }
 }
 
