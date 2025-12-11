@@ -11,15 +11,39 @@
 <body>
     <header id="header" class="site-header">
     <div class="container flex-between">
-
         <!-- Logo / Branding -->
         <div class="logo">
             <a href="index.html" aria-label="Go to homepage">Mohammed El Aouri</a>
         </div>
-
         <!--User Actions-->
         <div class="controls flex-between gap-sm">
+            <!-- Language toggle  -->
+            <div class="language-switcher flex">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                     fill="currentColor" class="icon">
+                    <path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/>
+                </svg>
+                <ul role="list" class="language-options">
+                    <li class="active">
+                        <label class="flex-center gap-sm">
+                            <input type="radio" name="language" checked>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <!-- Theme Switcher -->
+            <label class="theme-switcher flex">
+                <input checked="checked" type="checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                     class="icon moon-icon">
+                    <path d="M9.8216 2.23796C9.29417 3.38265 9 4.65697 9 6C9 10.9706 13.0294 15 18 15C19.343 15 20.6174 14.7058 21.762 14.1784C20.7678 18.6537 16.7747 22 12 22C6.47715 22 2 17.5228 2 12C2 7.22532 5.3463 3.23221 9.8216 2.23796ZM18.1642 2.29104L19 2.5V3.5L18.1642 3.70896C17.4476 3.8881 16.8881 4.4476 16.709 5.16417L16.5 6H15.5L15.291 5.16417C15.1119 4.4476 14.5524 3.8881 13.8358 3.70896L13 3.5V2.5L13.8358 2.29104C14.5524 2.1119 15.1119 1.5524 15.291 0.835829L15.5 0H16.5L16.709 0.835829C16.8881 1.5524 17.4476 2.1119 18.1642 2.29104ZM23.1642 7.29104L24 7.5V8.5L23.1642 8.70896C22.4476 8.8881 21.8881 9.4476 21.709 10.1642L21.5 11H20.5L20.291 10.1642C20.1119 9.4476 19.5524 8.8881 18.8358 8.70896L18 8.5V7.5L18.8358 7.29104C19.5524 7.1119 20.1119 6.5524 20.291 5.83583L20.5 5H21.5L21.709 5.83583C21.8881 6.5524 22.4476 7.1119 23.1642 7.29104Z"></path>
+                </svg>
 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon sun-icon">
+                    <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path>
+                </svg>
+            </label>
+            <!-- Call to Action Button -->
             <div class="cta-button flex">
                 <a href="#contact" class="btn btn-primary">Let's Talk</a>
                 <!-- Mobile Chat Icon -->
@@ -30,21 +54,9 @@
                     </svg>
                 </button>
             </div>
-
-            <!-- Theme Switcher -->
-            <label class="theme-switcher flex">
-                <input checked="checked" type="checkbox">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon moon-icon">
-                    <path d="M9.8216 2.23796C9.29417 3.38265 9 4.65697 9 6C9 10.9706 13.0294 15 18 15C19.343 15 20.6174 14.7058 21.762 14.1784C20.7678 18.6537 16.7747 22 12 22C6.47715 22 2 17.5228 2 12C2 7.22532 5.3463 3.23221 9.8216 2.23796ZM18.1642 2.29104L19 2.5V3.5L18.1642 3.70896C17.4476 3.8881 16.8881 4.4476 16.709 5.16417L16.5 6H15.5L15.291 5.16417C15.1119 4.4476 14.5524 3.8881 13.8358 3.70896L13 3.5V2.5L13.8358 2.29104C14.5524 2.1119 15.1119 1.5524 15.291 0.835829L15.5 0H16.5L16.709 0.835829C16.8881 1.5524 17.4476 2.1119 18.1642 2.29104ZM23.1642 7.29104L24 7.5V8.5L23.1642 8.70896C22.4476 8.8881 21.8881 9.4476 21.709 10.1642L21.5 11H20.5L20.291 10.1642C20.1119 9.4476 19.5524 8.8881 18.8358 8.70896L18 8.5V7.5L18.8358 7.29104C19.5524 7.1119 20.1119 6.5524 20.291 5.83583L20.5 5H21.5L21.709 5.83583C21.8881 6.5524 22.4476 7.1119 23.1642 7.29104Z"></path>
-                </svg>
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon sun-icon">
-                    <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path>
-                </svg>
-            </label>
         </div>
     </div>
-</header>
+    </header>
     <main>
         <section id="hero" class="hero-section section"  aria-label="Hero Section">
             <div class="container">
@@ -622,7 +634,7 @@
                 </header>
                 <div class="services-container wrapper">
                     <!-- Service 1 -->
-                    <div class="services-card">
+                    <div class="services-card card">
                         <div class="front">
                             <div class="service-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" class="icon">
@@ -639,9 +651,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="service-model-backdrop">
+                        <div class="service-model-backdrop hidden">
                             <div class="service-model">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                     class="close-icon icon">
                                     <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z">
                                     </path>
                                 </svg>
@@ -663,7 +676,7 @@
                         </div>
                     </div>
                     <!-- Service 2 -->
-                    <div class="services-card">
+                    <div class="services-card card">
                         <div class="front">
                             <div class="service-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" class="icon">
@@ -680,9 +693,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="service-model-backdrop">
+                        <div class="service-model-backdrop hidden">
                             <div class="service-model">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                     class="close-icon icon">
                                     <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z">
                                     </path>
                                 </svg>
@@ -703,7 +717,7 @@
                         </div>
                     </div>
                     <!-- Service 3 -->
-                    <div class="services-card">
+                    <div class="services-card card">
                         <div class="front">
                             <div class="service-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
@@ -721,9 +735,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="service-model-backdrop">
+                        <div class="service-model-backdrop hidden">
                             <div class="service-model">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                     class="close-icon icon">
                                     <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z">
                                     </path>
                                 </svg>
@@ -747,7 +762,25 @@
             </div>
         </section>
         <section id="portfolio" class="portfolio-section section" aria-label="portfolio Section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Portfolio</h2>
+                    <p class="section-subtitle">My Recent Works</p>
+                </header>
+                <div class="portfolio">
+                    <div class="portfolio-buttons flex-center gap-sm">
+                        <button class="btn btn-secondary" data-filter="all">All</button>
+                        <button class="btn btn-primary" data-filter="front-end">Front-End</button>
+                        <button class="btn btn-primary" data-filter="back-end">Back-End</button>
+                        <button class="btn btn-primary" data-filter="full-stack">Full-Stack</button>
+                        <button class="btn btn-primary" data-filter="database">Game development</button>
+                    </div>
+                    <div class="portfolio-container wrapper">
+                        <!-- Portfolio items will be dynamically inserted here -->
 
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="articles" class="articles-section section" aria-label="articles Section"></section>
         <section id="contact" class="contact-section section" aria-label="contact Section"></section>

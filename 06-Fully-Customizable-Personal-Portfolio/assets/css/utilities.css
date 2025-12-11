@@ -21,7 +21,7 @@
 /* ======== BUTTON STYLES ============ */
 
 .btn{
-    display: inline-block;
+    /*display: inline-block;*/
     padding: .5rem 1rem;
     border-radius: var(--radius-lg);
     font-size: var(--fs-md);
@@ -58,16 +58,6 @@
 
 /* ======== ICON STYLES ============ */
 
-.icon{
-    width: 1.5rem;
-    height: 1.5rem;
-    fill: var(--color-primary);
-    transition: fill 0.3s ease;
-}
-
-.icon:hover {
-    fill: var(--hover-color);
-}
 
 /* ======== CARD STYLES ============ */
 .card{
@@ -75,14 +65,13 @@
     border-radius: var(--radius-md);
     padding:2rem 1.5rem;
     text-align: center;
+    border-bottom: 3px solid var(--color-primary);
 }
 
 
 /*======== Flex Classes ============*/
-.flex{
-    display: flex;
+.flex{display: flex;}
 
-}
 .flex-center{
     display: flex;
     justify-content: center;
@@ -145,9 +134,6 @@
 }
 .p-0{
     padding: 0 !important;
-}
-.p-auto{
-    padding: auto !important;
 }
 .mt-1{
     margin-top: var(--space-sm) !important;

@@ -9,20 +9,21 @@
 @import "responsive.css" layer(responsive);
 @import "animations.css" layer(animations);
 
+/* Define the order of layers */
 @layer
-variables,  /* CSS variables for colors, spacing, etc. */
-reset,      /* reset browser defaults */
-typography, /* base fonts, headings, etc. */
-themes,     /* dark/light theme rules */
-base,       /* base elements like body, a, p, etc. */
-layout,     /* structural layout like containers, wrappers */
-components, /* buttons, cards, modals */
-animations, /* animations */
-utilities,  /* helper classes like .text-center, .mt-4 */
-responsive  /* media queries, overrides for small screens */
-;
+variables,
+reset,
+typography,
+themes,
+base,
+layout,
+components,
+animations,
+utilities,
+responsive
 
-/* You can add global styles here if needed */
+
+
 
 
 

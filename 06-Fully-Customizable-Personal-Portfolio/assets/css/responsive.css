@@ -1,21 +1,13 @@
-/* Base styles (mobile first) */
-body {
-   .cta-button{ a{display: none}
-       button{display: block}
-   }
-}
-
 /* Medium devices (tablet) */
 @media (min-width: 768px) {
     body {
-        /* ====== HERO SECTION ====== */
-        #hero .cta-button {
+         .cta-button {
             a {
-                display: block
+                display: inline-block;
             }
 
             button {
-                display: none
+                display: none;
             }
         }
         #hero .hero-content {
@@ -35,8 +27,8 @@ body {
 
         }
 
-        /* ====== RESUME SECTION ====== */
         /* ====== ABOUT SECTION ====== */
+        /* ====== RESUME SECTION ====== */
         #resume .resume-buttons {
             grid-template-columns: repeat(3, auto);
         }
@@ -53,6 +45,7 @@ body {
 
         #resume .resume-container{
             margin-top: 5rem;
+
         }
 
         .timeline-items .item-wrapper {
@@ -82,6 +75,18 @@ body {
             font-size: var(--fs-xs);
             color: var(--color-white);
         }
+        /* ====== RESUME SECTION ====== */
+        #resume .resume-wrapper.skills {
+            grid-template-columns: repeat(2, auto);
+        }
+        /* ===== SERVICES SECTION ====== */
+        #services .services-container {
+            grid-template-columns: repeat(3, auto);
+            column-gap: var(--space-md);
+            place-items: stretch;
+        }
+
+        /* ====== PORTFOLIO SECTION ====== */
     }
 
 
@@ -126,10 +131,6 @@ body {
             text-align: left;
         }
 
-        /* ====== RESUME SECTION ====== */
-        #resume .resume-buttons {
-
-        }
     }
 }
 
