@@ -1,115 +1,117 @@
 @layer variables {
-    :root {
 
-        /* =============================
-           TYPOGRAPHY
-           ============================= */
-        --font-base:'Lato', sans-serif;
-        --font-heading:'Playfair Display', serif;
 
-        /* =============================
-           COLOR SYSTEM (HSL)
-           ============================= */
-        /* Suggested hue palette:
-           Blue: hsl(217, 85%, 74%)
-           Purple: hsl(245, 54%, 74%)
-           Teal: hsl(181, 47%, 49%)
-           Yellow: hsl(65, 60%, 70%)
-           Green: hsl(162, 60%, 65%)
-           Red: hsl(356, 67%, 70%)
-           Pink: hsl(330, 73%, 72%)
-        */
+:root {
 
-        --hue: 217;
-        --sat: 85%;
-        --light: 74%;
+    /* =============================
+       TYPOGRAPHY
+       ============================= */
+    --font-base:'Lato', sans-serif;
 
-        /* Core Colors */
-        --color-primary: hsl(var(--hue) var(--sat) var(--light));
-        --color-white: hsl(var(--hue) 45% 98%);
-        --color-dark: hsl(var(--hue) 26% 12%);
-        --color-gray: hsl(var(--hue) 0% 62%);
-        --color-muted: hsl(var(--hue) 25% 20%);
+    /* =============================
+       COLOR SYSTEM (HSL)
+       ============================= */
+    /* Suggested hue palette:
+       Blue: hsl(217, 85%, 74%)
+       Purple: hsl(245, 54%, 74%)
+       Teal: hsl(181, 47%, 49%)
+       Yellow: hsl(65, 60%, 70%)
+       Green: hsl(162, 60%, 65%)
+       Red: hsl(356, 67%, 70%)
+       Pink: hsl(330, 73%, 72%)
+    */
 
-        /* Theme Variations (Light / Dark modes) */
-        --text-color: var(--color-gray);
-        --heading-color: var(--color-primary);
-        --anchor-color: var(--color-primary);
-        --body-bg-color: hsl(250 25% 12%);
-        --hover-color: hsl(var(--hue) var(--sat) calc(var(--light) - 7%));
-        --btn-primary-clr: var(--body-bg-color);
-        --btn-secondary-clr: var(--color-primary);
+    --hue: 217;
+    --sat: 85%;
+    --light: 74%;
 
-        /* Backgrounds & Overlays */
-        --bg-bottom-nav: hsl(var(--hue) 32% 25% / 0.65);
-        --bg-card: linear-gradient(120deg, hsl(var(--hue) 54% 74% / .15), hsl(var(--hue) 54% 74% / .05));
-        --bg-modal: hsl(var(--hue) 54% 74% / 0.1);
-        --bg-footer: linear-gradient(1turn, hsl(var(--hue) 54% 74% / 0.15), hsl(var(--hue) 54% 74% / 0.1));
+    /* Core Colors */
+    --color-primary: hsl(var(--hue) var(--sat) var(--light));
+    --color-white: hsl(var(--hue) 45% 98%);
+    --color-dark: hsl(var(--hue) 26% 12%);
+    --color-gray: hsl(var(--hue) 0% 62%);
+    --color-muted: hsl(var(--hue) 25% 20%);
 
-        /* Scrollbar */
-        --scrollbar-track: var(--color-muted);
-        --scrollbar-thumb: var(--color-primary);
-        --scrollbar-thumb-hover: var(--hover-color);
+    /* Theme Variations (Light / Dark modes) */
+    --text-color: var(--color-gray);
+    --heading-color: var(--color-primary);
+    --anchor-color: var(--color-primary);
+    --body-bg-color: hsl(250 25% 12%);
+    --hover-color: hsl(var(--hue) var(--sat) calc(var(--light) - 7%));
+    --btn-primary-clr: var(--color-primary);
+    --btn-secondary-clr: var(--body-bg-color);
 
-        /* =============================
-           TYPOGRAPHY SCALE
-           ============================= */
+    /* Backgrounds & Overlays */
+    --bg-bottom-nav: hsl(var(--hue) 32% 25% / 0.65);
+    --bg-card: linear-gradient(120deg, hsl(var(--hue) 54% 74% / .15), hsl(var(--hue) 54% 74% / .05));
+    --bg-modal: hsl(var(--hue) 54% 74% / 0.1);
+    --bg-footer: linear-gradient(1turn, hsl(var(--hue) 54% 74% / 0.15), hsl(var(--hue) 54% 74% / 0.1));
 
-        --fs-xs: 0.75rem;
-        --fs-sm: 0.875rem;
-        --fs-md: 1rem;
-        --fs-lg: 1.125rem;
-        --fs-xl: 1.25rem;
-        --fs-2xl: 1.5rem;
-        --fs-3xl: 1.875rem;
-        --fs-4xl: 2rem;
-        --fs-5xl: 2.5rem;
+    /* Scrollbar */
+    --scrollbar-track: var(--color-muted);
+    --scrollbar-thumb: var(--color-primary);
+    --scrollbar-thumb-hover: var(--hover-color);
+    --scrollbar-bg: hsl(var(--hue) 25% 20%);
 
-        /* Headings (fluid) */
-        --fs-h1: clamp(2.85rem, 3vw + 1rem, 3.5rem);
-        --fs-h2: clamp(2.25rem, 2.5vw + 0.75rem, 3rem);
-        --fs-h3: clamp(1.97rem, 1vw + 0.5rem, 2.5rem);
-        --fs-h4: clamp(1.43rem, 1vw + 0.25rem, 2rem);
-        --fs-body: clamp(1rem, 0.5vw + 0.5rem, 1.125rem);
+    /* =============================
+       TYPOGRAPHY SCALE
+       ============================= */
 
-        /* =============================
-           FONT WEIGHTS & LINE HEIGHTS
-           ============================= */
-        --fw-light: 300;
-        --fw-regular: 400;
-        --fw-medium: 500;
-        --fw-bold: 700;
-        --fw-extrabold: 800;
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: 1.25rem;
+    --fs-2xl: 1.5rem;
+    --fs-3xl: 1.875rem;
+    --fs-4xl: 2rem;
+    --fs-5xl: 2.5rem;
 
-        --lh-tight: 1.1;
-        --lh-snug: 1.25;
-        --lh-normal: 1.5;
-        --lh-loose: 1.75;
+    /* Headings (fluid) */
+    --fs-h1: clamp(2.85rem, 3vw + 1rem, 3.5rem);
+    --fs-h2: clamp(2.25rem, 2.5vw + 0.75rem, 3rem);
+    --fs-h3: clamp(1.97rem, 1vw + 0.5rem, 2.5rem);
+    --fs-h4: clamp(1.43rem, 1vw + 0.25rem, 2rem);
+    --fs-body: clamp(1rem, 0.5vw + 0.5rem, 1.125rem);
 
-        /* =============================
-           SPACING SYSTEM
-           ============================= */
-        --space-xs: clamp(0.25rem, 0.5vw, 0.5rem);
-        --space-sm: clamp(0.5rem, 1vw, 1rem);
-        --space-md: clamp(.5rem, 2vw, 2rem);
-        --space-lg: clamp(1.5rem, 3vw, 3rem);
-        --space-xl: clamp(2rem, 3.5vw, 3.5rem);
+    /* =============================
+       FONT WEIGHTS & LINE HEIGHTS
+       ============================= */
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
 
-        /* =============================
-           BORDERS & RADII
-           ============================= */
-        --radius-sm: 0.5rem;
-        --radius-md: 1rem;
-        --radius-lg: 1.5rem;
-        --radius-full: 100%;
+    --lh-tight: 1.1;
+    --lh-snug: 1.25;
+    --lh-normal: 1.5;
+    --lh-loose: 1.75;
 
-        /* =============================
-           Z-INDEX
-           ============================= */
-        --z-back: -1;
-        --z-base: 0;
-        --z-normal: 1;
-        --z-overlay: 5;
-        --z-top: 10;
-    }
+    /* =============================
+       SPACING SYSTEM
+       ============================= */
+    --space-xs: clamp(0.25rem, 0.5vw, 0.5rem);
+    --space-sm: clamp(0.5rem, 1vw, 1rem);
+    --space-md: clamp(.5rem, 2vw, 2rem);
+    --space-lg: clamp(1.5rem, 3vw, 3rem);
+    --space-xl: clamp(2rem, 3.5vw, 3.5rem);
+
+    /* =============================
+       BORDERS & RADII
+       ============================= */
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-full: 100%;
+
+    /* =============================
+       Z-INDEX
+       ============================= */
+    --z-back: -1;
+    --z-base: 0;
+    --z-normal: 1;
+    --z-overlay: 5;
+    --z-top: 10;
+}
 }

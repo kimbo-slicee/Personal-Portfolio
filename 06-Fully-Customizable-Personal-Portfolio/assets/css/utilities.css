@@ -28,33 +28,38 @@
     font-weight: var(--fw-medium);
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
-}
-.btn:hover{
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    svg{fill: var(--color-white)}
-}
-
-.btn-primary{
-    background-color: var(--btn-primary-clr);
     color: var(--color-primary);
-    border: 1px solid var(--color-primary);
+    .icon{
+     fill: var(--color-primary);
+    }
+}
 
+.btn-primary,
+.btn.active{
+    background-color: var(--btn-primary-clr);
+    color: var(--body-bg-color);
+    border: 1px solid var(--color-primary);
+    & .icon{
+        fill: var(--body-bg-color);
+    }
 }
 
 .btn-secondary{
     background-color: var(--btn-secondary-clr);
-    color: var(--color-white);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    & .icon{
+        fill: var(--color-primary);
+    }
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus{
     background-color: var(--hover-color);
-    color: var(--color-white);
+    color: var(--body-bg-color);
 }
-.btn-secondary .icon{
-    fill: var(--color-white);
-}
+
+
 
 /* ======== ICON STYLES ============ */
 
@@ -66,6 +71,7 @@
     padding:2rem 1.5rem;
     text-align: center;
     border-bottom: 3px solid var(--color-primary);
+    max-width:350px;
 }
 
 

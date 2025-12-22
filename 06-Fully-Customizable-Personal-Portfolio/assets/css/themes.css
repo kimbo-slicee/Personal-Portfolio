@@ -1,0 +1,34 @@
+
+[data-theme="light"] {
+
+    /* Core Colors */
+    --color-primary: hsl(var(--hue) 26% 12%);
+    --color-white: hsl(var(--hue) 26% 12%);
+    --color-dark: hsl(var(--hue) 45% 98%);
+    --color-gray: hsl(var(--hue) 9% 46%);
+    --color-muted: hsl(var(--hue) var(--sat) var(--light));
+
+     /*Theme Variations (Light / Dark modes)*/
+    --text-color: var(--color-gray);
+    --heading-color: var(--color-primary);
+    --anchor-color: var(--color-primary);
+    --body-bg-color: hsl(var(--hue) 45% 98%);
+    --hover-color: hsl(var(--hue) 25% 12%);
+    --btn-primary-clr: var(--color-primary);
+    --btn-secondary-clr: var(--body-bg-color);
+
+    /* Backgrounds & Overlays */
+    --bg-bottom-nav: hsl(var(--hue) 32% 25% / 0.65);
+    --b-card:hsl(0 0% 100%);
+    --bg-modal: hsl(var(--hue) 50% 12% / 0.5);
+    --bg-footer: linear-gradient(
+                    1turn,
+                     var(--color-muted),
+                     hsl(var(--hue) var(--sat) var(--light) / 0.74));
+    /* Scrollbar */
+    --scrollbar-track: var(--color-muted);
+    --scrollbar-thumb: hsl(var(--hue) 9% 50%);
+    --scrollbar-thumb-hover: hsl(var(--hue) 10% 50%);
+    --scrollbar-bg: hsl(var(--hue) 25% 20%);
+
+}

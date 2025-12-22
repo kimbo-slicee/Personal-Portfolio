@@ -1,5 +1,5 @@
 .container {
-    width: min(80%, 1200px);
+    width: min(90%, 1200px);
     margin-inline: auto;
 }
 .wrapper {
@@ -14,7 +14,7 @@
     text-align: center;
 }
 #header {
-    padding-block: var(--space-md);
+    padding-block: var(--space-lg);
 }
 
 #hero {
