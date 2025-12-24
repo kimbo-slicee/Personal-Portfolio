@@ -1,4 +1,16 @@
-/* 1️⃣ DEFINE LAYER ORDER FIRST */
+/* 2️⃣ THEN IMPORT FILES INTO LAYERS */
+@import "base/variables.css" layer(variables);
+@import "base/reset.css" layer(reset);
+@import "base/typography.css" layer(typography);
+@import "themes/themes.css" layer(themes);
+@import "base/base.css" layer(base);
+@import "layout/layouts.css" layer(layout);
+@import "components/components.css" layer(components);
+@import "utilities/animations.css" layer(animations);
+@import "utilities/utilities.css" layer(utilities);
+@import "utilities/responsive.css" layer(responsive);
+
+/* 3️⃣ FINALLY, COMBINE LAYERS */
 @layer
 variables,
 reset,
@@ -11,19 +23,3 @@ animations,
 utilities,
 responsive;
 
-/* 2️⃣ THEN IMPORT FILES INTO LAYERS */
-@import "base/variables.css" layer(variables);
-@import "base/reset.css" layer(reset);
-@import "base/typography.css" layer(typography);
-
-@import "themes/themes.css" layer(themes);
-
-@import "base/base.css" layer(base);
-
-@import "layout/layouts.css" layer(layout);
-
-@import "components/components.css" layer(components);
-
-@import "utilities/animations.css" layer(animations);
-@import "utilities/utilities.css" layer(utilities);
-@import "utilities/responsive.css" layer(responsive);
