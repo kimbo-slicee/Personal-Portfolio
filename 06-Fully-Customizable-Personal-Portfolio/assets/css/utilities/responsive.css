@@ -90,7 +90,39 @@
         }
 
         /* ====== PORTFOLIO SECTION ====== */
-    }
+
+           #portfolio .portfolio-items {
+               grid-template-columns: repeat(2, auto);
+               column-gap: var(--space-md);
+               place-content: center;
+           }
+           #portfolio .back-overlay-wrapper{
+                min-width: 80vw;
+                max-width: 600px;
+               gap: var(--space-xs);
+            }
+           #portfolio .slider-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+             }
+            .sliders{
+                min-height: 280px;
+                /*width: auto;*/
+            }
+            .slide-image{
+                position: relative;
+                width: 100%;
+                border-radius: var(--radius-sm);
+            }
+            .arrow-right,
+            .arrow-left{
+                display: block;
+            }
+
+
+        }
 
 
 }
@@ -133,8 +165,19 @@
         #about .about-content .about-text {
             text-align: left;
         }
+        /* ====== PORTFOLIO SECTION ====== */
+        #portfolio .portfolio-items {
+            grid-template-columns: repeat(3, auto);
+            column-gap: var(--space-md);
+            place-content: center;
+        }
+        #portfolio .back-overlay-wrapper {
+            min-width: 60vw;
+            max-width: 800px;
+        }
 
     }
+
 }
 
 /* Extra large screens */

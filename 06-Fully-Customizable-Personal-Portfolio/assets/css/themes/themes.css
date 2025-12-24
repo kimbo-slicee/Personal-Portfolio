@@ -1,3 +1,35 @@
+/* view animation for theme change */
+::view-transition-old(root) {
+    animation-delay: .5s;
+}
+
+::view-transition-new(root) {
+    animation: circle-in .5s;
+}
+
+@keyframes move-in {
+    from { translate: 0 -100%; }
+    to { translate: 0  0; }
+}
+
+@keyframes circle-in {
+    from { clip-path: circle(0% at 50% 0%); }
+    to { clip-path: circle(120% at 50% 0%); }
+}
+
+/* scroll Bar styling */
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--scrollbar-bg);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 5px;
+
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover);
+}
 
 [data-theme="light"] {
 

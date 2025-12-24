@@ -6,7 +6,8 @@
     /* =============================
        TYPOGRAPHY
        ============================= */
-    --font-base:'Lato', sans-serif;
+    --font-base: sans-serif;
+    --headgin-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     /* =============================
        COLOR SYSTEM (HSL)

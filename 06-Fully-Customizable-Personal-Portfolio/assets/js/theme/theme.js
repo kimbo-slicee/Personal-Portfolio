@@ -1,4 +1,4 @@
-export const toggleTheme = () => {
+// const toggleTheme = (() => {
     const themeButton = document.querySelector('.theme-toggle-button');
 
     // init theme based on local storage
@@ -20,4 +20,6 @@ export const toggleTheme = () => {
             switchTheme();
         });
     });
-}
+//     return {};
+// })();
+// export default toggleTheme;

@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="assets/css/main.css" rel="stylesheet"/>
-  <script src="assets/js/carousel.js" defer></script>
   <script src="assets/js/main.js" type="module" defer></script>
   <title>Mohammed El Aouri</title>
 </head>
@@ -804,42 +803,78 @@
                     <p class="section-subtitle">My Recent Works</p>
                 </header>
                 <div class="portfolio">
-                    <div class="portfolio-buttons flex-center gap-sm">
+                    <div class="portfolio-buttons">
                         <button class="btn active" data-filter="all">All</button>
                         <button class="btn" data-filter="front-end">Front-End</button>
                         <button class="btn" data-filter="back-end">Back-End</button>
                         <button class="btn" data-filter="full-stack">Full-Stack</button>
-                        <button class="btn" data-filter="database">featured</button>
                     </div>
                     <div class="portfolio-container wrapper">
                         <!-- Portfolio items will be dynamically inserted here -->
-                        <div class="portfolio-items grid gap-lg">
+                        <div class="portfolio-items">
                             <!-- Example Portfolio Item -->
                             <article class="portfolio-item card mt-3" data-category="front-end">
-                                <div class="front-overlay" data-filter="front-end">
-                                    <img src="assets/images/portfolio-images/front-end/react/hooBank/hooBank-hero.png"
-                                         alt="HooBank Porject"
-                                         class="portfolio-image mb-2"
-                                         loading="lazy">
+                                <div class="front-overlay">
+                                    <div class="card-header">
+                                        <img src="assets/images/portfolio-images/front-end/react/hooBank/hooBank-hero.png"
+                                             alt="HooBank Project Screenshot"
+                                             class="portfolio-image"
+                                        >
+                                    </div>
                                     <div class="overlay-content">
-                                        <h3 >HooBank</h3>
-                                        <p> Website with Modern UI/UX </p>
-                                        <span>see more</span>
+                                        <h3 class="card-title">HooBank</h3>
+                                        <p class="card-description">Modern banking landing page.</p>
                                     </div>
                                 </div>
-                                <div class="back-overlay hidden">
-                                    <div class="back-overlay-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                         class="close-icon icon">
-                                        <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z">
-                                        </path>
-                                    </svg>
-                                        <div class="portfolio-overview">
+                                <div class="back-overlay">
+                                    <div class="back-overlay-wrapper">
+                                            <div class="slider-container">
+                                                <button class="arrow-left">&#10094;</button>
+                                                    <div class="sliders">
+                                                        <img src="assets/images/portfolio-images/front-end/react/hooBank/hooBank-hero.png" alt="" class="slide-image" loading="lazy">
+                                                        <img src="assets/images/portfolio-images/front-end/react/hooBank/hooBank-about.png" alt="" class="slide-image" loading="lazy">
+                                                        <img src="assets/images/portfolio-images/front-end/react/hooBank/hooBank-testimonials.png" alt="" class="slide-image" loading="lazy">
+                                                    </div>
+                                                <button class="arrow-right">&#10095;</button>
+                                            </div>
+                                            <div class="slide-indicators flex flex-center gap-sm mt-1 ">
+                                                <span class="indicator active"></span>
+                                                <span class="indicator"></span>
+                                                <span class="indicator"></span>
+                                            </div>
+                                        <div class="project-overlay">
+                                            <header class="project-header">
+                                                <h3 class="project-title">HooBank</h3>
+                                                <div class="project-actions">
+                                                    <a href="#" class="anchor-link">Live Demo</a>
+                                                    <a href="#" class="anchor-link">Source Code</a>
+                                                </div>
+                                            </header>
+                                            <section class="project-content">
+                                                <p class="project-summary">
+                                                    HooBank is a modern banking landing page developed with React.js,
+                                                    featuring a clean interface, responsive layout, and interactive
+                                                    components designed to enhance user engagement.
+                                                </p>
+
+                                                <ul class="project-features" role="list">
+                                                    <li>Developed using React.js with modern, scalable component architecture.</li>
+                                                    <li>Fully responsive design implemented with CSS3 and Flexbox.</li>
+                                                    <li>Includes key sections such as About, Features, Testimonials, and Contact.</li>
+                                                    <li>Optimized for performance, accessibility, and cross-browser compatibility.</li>
+                                                </ul>
+                                            </section>
                                         </div>
+                                    </div>
+                                    <div class="close-mark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                             class="close-icon icon">
+                                            <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z">
+                                            </path>
+                                        </svg>
                                     </div>
                                 </div>
                             </article>
-                            <!-- More portfolio items can be added here -->
                         </div>
                     </div>
                 </div>
