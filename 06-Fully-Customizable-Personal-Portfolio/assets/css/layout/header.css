@@ -1,0 +1,71 @@
+/* ========== HEADER STYLING ========== */
+#header {
+    padding-block: var(--space-lg);
+    /*border: 1px solid var(--color-primary);*/
+}
+
+#header{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#header .container{
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: var(--z-top);
+}
+#header .logo a{
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-bold);
+    font-family: var(--headgin-font);
+}
+.theme-switcher {
+    cursor: pointer;
+}
+.theme-switcher input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.theme-switcher .icon.moon-icon {
+    display: none;
+    animation: keyframes-fill .5s;
+}
+.theme-switcher .icon.sun-icon {
+    animation: keyframes-fill .5s;
+}
+.theme-switcher input:checked ~ .moon-icon {
+    display: flex;
+}
+.theme-switcher input:checked ~ .sun-icon {
+    display: none;
+}
+.language-switcher{
+    cursor: pointer;
+    position: relative;
+}
+
+/* ===== LANGUAGE OPTIONS DROPDOWN ===== */
+.language-options{
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-sm);
+    z-index: var(--z-top);
+    padding: var(--space-sm);
+    color: white;
+
+}
+
+/* ===== CTA BUTTON ===== */
+.cta-button a:first-of-type{
+    display: none;
+}

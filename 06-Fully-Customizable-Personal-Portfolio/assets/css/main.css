@@ -4,12 +4,14 @@
 @import "base/typography.css" layer(typography);
 @import "themes/themes.css" layer(themes);
 @import "base/base.css" layer(base);
-@import "layout/layouts.css" layer(layout);
-@import "components/components.css" layer(components);
+@import "components/index.css" layer(sections);
+@import "layout/index.css" layer(layout);
+@import "sections/index.css" layer(sections);
 @import "utilities/animations.css" layer(animations);
-@import "utilities/utilities.css" layer(utilities);
+@import "utilities/helpers.css" layer(utilities);
 @import "utilities/responsive.css" layer(responsive);
-/* 3️⃣ FINALLY, COMBINE LAYERS */
+
+/* 3️⃣ DEFINE THE ORDER OF LAYERS */
 @layer
 variables,
 reset,
@@ -17,7 +19,7 @@ typography,
 themes,
 base,
 layout,
-components,
+sections,
 animations,
 utilities,
 responsive;

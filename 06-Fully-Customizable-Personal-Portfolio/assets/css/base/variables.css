@@ -1,27 +1,16 @@
-@layer variables {
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-:root {
-
+@layer variables{
+    :root {
     /* =============================
        TYPOGRAPHY
        ============================= */
-    --font-base: sans-serif;
-    --headgin-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-base: 'Poppins', sans-serif;
+    --headgin-font: 'Playfair Display', serif;
 
     /* =============================
-       COLOR SYSTEM (HSL)
+        COLOR PALETTE
        ============================= */
-    /* Suggested hue palette:
-       Blue: hsl(217, 85%, 74%)
-       Purple: hsl(245, 54%, 74%)
-       Teal: hsl(181, 47%, 49%)
-       Yellow: hsl(65, 60%, 70%)
-       Green: hsl(162, 60%, 65%)
-       Red: hsl(356, 67%, 70%)
-       Pink: hsl(330, 73%, 72%)
-    */
-
     --hue: 217;
     --sat: 85%;
     --light: 74%;
@@ -32,12 +21,13 @@
     --color-dark: hsl(var(--hue) 26% 12%);
     --color-gray: hsl(var(--hue) 0% 62%);
     --color-muted: hsl(var(--hue) 25% 20%);
+    --bg-color: hsl(250 25% 12%);
 
     /* Theme Variations (Light / Dark modes) */
     --text-color: var(--color-gray);
     --heading-color: var(--color-primary);
     --anchor-color: var(--color-primary);
-    --body-bg-color: hsl(250 25% 12%);
+    --body-bg-color: var(--bg-color);
     --hover-color: hsl(var(--hue) var(--sat) calc(var(--light) - 7%));
     --btn-primary-clr: var(--color-primary);
     --btn-secondary-clr: var(--body-bg-color);
@@ -97,6 +87,7 @@
     --space-md: clamp(.5rem, 2vw, 2rem);
     --space-lg: clamp(1.5rem, 3vw, 3rem);
     --space-xl: clamp(2rem, 3.5vw, 3.5rem);
+    --space-2xl: clamp(3rem, 4vw, 4rem);
 
     /* =============================
        BORDERS & RADII
@@ -114,5 +105,11 @@
     --z-normal: 1;
     --z-overlay: 5;
     --z-top: 10;
+    /* =====================
+       Box Shadows
+     ==================*/
+    --shadow-sm: 0 1px 2px hsl(var(--hue) 25% 20% / 0.1);
+    --shadow-md: 0 4px 6px hsl(var(--hue) 25% 20% / 0.1);
+    --shadow-lg: 0 10px 15px hsl(var(--hue) 25% 20% / 0.1);
 }
 }

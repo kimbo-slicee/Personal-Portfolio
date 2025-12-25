@@ -1,18 +1,26 @@
+/* ======== GLOBAL STYLES ============ */
 .container {
     width: min(90%, 1200px);
     margin-inline: auto;
+    border: 1px solid reed;
 }
 .wrapper {
     display: flex;
     flex-direction: column;
+    border: 1px solid white;
 }
-.section {
-    padding-block: var(--space-md);
+.section:not(:last-of-type) {
+    margin-block-end: var(--space-2xl);
+    padding: var(--space-xl) 0;
+    /*border:1px solid red;*/
+
 }
+
 .section-header {
     margin-block-end: var(--space-xl);
     text-align: center;
 }
+
 .sr-only {
     position: absolute !important;
     width: 1px;
@@ -32,64 +40,6 @@
 .flow > * + * {
     margin-bottom: var(--space-sm);
 }
-
-/* ======== BUTTON STYLES ============ */
-
-.btn{
-    /*display: inline-block;*/
-    padding: .5rem 1rem;
-    border-radius: var(--radius-lg);
-    font-size: var(--fs-md);
-    font-weight: var(--fw-medium);
-    transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-    color: var(--color-primary);
-    .icon{
-     fill: var(--color-primary);
-    }
-}
-
-.btn-primary,
-.btn.active{
-    background-color: var(--btn-primary-clr);
-    color: var(--body-bg-color);
-    border: 1px solid var(--color-primary);
-    & .icon{
-        fill: var(--body-bg-color);
-    }
-}
-
-.btn-secondary{
-    background-color: var(--btn-secondary-clr);
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-    & .icon{
-        fill: var(--color-primary);
-    }
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus{
-    background-color: var(--hover-color);
-    color: var(--body-bg-color);
-}
-
-
-
-/* ======== ICON STYLES ============ */
-
-
-/* ======== CARD STYLES ============ */
-.card{
-    background: var(--bg-card);
-    border-radius: var(--radius-md);
-    padding:2rem 1.5rem;
-    text-align: center;
-    border-bottom: 3px solid var(--color-primary);
-    max-width:320px;
-    position: relative;
-}
-
 
 /*======== Flex Classes ============*/
 .flex{display: flex;}

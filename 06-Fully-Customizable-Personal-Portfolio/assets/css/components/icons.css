@@ -1,0 +1,39 @@
+/* =========================
+   Base Icon
+========================= */
+.icon {
+    --icon-size: 1.5rem;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: currentColor;
+    color: var(--color-primary);
+    pointer-events: none;
+    &:hover{
+        color: var(--hover-color);
+    }
+}
+.btn .icon{
+    color: inherit;
+}
+
+/* =========================
+   Icon Sizes
+========================= */
+.icon--xs {
+    --icon-size: 0.75rem;
+}
+
+.icon--sm {
+    --icon-size: 1rem;
+}
+
+.icon--md {
+    --icon-size: 1.25rem;
+}
+
+.icon--lg {
+    --icon-size: 1.5rem;
+}

@@ -60,8 +60,6 @@
 │   ├── fonts/
 │   └── pdf/
 │
-├── components/             ← OPTIONAL (HTML experiments)
-│
 ├── README.md
 └── .gitignore    
 ```

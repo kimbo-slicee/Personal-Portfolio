@@ -29,7 +29,7 @@ h4 {
     color: var(--heading-color);
     line-height: var(--lh-snug);
     font-weight: var(--fw-bold);
-    /*font-family: var(--font-heading);*/
+    font-family: var(--headgin-font);
 }
 
 h1 {
@@ -59,15 +59,12 @@ a {
 }
 
 input {
-    background-color: var(--color-gray);
-    padding: 0.75rem var(--space-lg);
-    border-radius: var(--radius-lg);
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: transparent;
     border: none;
     outline: none;
-}
-
-input::placeholder {
-    color: var(--text-color);
 }
 
 button {

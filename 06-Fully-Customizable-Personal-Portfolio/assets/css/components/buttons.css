@@ -1,0 +1,49 @@
+/* =========================
+   Button Base
+========================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-lg);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-medium);
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: var(--color-primary);
+    transition:
+            background-color 0.25s ease,
+            color 0.25s ease,
+            transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* =========================
+   Primary Button
+========================= */
+.btn-primary,
+.btn.active {
+    background-color: var(--btn-primary-clr);
+    color: var(--body-bg-color);
+    border-color: var(--color-primary);
+}
+
+/* =========================
+   Secondary Button
+========================= */
+.btn-secondary {
+    background-color: var(--btn-secondary-clr);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    background-color: var(--color-primary);
+    color: var(--body-bg-color);
+}
