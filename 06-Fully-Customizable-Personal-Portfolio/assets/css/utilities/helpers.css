@@ -2,18 +2,16 @@
 .container {
     width: min(90%, 1200px);
     margin-inline: auto;
-    border: 1px solid reed;
 }
+
 .wrapper {
     display: flex;
     flex-direction: column;
-    border: 1px solid white;
 }
+
 .section:not(:last-of-type) {
     margin-block-end: var(--space-2xl);
     padding: var(--space-xl) 0;
-    /*border:1px solid red;*/
-
 }
 
 .section-header {
