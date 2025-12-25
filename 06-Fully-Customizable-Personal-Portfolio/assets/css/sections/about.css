@@ -1,0 +1,171 @@
+/* ========== ABOUT ME STYLING ======== */
+#about .about-content{
+    display: grid;
+    row-gap: var(--space-lg);
+    place-content: center;
+    grid-template-areas:
+        'hero-circle'
+        'about-text'
+        'about-carousel';
+}
+
+/* ===== Rotating Circle with Icons ===== */
+
+.hero-circle {
+    grid-area: hero-circle;
+    margin-inline:auto;
+    width:300px;
+    height:300px;
+    position: relative;
+}
+
+.big-circle {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 3px solid var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    animation: Rotate 20s linear infinite;
+    -webkit-animation: Rotate 20s linear infinite;
+}
+.icon-block {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary) 100%);
+}
+.icon-block .tech-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--body-bg-color);
+}
+.icon-block:first-child {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.icon-block:nth-child(2) {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+.icon-block:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.icon-block:nth-child(4) {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.icon-block svg {
+    margin-inline:auto;
+    width: 80%;
+    animation: Rotate-reverse 20s linear infinite;
+    -webkit-animation: Rotate-reverse 20s linear infinite;
+}
+.circle {
+    animation: circle-rotate 20s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 75%;
+    height: 75%;
+    border: 3px solid var(--color-primary);
+    border-radius: 50%;
+}
+.circle:hover,
+.circle:hover .icon-block svg {
+    animation-play-state: paused;
+}
+.circle .icon-block svg {
+    animation: img-rotate 20s linear infinite;
+    -webkit-animation: img-rotate 20s linear infinite;
+}
+.center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.center-logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+/* ===== About Text Styling ===== */
+
+#about .about-content .about-text{
+    grid-area: about-text;
+    text-align: center;
+    display: grid;
+    row-gap: var(--space-sm);
+}
+#about .about-content .about-text .about-title{
+    font-style: italic;
+    font-size: var(--fs-4xl);
+}
+/* ======= Carousel Styling ======= */
+
+#about .about-content .carousel{
+    grid-area: about-carousel;
+}
+.carousel{
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    mask-image:  linear-gradient(to right, transparent, var(--body-bg-color) 20%, var(--body-bg-color) 80%, transparent);
+    overflow-x: hidden;
+}
+.carousel-items,
+.carousel-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+
+}
+
+.carousel-item{
+    background: var(--bg-card);
+    gap: var(--space-sm);
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius-sm);
+}
+
+.carousel-item:focus {
+    outline: none;
+}
+.carousel-item:hover {
+    cursor: grab;
+}
+.carousel-item:active {
+    cursor: grabbing;
+}
+.carousel-item span{
+    font-size: var(--fs-4xl);
+    color: var(--color-primary);
+    font-family: var(--headgin-font);
+}
+.carousel-item h3{
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+    color:var(--text-color);
+    font-style: italic;
+}

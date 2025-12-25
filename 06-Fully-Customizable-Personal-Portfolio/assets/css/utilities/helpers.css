@@ -1,3 +1,18 @@
+.container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.section {
+    padding-block: var(--space-md);
+}
+.section-header {
+    margin-block-end: var(--space-xl);
+    text-align: center;
+}
 .sr-only {
     position: absolute !important;
     width: 1px;

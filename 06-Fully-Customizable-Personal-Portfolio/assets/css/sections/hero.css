@@ -1,0 +1,158 @@
+/* ========== HERO STYLING ========== */
+#hero {
+    padding-block: var(--space-md);
+}
+#hero .hero-content{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    display: grid;
+    row-gap:var(--space-xl);
+    place-items: center;
+    grid-template-areas:
+            'hero-image'
+            'hero-text'
+            'hero-scroll';
+}
+
+
+#hero .hero-content .hero-image{
+    grid-area: hero-image;
+    margin: 0 auto;
+}
+#hero .hero-content .hero-image img{
+    width: 250px;
+
+}
+#hero .hero-content .hero-text{
+    grid-area: hero-text;
+    display: grid;
+    row-gap: var(--space-sm);
+    justify-items: center;
+
+}
+
+#hero .hero-content .hero-text .name{
+    font-size: var(--fs-5xl);
+    font-weight: var(--fw-bold);
+    color: var(--color-primary);
+    font-family: var(--headgin-font);
+}
+
+#hero .hero-content .hero-text .profession{
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-xl);
+}
+
+#hero .hero-content .social-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    color: var(--color-primary);
+    grid-area: hero-socials;
+    align-self: center;
+}
+#hero .hero-content .social-links .vertical-text{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: var(--fs-md);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+#hero .hero-content .social-links .vertical-line{
+    width: 2px;
+    min-height: 100px;
+    background-color: var(--color-primary);
+}
+
+#hero .hero-content .social-links ul{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+/* ========== Mouse Scroll animation ========== */
+
+.mouse-scroll {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    grid-area: hero-scroll;
+}
+
+.mouse {
+    height: 30px;
+    width: 20px;
+    border-radius: 14px;
+    transform: none;
+    border: 2px solid var(--color-primary);
+    top: 170px;
+}
+
+.mouse:hover {
+    color: var(--color-primary);
+}
+
+.wheel {
+    height: 5px;
+    width: 2px;
+    display: block;
+    margin: 5px auto;
+    background: var(--color-primary);
+    position: relative;
+    -webkit-animation: mouse-wheel 0.6s linear infinite;
+    -moz-animation: mouse-wheel 0.6s linear infinite;
+    animation: mouse-wheel 0.6s linear infinite;
+}
+
+.arrow {
+    display: block;
+    transform: rotate(45deg);
+    border-right: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    margin-inline: auto;
+    margin-block-end: .35rem;
+    width: 10px;
+    height: 10px;
+}
+
+.arrow:first-child {
+    margin-block-start: .5rem;
+}
+
+.arrow:nth-child(1),
+.arrow:nth-child(2),
+.arrow:nth-child(3) {
+    -webkit-animation: mouse-scroll 1s infinite;
+    -moz-animation: mouse-scroll 1s infinite;
+    animation: mouse-scroll 1s infinite;
+}
+
+.arrow:first-child {
+    -webkit-animation-delay: .1s;
+    -moz-animation-delay: .1s;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.arrow:nth-child(2) {
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -webkit-animation-direction: alternate;
+    animation-delay: .2s;
+    animation-direction: alternate;
+    margin-top: -6px;
+}
+
+.arrow:last-child {
+    -webkit-animation-delay: .3s;
+    -moz-animation-delay: .3s;
+    -webkit-animation-direction: alternate;
+    animation-delay: .3s;
+    animation-direction: alternate;
+    margin-top: -6px;
+}

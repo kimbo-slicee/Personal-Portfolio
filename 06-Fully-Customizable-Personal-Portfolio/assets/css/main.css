@@ -9,7 +9,6 @@
 @import "utilities/animations.css" layer(animations);
 @import "utilities/utilities.css" layer(utilities);
 @import "utilities/responsive.css" layer(responsive);
-
 /* 3️⃣ FINALLY, COMBINE LAYERS */
 @layer
 variables,
