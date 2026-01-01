@@ -49,7 +49,7 @@
 │   │   │
 │   │   ├── services/
 │   │   │   ├── storage.service.js
-│   │   │   └── data.service.js
+│   │   │   └── projects.service.js
 │   │   │
 │   │   └── utils/
 │   │       ├── debounce.js

@@ -1,0 +1,22 @@
+#footer{
+    margin-top: var(--space-lg);
+    background: var(--bg-footer);
+    padding: var(--space-lg) var(--space-md);
+}
+.footer-layout{
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: var(--space-sm);
+}
+.footer-title{
+    font-size: var(--fs-2xl);
+}
+.footer-links li a,
+.footer-copy{
+    font-size: var(--fs-sm);
+}
+.footer-links li a:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}

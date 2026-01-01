@@ -8,7 +8,10 @@
     display: flex;
     flex-direction: column;
 }
-
+.section{
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+}
 .section:not(:last-of-type) {
     margin-block-end: var(--space-2xl);
     padding: var(--space-xl) 0;
@@ -142,4 +145,8 @@
 .pb-3{
     padding-bottom: var(--space-lg) !important;
 }
+
+/* ============= Articles Card image  Skeleton ============ */
+
+
 

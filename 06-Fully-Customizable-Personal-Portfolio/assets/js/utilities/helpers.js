@@ -18,5 +18,10 @@ function parseHTML(htmlString) {
     const parser = new DOMParser();
     return parser.parseFromString(htmlString, "text/html");
 }
+const activeItem=(item,items,className)=>{
+    items?.forEach(e=>e.classList.remove(className))
+    item?.classList.add(className)
+}
 
-export { truncateText , parseHTML  };
+
+export { truncateText , parseHTML ,activeItem};

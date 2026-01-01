@@ -46,23 +46,11 @@
 .theme-switcher input:checked ~ .sun-icon {
     display: none;
 }
+
+/* ===== LANGUAGE OPTIONS DROPDOWN ===== */
 .language-switcher{
     cursor: pointer;
     position: relative;
-}
-
-/* ===== LANGUAGE OPTIONS DROPDOWN ===== */
-.language-options{
-    display: none;
-    position: absolute;
-    top: 2.5rem;
-    right: 0;
-    background-color: var(--color-primary);
-    border-radius: var(--radius-sm);
-    z-index: var(--z-top);
-    padding: var(--space-sm);
-    color: white;
-
 }
 
 /* ===== CTA BUTTON ===== */

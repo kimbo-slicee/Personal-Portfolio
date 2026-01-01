@@ -1,0 +1,6 @@
+.contact-wrapper{
+    display: grid;
+    grid-template-columns:30% 55%;
+    gap: var(--space-md);
+    justify-content: center;
+}
