@@ -20,8 +20,13 @@ portfolioFilterButtons.forEach((button)=>{
     })
 });
 
+
+
+
 init().then(()=>{
     const portfolioItems=document.querySelectorAll(".portfolio-items .portfolio-item");
+    const closeBtn=document.querySelectorAll(".back-overlay .close-mark");
+    console.log(closeBtn);
     portfolioItems.forEach((item)=>{
         item.addEventListener("click",()=>{
             const cardBackOverlay=item.querySelector(".back-overlay");

@@ -45,13 +45,6 @@ const renderContent = (description, features, techStack, status, dates) => {
       ${renderFeatures(features)}
       ${renderTechStack(techStack)}
 
-      <div class="project-meta">
-        <span class="project-status">${status}</span>
-        <div class="project-dates">
-         <span>Started At: <time>${dates.startedAt}</time> </span>
-         <span>Complited At <time>${dates.finishedAt}</time></span>
-        </div>
-      </div>
     </section>
   `;
 };
@@ -100,7 +93,6 @@ const portfolioCardFrontOverlay = ({ images, title, slug }) => {
 };
 export const portfolioCardBackOverlay = ({images, title, description, links, features, techStack, status, dates}) => {
     const { gallery = [] } = images;
-
     return `
     <div class="back-overlay">
          <div class="back-overlay-wrapper">
@@ -110,9 +102,7 @@ export const portfolioCardBackOverlay = ({images, title, description, links, fea
               ${renderContent(description, features, techStack, status, dates)}
             </div>
           </div>
-          <div class="">
             ${renderCloseButton}
-          </div>
     </div>
   `;
 };

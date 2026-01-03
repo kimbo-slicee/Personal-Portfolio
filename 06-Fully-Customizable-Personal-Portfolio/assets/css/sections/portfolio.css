@@ -67,7 +67,8 @@
 .back-overlay-wrapper{
     width: 90%;
     min-width: 350px;
-    max-height: 80vh;
+    min-height: 80vh;
+    height:85vh;
     margin-inline: auto;
 
     display: grid;
@@ -88,12 +89,13 @@
 .back-overlay .close-mark{
     margin-top: var(--space-md);
     background-color:var(--body-bg-color);
-    width: min-content;
+    width: fit-content;
     padding: .5rem;
     border-radius: var(--radius-full);
     margin-inline: auto;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    z-index: var(--z-top);
     & svg{
         width: 2rem;
         height: 2rem;

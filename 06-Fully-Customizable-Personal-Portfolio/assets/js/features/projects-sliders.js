@@ -1,7 +1,7 @@
 const imageSlliders=()=>{
     const track = document.querySelector(".slider-track");
     const slides = Array.from(track.children);
-    console.log(slides[0].offsetLeft);
+    const indicators = document.querySelectorAll(".indicator");
     let index = 0;
     const scrollToSlide = (i) => {
         slides[i].scrollIntoView({
@@ -21,15 +21,14 @@ const imageSlliders=()=>{
         index = Math.max(index - 1, 0);
         scrollToSlide(index);
     };
-    const indicators = document.querySelectorAll(".indicator");
 
-    track.addEventListener("scroll", () => {
-        const newIndex = Math.round(track.scrollLeft / track.clientWidth);
-        if (newIndex !== index) {
-            indicators[index].classList.remove("active");
-            indicators[newIndex].classList.add("active");
-            index = newIndex;
-        }
-    });
+    // track.addEventListener("scroll", () => {
+    //     const newIndex = Math.round(track.scrollLeft / track.clientWidth);
+    //     if (newIndex !== index) {
+    //         indicators[index].classList.remove("active");
+    //         indicators[newIndex].classList.add("active");
+    //         index = newIndex;
+    //     }
+    // });
 }
 export {imageSlliders}
