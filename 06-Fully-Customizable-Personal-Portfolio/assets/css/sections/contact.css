@@ -1,6 +1,85 @@
-.contact-wrapper{
+/* -------------------- Info -------------------- */
+
+.contact-info {
     display: grid;
-    grid-template-columns:30% 55%;
-    gap: var(--space-md);
-    justify-content: center;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
 }
+
+/* Titles */
+.contact-methods h3,
+.contact-social-title {
+    font-size: var(--fs-xl);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+/* -------------------- Contact list -------------------- */
+
+.contact-list {
+    display: grid;
+    place-content: center;
+    gap: var(--space-xl);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+/* Icons (shared) */
+.contact-icon,
+.social-icon a {
+    display: grid;
+    place-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--bg-card);
+    border-radius: 8px;
+}
+
+/* Text */
+.contact-details {
+    display: grid;
+    gap: 0.3rem;
+}
+
+.contact-label {
+    font-size: var(--fs-md);
+    color: var(--text-color);
+}
+
+.contact-value {
+    font-size: var(--fs-md);
+    color: var(--color-white);
+}
+
+/* -------------------- Social -------------------- */
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.social-icon a {
+    border-radius: var(--radius-full);
+    transition: scale 0.2s ease;
+}
+
+.social-icon a:hover {
+    scale: 1.2;
+}
+
+/* -------------------- Form -------------------- */
+
+.contact-form {
+    display: grid;
+    gap: var(--space-lg);
+    padding: 1.2rem 1rem;
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+}
+

@@ -2,15 +2,18 @@
 .container {
     width: min(90%, 1200px);
     margin-inline: auto;
+    /*border: 1px solid red;*/
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
+    /*border: 1px solid white;*/
 }
 .section{
     scroll-snap-align: start;
     scroll-snap-stop: normal;
+    /*border: 1px solid blue;*/
 }
 .section:not(:last-of-type) {
     margin-block-end: var(--space-2xl);
@@ -43,7 +46,9 @@
 }
 
 /*======== Flex Classes ============*/
-.flex{display: flex;}
+.flex{
+    display: flex;
+}
 
 .flex-center{
     display: flex;

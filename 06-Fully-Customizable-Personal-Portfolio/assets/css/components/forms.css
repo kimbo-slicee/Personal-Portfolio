@@ -1,76 +1,15 @@
-.contact-methods,
-.contact-info{
-    display: grid;
-    gap: var(--space-md);
-}
-.contact-methods-title,
-.contact-social-title{
-    font-size: var(--fs-md);
-    color: var(--color-white);
-    margin-bottom: var(--space-sm);
-}
-.contact-list{
-    display: grid;
-    gap: var(--space-md);
-}
-.contact-item{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--space-md);
-}
-.contact-icon,
-.social-icon {
+input,
+textarea{
+    display: block;
     background: var(--bg-card);
+    padding:1rem 1.1rem;
+    width: 100%;
+    margin-bottom: 1rem;
     border-radius: var(--radius-sm);
-    padding: 1rem;
-    display:grid;
-    place-items: center;
-}
-
-.contact-details h4{
-    font-size: var(--fs-sm);
-    text-transform: uppercase;
-}
-.contact-details .contact-value a{
-    margin-top: var(--space-xs);
-    color: var(--text-color);
-    font-size: var(--fs-xs);
-}
-.contact-action{
-    font-weight: var(--fw-regular);
-    font-size: var(--fs-sm);
-}
-/**/
-.social-list{
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-}
-.social-icon{
-    border-radius: 50%;
-}
-.contact-form{
-    background: var(--bg-card);
-    padding:1.5rem 2rem;
-    border-radius:var(--radius-md);
-    > *{
-        margin-bottom: .5rem;
-    }
-}
-.contact-form-fields{
-    display: grid;
-    gap: var(--space-sm);
-}
-.contact-form-fields input,textarea{
-    background: var(--bg-card);
-    padding: 1rem .5rem;
-    border-radius: 8px;
 }
 textarea{
     resize: none;
 }
-button[type="submit"]{
-    justify-self: start;
-    padding: .8rem 1.5rem;
+.contact-form-fields button{
+    padding: .75rem 1rem;
 }

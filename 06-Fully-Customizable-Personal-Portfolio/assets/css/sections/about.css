@@ -118,8 +118,10 @@
     row-gap: var(--space-sm);
 }
 #about .about-content .about-text .about-title{
-    font-style: italic;
     font-size: var(--fs-4xl);
+}
+.about-buttons{
+    justify-content: center;
 }
 /* ======= Carousel Styling ======= */
 

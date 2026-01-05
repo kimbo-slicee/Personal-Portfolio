@@ -152,11 +152,60 @@
             justify-self: start;
             text-align: left;
         }
+        #about .about-buttons{
+            justify-content: start;
+        }
         /* ==================== PORTFOLIO SECTION ====================== */
         #portfolio .slider-wrapper{
             width:80%;
             margin-inline: auto;
         }
+        /* ==================== CONTACT SECTION ======================== */
+
+        /* Layout */
+        #contact .contact-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Shared spacing */
+        .contact-info,
+        #contact .contact-list,
+        .contact-list,
+        .social-list {
+            gap: var(--space-md);
+        }
+
+        /* Contact info specific */
+        .contact-info {
+            gap: var(--space-md);
+            padding: var(--space-xl);
+            flex: 1;
+        }
+
+        /* Titles */
+        .contact-methods h3,
+        .contact-social-title {
+            text-align: start;
+            margin-bottom: var(--space-md);
+        }
+
+        /* Lists alignment */
+        .contact-list {
+            place-content: start;
+        }
+
+        .social-list {
+            justify-content: start;
+        }
+
+        /* Form */
+        .contact-form {
+            padding: var(--space-md);
+            gap: var(--space-sm);
+            flex: 2;
+        }
+
 
 
 
