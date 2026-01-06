@@ -13,17 +13,14 @@
     grid-template-columns: repeat(auto-fill,300px);
     justify-content: center;
 }
-.portfolio-item.card{
-    padding: 0 !important;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 /* ============== FRONT OVERLAY STYLES ========== */
 
 .front-overlay{
     display: grid;
     row-gap: var(--space-sm);
     cursor: pointer;
+    background:var(--bg-card);
+    border-radius: var(--radius-sm);
 }
 .front-overlay .card-header{
     margin-bottom: 0;
