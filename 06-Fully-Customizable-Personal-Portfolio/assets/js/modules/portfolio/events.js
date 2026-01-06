@@ -1,19 +1,53 @@
 const portfolioButtons = document.querySelectorAll(
     ".portfolio-buttons button"
 );
-const items =document.querySelectorAll( ".front-overlay");
-console.log(items)
-export function initPortfolioEvents(onFilterChange,projectsList) {
-    //
-    portfolioButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            portfolioButtons.forEach(b => b.classList.remove("active"));
-            button.classList.add("active");
-            const category = button.dataset.filter;
-            onFilterChange(category,projectsList);
-        });
-    });
+const itemsContainer = document.querySelector(".portfolio-items");
 
+export function initPortfolioEvents(onFilterChange, projectsList) {
+    initFilterButtons(onFilterChange, projectsList);
+    initCardOverlayEvents();
 }
 
+/* ================= FILTER BUTTONS ================= */
 
+function initFilterButtons(onFilterChange, projectsList) {
+    portfolioButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            setActiveButton(button);
+            const category = button.dataset.filter;
+            onFilterChange(category, projectsList);
+        });
+    });
+}
+
+function setActiveButton(activeButton) {
+    portfolioButtons.forEach(b => b.classList.remove("active"));
+    activeButton.classList.add("active");
+}
+
+/* ================= CARD OVERLAYS ================= */
+
+function initCardOverlayEvents() {
+    itemsContainer.addEventListener("click", handleCardClick);
+}
+
+function handleCardClick(e) {
+    const frontCard = e.target.closest(".front-overlay");
+    const closeBtn = e.target.closest("[data-close]");
+
+    if (frontCard) openBackOverlay(frontCard);
+    if (closeBtn) closeBackOverlay(closeBtn);
+}
+
+function openBackOverlay(frontCard) {
+    const backOverlay = frontCard.nextElementSibling;
+    if (!backOverlay) return;
+    backOverlay.classList.add("open");
+}
+
+function closeBackOverlay(closeBtn) {
+    const backOverlay = closeBtn.closest(".back-overlay");
+    if (!backOverlay) return;
+
+    backOverlay.classList.remove("open");
+}

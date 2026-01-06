@@ -8,7 +8,6 @@ async function initPortfolio() {
     projectsList = await fetchAllProjects()
     renderProjectsCards(category,projectsList);
     initPortfolioEvents(renderProjectsCards,projectsList);
-
 }
 
 initPortfolio()

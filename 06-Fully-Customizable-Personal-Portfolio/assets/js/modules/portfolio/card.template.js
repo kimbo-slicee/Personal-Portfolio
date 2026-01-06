@@ -1,6 +1,6 @@
 
 const renderCloseButton = `
-  <div class="close-mark">
+  <div class="close-mark" data-close>
     <svg xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
@@ -8,7 +8,7 @@ const renderCloseButton = `
       <path d="M12 10.586l4.95-4.95 1.414 1.414L13.414 12l4.95 4.95-1.414 1.414L12 13.414l-4.95 4.95-1.414-1.414L10.586 12 5.636 7.05l1.414-1.414z"/>
     </svg>
   </div>
-`;
+`
 const renderSlider = (gallery) => {
     if (!gallery.length) return "";
 
@@ -92,7 +92,7 @@ const renderTechStack = (techStack = {}) => {
 export const portfolioCardFrontOverlay = ({ images, title, slug }) => {
     const { cover } = images;
     return `
-    <div class="front-overlay">
+    <div class="front-overlay" >
       <div class="card-header">
         <img 
           src="${cover}" 
@@ -119,9 +119,14 @@ export const portfolioCardBackOverlay = ({images, title, description, links, fea
               ${renderContent(description, features, techStack, status, dates)}
             </div>
           </div>
-          <div class="">
-            ${renderCloseButton}
-          </div>
+         ${renderCloseButton}
     </div>
-  `;
+  `
 };
+
+export const card=(project)=>`
+        <article class="project-card" data-type="${project.type}">
+            ${portfolioCardFrontOverlay(project)}
+            ${portfolioCardBackOverlay(project)}
+        </article>
+    `
