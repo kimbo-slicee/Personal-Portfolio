@@ -29,8 +29,7 @@ const renderSlider = (gallery) => {
         )
         .join("")}
           </div>
-      </div>
-        
+      </div>   
   `;
 };
 const renderHeader = (title, links) => {
@@ -47,26 +46,18 @@ const renderHeader = (title, links) => {
   `;
 };
 const renderContent = (description, features, techStack, status, dates) => {
+    const {long}=description;
+    const {startedAt,finishedAt}=dates;
     return `
     <section class="project-content">
-      <p class="project-summary">${description.long}</p>
-
+      <p class="project-summary">${long}</p>
       ${renderFeatures(features)}
       ${renderTechStack(techStack)}
-
-      <div class="project-meta">
-        <span class="project-status">${status}</span>
-        <div class="project-dates">
-         <span>Started At: <time>${dates.startedAt}</time> </span>
-         <span>Complited At <time>${dates.finishedAt}</time></span>
-        </div>
-      </div>
     </section>
   `;
 };
 const renderFeatures = (features = []) => {
     if (!features.length) return "";
-
     return `
     <ul class="project-features" role="list">
       ${features.map((f) => `<li>${f}</li>`).join("")}
