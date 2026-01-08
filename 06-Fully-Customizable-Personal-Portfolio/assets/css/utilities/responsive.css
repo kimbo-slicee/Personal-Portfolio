@@ -156,10 +156,19 @@
             justify-content: start;
         }
         /* ==================== PORTFOLIO SECTION ====================== */
+
         #portfolio .slider-wrapper{
             width:80%;
             margin-inline: auto;
         }
+
+        /* ==================== ARTICLES SECTION ====================== */
+
+        #portfolio .articles-grid{
+            grid-template-columns:auto;
+
+        }
+
         /* ==================== CONTACT SECTION ======================== */
 
         /* Layout */
@@ -205,6 +214,7 @@
             gap: var(--space-sm);
             flex: 2;
         }
+
 
 
 
