@@ -1,0 +1,193 @@
+/* ==================================================
+   Bottom Navigation – Base
+================================================== */
+.bottom-nav,
+.bottom-nav__toggle {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: var(--z-top);
+}
+
+
+
+/* ==================================================
+   Bottom Navigation – List
+================================================== */
+
+.bottom-nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    background: var(--bg-bottom-nav);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid hsl(var(--hue) 45% 98% / 0.1);
+}
+
+.bottom-nav__item {
+    anchor-name: --nav-item;
+    padding: var(--space-xs);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    position: relative;
+}
+
+.bottom-nav__item:hover,
+.bottom-nav__item.active {
+    background-color: var(--color-primary);
+}
+
+.bottom-nav__item:hover svg,
+.bottom-nav__item.active svg {
+    fill: var(--color-white);
+}
+
+.bottom-nav__item svg {
+    fill: var(--color-primary);
+    transition: fill 0.5s ease-in-out;
+}
+
+.bottom-nav__item a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ==================================================
+   Tooltip Label (Anchor Positioned)
+================================================== */
+
+.bottom-nav__item span {
+    position: absolute;
+    pointer-events: none;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-light);
+    color: var(--color-dark);
+    background-color: var(--color-primary);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease,
+            transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bottom-nav__item span::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-primary);
+
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.bottom-nav__item:hover span {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-2.5rem) scale(1.1);
+}
+
+
+
+/* ==================================================
+   Close Button
+================================================== */
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: var(--z-top);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-primary);
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.close-btn svg {
+    fill: var(--body-bg-color);
+    transition: transform 0.5s ease-in-out, fill 0.5s ease-in-out;
+}
+
+.close-btn:hover svg {
+    transform: translate(-10%, 10%);
+    fill: var(--color-white);
+}
+
+
+/* ==================================================
+   Bottom Navigation Toggle
+================================================== */
+
+.bottom-nav__toggle {
+    display: grid;
+    place-items: center;
+    width:80px;
+    row-gap: 5px;
+    height: 50px;
+    padding: .75rem;
+    background-color: var(--bg-bottom-nav);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border-left: 1px solid hsl(var(--hue) 45% 98% / 0.1);
+    border-bottom: 1px solid hsl(var(--hue) 45% 98% / 0.1);
+    cursor: pointer;
+    overflow: hidden;
+    animation: wiggle 2s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.bottom-nav__toggle.hidden {
+    opacity: 0;
+    visibility: hidden;
+    bottom: -75px;
+}
+
+.bottom-nav__toggle.display {
+    opacity: 1;
+    visibility: visible;
+    bottom: 10px;
+}
+
+.bottom-nav__toggle span {
+    width: 90%;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.bottom-nav__toggle:hover span {
+    background-color: var(--hover-color);
+}
+
+
+/* ==================================================
+   Animations
+================================================== */
+
+@keyframes wiggle {
+    0%, 5%   { transform: translateX(-50%) rotate(0); }
+    15%      { transform: translateX(-50%) rotate(-20deg); }
+    20%      { transform: translateX(-50%) rotate(15deg); }
+    25%      { transform: translateX(-50%) rotate(-10deg); }
+    30%      { transform: translateX(-50%) rotate(6deg); }
+    35%      { transform: translateX(-50%) rotate(-4deg); }
+    40%,100% { transform: translateX(-50%) rotate(0); }
+}
