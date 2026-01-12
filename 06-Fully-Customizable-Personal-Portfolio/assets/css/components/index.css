@@ -4,3 +4,30 @@
 @import "bottomNavbars.css";
 @import "forms.css";
 @import "icons.css";
+@import "mouseScroll.css";
+
+#Spinner {
+    transform-origin: 50% 50%;
+    fill: var(--color-white);
+}
+
+.compass-container,
+.message {
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.compass-container {
+    padding-top: 50px;
+    width: 300px;
+    max-width: 600px;
+}
+
+#Base{
+    fill: var(--color-primary);
+}
+
+
+
+

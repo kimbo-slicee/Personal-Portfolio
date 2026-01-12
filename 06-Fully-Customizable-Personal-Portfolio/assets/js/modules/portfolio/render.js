@@ -1,4 +1,4 @@
-import {card} from "./card.template.js";
+import {renderProjectCard} from "./card.template.js";
 
 export const portfolioContainer = document.querySelector(".portfolio-items");
 
@@ -9,6 +9,6 @@ export function renderProjectsCards(category,projectsList) {
             : projectsList.filter(({ type }) => type === category);
 
     portfolioContainer.innerHTML = projects
-        .map(card)
+        .map(renderProjectCard)
         .join("");
 }

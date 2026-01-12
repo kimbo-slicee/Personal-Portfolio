@@ -4,25 +4,20 @@
     margin-inline: auto;
     /*border: 1px solid red;*/
 }
+section[id]{
+    margin-bottom:var(--space-2xl);
+    /*border: 1px solid blue;*/
+}
+
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    /*border: 1px solid white;*/
-}
-.section{
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
-    /*border: 1px solid blue;*/
-}
-.section:not(:last-of-type) {
-    margin-block-end: var(--space-2xl);
-    padding: var(--space-xl) 0;
 }
 
 .section-header {
-    margin-block-end: var(--space-xl);
     text-align: center;
+    margin-bottom: var(--space-lg);
 }
 
 .sr-only {

@@ -1,5 +1,5 @@
 /* Medium devices (tablet) */
-@media (min-width: 699px) {
+@media (min-width: 700px) {
     .container {
         width: min(85%, 1100px);
     }
@@ -20,7 +20,7 @@
             justify-content: space-between;
             grid-template-areas:
                 'hero-socials hero-image hero-image hero-scroll'
-                'hero-socials hero-text hero-text hero-scroll';
+                'hero-text hero-text hero-text hero-text';
         }
         #hero .hero-content .hero-image img {
             min-width: 400px;
@@ -47,10 +47,11 @@
         #resume .resume-buttons .btn:last-child {
             grid-column: 3 / 4 ;
         }
-        #resume .resume-container{
-            margin-top: 5rem;
+        /*#resume .resume-container{*/
+        /*    margin-top: 5rem;*/
 
-        }
+        /*}*/
+
         .timeline-items .item-wrapper {
             position: absolute;
             display: flex;
@@ -80,36 +81,7 @@
         }
 
         /* ====== PORTFOLIO SECTION ====== */
-           #portfolio .back-overlay-wrapper{
-                min-width: 60vw;
-                max-width: 600px;
-                gap: var(--space-xs);
-            }
 
-           #portfolio .slider-wrapper{
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                padding: var(--space-sm) var(--space-lg);
-                gap: var(--space-sm);
-             }
-
-            #portfolio .slider-track{
-                gap: var(--space-sm);
-                scroll-snap-type: x proximity;
-            }
-
-            #portfolio .slider{
-                flex: 0 0 80%;
-                height: 300px;
-                border-radius: var(--radius-md);
-                object-fit: contain;
-            }
-
-            .arrow-right,
-            .arrow-left{
-                display: block;
-            }
 }
 
 /* Large devices (desktop) */
@@ -146,7 +118,7 @@
             align-self: center;
         }
         #about .about-content {
-            padding:var(--space-md) var(--space-lg);
+            padding:var(--space-md);
         }
         #about .about-content .about-text {
             justify-self: start;
@@ -157,10 +129,6 @@
         }
         /* ==================== PORTFOLIO SECTION ====================== */
 
-        #portfolio .slider-wrapper{
-            width:80%;
-            margin-inline: auto;
-        }
 
         /* ==================== ARTICLES SECTION ====================== */
 
@@ -168,7 +136,6 @@
             grid-template-columns:auto;
 
         }
-
         /* ==================== CONTACT SECTION ======================== */
 
         /* Layout */
@@ -220,6 +187,3 @@
 
 
 }
-
-/* Extra large screens */
-@media (min-width: 1440px) { }

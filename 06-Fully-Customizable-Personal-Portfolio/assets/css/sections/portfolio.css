@@ -1,4 +1,4 @@
-/* ========= PORTFOLIO SECTION ======== */
+/*!* ========= PORTFOLIO SECTION ======== *!*/
 .portfolio-buttons{
     display: flex;
     align-items: center;
@@ -10,44 +10,71 @@
 .portfolio-items{
     display: grid;
     gap: var(--space-lg);
-    grid-template-columns: repeat(auto-fill,300px);
+    grid-template-columns: repeat(auto-fill,350px);
     justify-content: center;
 }
-/* ============== FRONT OVERLAY STYLES ========== */
 
-.front-overlay{
-    display: grid;
-    row-gap: var(--space-sm);
-    cursor: pointer;
+/* ============================================== */
+.project-card{
+    padding: 0;
+    text-align: left;
     background:var(--bg-card);
-    border-radius: var(--radius-sm);
+    border-radius: 10px;
+    border-bottom: 2px solid var(--color-primary);
 }
-.front-overlay .card-header{
-    margin-bottom: 0;
-    width: 100%;
+.front-face:is(:hover,:focus-visible) .full-screen{
+    transform:translateX(0) scale(1);
+}
+.front-face__header{
     position: relative;
-    overflow: hidden;
+    height: 200px;
 }
-.front-overlay .card-header img{
-    width: 100%;
-    height: 180px;
-    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-    /* Mask */
-    mask-image: linear-gradient(to right , hsl(250 25% 12%) 70%, hsl(250 25% 12%) 100%);
+.full-screen{
+    position: absolute;
+    right: .75rem;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 5px;
+    background: var(--bg-bottom-nav);
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease-in-out;
+    box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+    cursor: pointer;
+    transform: translateX(10px) scale(0);
+}
 
+.full-screen svg{
+    fill: var(--color-white);
 }
-.front-overlay .overlay-content {
-    display: grid;
-    gap: var(--space-xs);
-    justify-items: start;
+.full-screen:hover{
+    scale: 1.2;
+}
+
+.card-cover{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /*filter: saturate(1.1) contrast(1.05);*/
+}
+.front-face__content{
     padding: var(--space-sm);
 }
-.front-overlay .overlay-content h3{
-    font-size: var(--fs-lg);
-    color: var(--color-primary);
+.badge {
+    padding: .2rem .6rem;
+    border-radius: 999px;
+    font-size: .7rem;
+    text-transform: capitalize;
 }
 
-/* ================ BACK OVERLAY STYLES =================== */
+.badge-completed { background: #16a34a; color: #fff; }
+.badge-in-progress { background: #f59e0b; color: #000; }
+.badge-ongoing { background: #334155; color: #cbd5f5; }
+
+/* ============== CARD BACK OVERLAY ================= */
 
 .back-overlay{
     position: fixed;
@@ -65,23 +92,17 @@
     width: 90%;
     min-width: 350px;
     min-height: 80vh;
-    height:85vh;
+    height:50vh;
     margin-inline: auto;
-
-    display: grid;
-    row-gap: var(--space-md);
     overflow: hidden;
-
     background: var(--body-bg-color);
     border-radius: var(--radius-md);
     border-bottom: 4px solid var(--color-primary);
-
     transform: scale(0.5);
     opacity: 0;
     visibility: hidden;
     transition: transform 0.4s ease, opacity 0.4s ease;
 }
-
 
 .back-overlay .close-mark{
     margin-top: var(--space-md);
@@ -105,12 +126,14 @@
 
 .slider-track{
     display: flex;
-    overflow-x: auto;
+    overflow: auto hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     scrollbar-width: none;
     gap: var(--space-sm);
+    align-self: flex-start;
+
 }
 
 .slider{
@@ -156,13 +179,12 @@
 
 /* ======================= PROJECT DETAILS OVERLAY ======================= */
 
-.project-overlay{
+.back-overlay-content{
     display: grid;
     gap: var(--space-md);
-    width:85%;
     margin-inline: auto;
-    overflow-y: scroll;
-    padding: var(--space-md);
+    overflow: hidden;
+    padding: var(--space-md) var(--space-xl);
 }
 
 .project-header{
@@ -171,46 +193,58 @@
     justify-content: space-between;
     margin-bottom: var(--space-sm);
 }
+.project-details{
+    display: grid;
+    gap: .5rem;
+}
 
 .project-header .project-title{
-    font-size: var(--fs-xl);
+    font-size: var(--fs-md);
     font-weight: var(--fw-bold);
     color: var(--color-primary);
-}
-.project-actions .anchor-link{
-    font-size: var(--fs-sm);
-}
-.project-actions .anchor-link:first-child{
-    margin-right: var(--space-md);
-}
-.project-actions .anchor-link:hover{
-    text-decoration: underline;
+    text-transform: uppercase;
 }
 
-.project-content{
-    text-align: left;
+
+.anchor-link{
+    --anchor-color:var(--text-color);
+    font-size: var(--fs-sm);
+    transition: .5s ease-in;
+    color: var(--anchor-color);
+    & svg{fill: var(--anchor-color)}
 }
-.project-summary{
-    font-size: var(--fs-md);
-    color: var(--text-color);
-}
-.project-features{
-    display: grid;
-    gap: var(--space-sm);
-    margin-top: var(--space-sm);
-}
-.project-features li{
-    position: relative;
-    padding-left: 1.5rem;
-}
-.project-features li:before{
-    content: '▫';
-    position: absolute;
-    left: 0;
-    top: 0;
+
+.anchor-link:is(:hover,:active,:focus-visible){
+    text-underline-offset: 3px;
+    text-decoration: underline;
     color: var(--color-primary);
-    font-weight: var(--fw-bold);
+    & svg{fill: var(--color-primary)}
 }
+
+.project-details{
+    overflow:hidden scroll;
+
+}
+.tech-group{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+
+.pill {
+    padding: .3rem .65rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid var(--color-white);
+    font-size: .7rem;
+    width: fit-content;
+}
+
 
 .back-overlay.open{
     visibility: visible;
@@ -218,8 +252,10 @@
     scale: 1;
 }
 
-.back-overlay.open .back-overlay-wrapper{
+.back-overlay.open .back-overlay-wrapper {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
 }
+
+

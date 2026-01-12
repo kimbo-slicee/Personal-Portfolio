@@ -5,7 +5,6 @@ export const fetchArticles=async()=>{
         const response=await fetch(RSS_TO_JSON_API);
         if(!response.ok) return (`HTTP error! status: ${response.status}`);
         const data=await response.json();
-        console.log(data);
         return data.items;
     }catch(error){
         console.error("Error fetching articles:",error);

@@ -7,6 +7,7 @@ const imageSliders = () => {
         const indicators = Array.from(
             container.querySelectorAll(".indicator")
         );
+
         const arrowRight = container.querySelector(".arrow-right");
         const arrowLeft = container.querySelector(".arrow-left");
 
@@ -55,7 +56,7 @@ const imageSliders = () => {
             );
             if (newIndex !== index) {
                 index = newIndex;
-                // updateIndicators(index);
+                updateIndicators(index);
 
             }
 

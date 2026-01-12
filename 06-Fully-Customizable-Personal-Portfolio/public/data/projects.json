@@ -13,7 +13,7 @@
 
     "techStack": {
       "frontend": ["React", "Tailwind CSS"],
-      "backend": ["Laravel", "JWT"],
+      "backend":  ["Laravel", "JWT"],
       "database": ["MySQL"]
     },
 

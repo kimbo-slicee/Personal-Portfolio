@@ -1,7 +1,4 @@
 /* ========== HERO STYLING ========== */
-#hero {
-    padding-block: var(--space-md);
-}
 #hero .hero-content{
     text-align: center;
     margin-top: 1rem;

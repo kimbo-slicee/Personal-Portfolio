@@ -5,6 +5,7 @@
     gap: var(--space-lg);
     grid-template-columns: repeat(auto-fit, 250px);
     justify-content: center;
+    padding: var(--space-md);
 }
 .services-card{
     max-width: 350px;
@@ -87,7 +88,8 @@
     opacity: 1;
     scale: 1;
 }
-.service-model svg.close-icon{
+
+.service-model svg{
     cursor: pointer;
     position: absolute;
     top: 1rem;
@@ -96,9 +98,12 @@
     height: 1.5rem;
     fill: var(--color-primary);
     transition: transform 0.5s ease-in-out;
+    pointer-events: auto;
 }
-.service-model svg.close-icon:hover{
+
+.service-model svg:hover{
     transform: rotate(.5turn);
+
 }
 .service-model h3,
 .service-model h4{

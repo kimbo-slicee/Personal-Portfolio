@@ -32,15 +32,16 @@ function initCardOverlayEvents() {
 }
 
 function handleCardClick(e) {
-    const frontCard = e.target.closest(".front-overlay");
+    const fullscreenIcon = e.target.closest(".full-screen");
     const closeBtn = e.target.closest("[data-close]");
 
-    if (frontCard) openBackOverlay(frontCard);
+    if (fullscreenIcon) openBackOverlay(fullscreenIcon);
     if (closeBtn) closeBackOverlay(closeBtn);
 }
 
 function openBackOverlay(frontCard) {
-    const backOverlay = frontCard.nextElementSibling;
+    const backOverlay = frontCard.closest(".front-face").nextElementSibling;
+    console.log(backOverlay);
     if (!backOverlay) return;
     backOverlay.classList.add("open");
 }
