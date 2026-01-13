@@ -31,10 +31,7 @@
         #hero .hero-content .hero-text {
             grid-area: hero-text;
         }
-
         /* ====== ABOUT SECTION ====== */
-
-
         /* ====== RESUME SECTION ====== */
         #resume .resume-buttons {
             grid-template-columns: repeat(3, auto);
@@ -47,11 +44,6 @@
         #resume .resume-buttons .btn:last-child {
             grid-column: 3 / 4 ;
         }
-        /*#resume .resume-container{*/
-        /*    margin-top: 5rem;*/
-
-        /*}*/
-
         .timeline-items .item-wrapper {
             position: absolute;
             display: flex;
@@ -79,8 +71,18 @@
         #resume .resume-wrapper.skills {
             grid-template-columns: repeat(2,auto);
         }
-
         /* ====== PORTFOLIO SECTION ====== */
+        #portfolio .back-overlay-wrapper{
+            width: 65%;
+        }
+        #portfolio .sliders-container{
+            padding: var(--space-md);
+        }
+        #portfolio .arrow-left,
+        #portfolio .arrow-right{
+            display: flex;
+        }
+
 
 }
 
@@ -128,14 +130,17 @@
             justify-content: start;
         }
         /* ==================== PORTFOLIO SECTION ====================== */
-
+        #portfolio .back-overlay-wrapper{
+            width: 50%;
+            height: 80vh;
+        }
 
         /* ==================== ARTICLES SECTION ====================== */
 
-        #portfolio .articles-grid{
+        #articles .articles-grid{
             grid-template-columns:auto;
-
         }
+
         /* ==================== CONTACT SECTION ======================== */
 
         /* Layout */
@@ -181,6 +186,7 @@
             gap: var(--space-sm);
             flex: 2;
         }
+
 
 
 

@@ -1,11 +1,11 @@
-
+@import url(https://fonts.bunny.net/css?family=krub:200i,300);
 @layer variables{
     :root {
     /* =============================
        TYPOGRAPHY
        ============================= */
-    --font-base: 'Poppins', sans-serif;
-    --headgin-font: 'Playfair Display', serif;
+    --font-base: 'Krub', sans-serif;
+    --headgin-font: 'Krub', sans-serif;
 
     /* =============================
         COLOR PALETTE
