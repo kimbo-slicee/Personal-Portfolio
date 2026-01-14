@@ -138,7 +138,7 @@
         /* ==================== ARTICLES SECTION ====================== */
 
         #articles .articles-grid{
-            grid-template-columns:auto;
+            grid-template-columns:1fr;
         }
 
         /* ==================== CONTACT SECTION ======================== */
