@@ -1,9 +1,206 @@
-.articles-grid {
+.articles-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    gap: clamp(1rem, 2vw, var(--space-md));
 }
-.article-card{
+.article-card {
+    display: grid;
     background: var(--bg-card);
-    padding: .5rem;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition:
+            transform .35s ease,
+            box-shadow .35s ease;
+    isolation: isolate;
+    border-bottom: 3px solid var(--color-primary);
 }
+
+.article-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+.article-card__media {
+    position: relative;
+    max-height: 260px;
+    overflow: hidden;
+}
+
+.article-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.article-card__media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.55)
+    );
+    pointer-events: none;
+}
+.article-card:hover .article-card__media img {
+    transform: scale(1.06);
+}
+
+.article-card__content {
+    padding: clamp(1rem, 2vw, 1.4rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(.6rem, 1.2vw, .9rem);
+}
+
+.article-card__meta {
+    display: flex;
+    gap: var(--space-sm);
+    font-size: var(--fs-xs);
+    opacity: .85;
+}
+
+.article-card__author {
+    color: var(--color-white);
+    font-weight: var(--fw-medium);
+}
+
+.article-card__time {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    font-weight: var(--fw-extrabold);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.article-card__title {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-bold);
+    line-height: 1.35;
+    text-transform: uppercase;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.article-card__excerpt {
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+    opacity: .9;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.article-card__categories {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: .25rem;
+}
+
+.tag {
+    font-size: .65rem;
+    padding: .35rem .7rem;
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: var(--body-bg-color);
+    font-weight: var(--fw-extrabold);
+    letter-spacing: .04em;
+}
+.article-card__read {
+    margin-left: auto;
+    font-size: var(--fs-xs);
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all .3s ease;
+}
+
+.article-card:hover .article-card__read {
+    opacity: 1;
+    transform: none;
+}
+.articles-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: clamp(2rem, 4vw, 3rem);
+    position: relative;
+}
+.articles-btn {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--bg-card);
+    color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+
+    transition:
+            transform .3s ease,
+            box-shadow .3s ease,
+            background .3s ease;
+}
+.articles-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    background: color-mix(in srgb, var(--bg-card) 90%, var(--color-primary));
+}
+
+.articles-btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+.articles-btn svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    transition: transform .3s ease;
+}
+
+.articles-btn.down:hover svg {
+    transform: translateY(2px);
+}
+
+.articles-btn.up:hover svg {
+    transform: translateY(-2px);
+}
+.articles-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+}
+@media (hover: hover) {
+    .articles-btn::after {
+        content: attr(aria-label);
+        position: absolute;
+        bottom: -2.2rem;
+        font-size: .7rem;
+        padding: .3rem .6rem;
+        border-radius: 999px;
+        background: var(--bg-card);
+        opacity: 0;
+        white-space: nowrap;
+        pointer-events: none;
+        transition: opacity .3s ease;
+    }
+
+    .articles-btn:hover::after {
+        opacity: .85;
+    }
+}
+
+
+

@@ -82,6 +82,12 @@
         #portfolio .arrow-right{
             display: flex;
         }
+        /* ================ ARTICLES SECTION ==================*/
+        #articles .articles-grid{
+        }
+        #articles .article-card{
+            grid-template-columns: 200px 1fr;
+        }
 
 
 }
@@ -136,9 +142,12 @@
         }
 
         /* ==================== ARTICLES SECTION ====================== */
-
         #articles .articles-grid{
-            grid-template-columns:1fr;
+            grid-template-columns:80%;
+            place-content: center;
+        }
+        #articles .article-card{
+            grid-template-columns: 350px 1fr;
         }
 
         /* ==================== CONTACT SECTION ======================== */
