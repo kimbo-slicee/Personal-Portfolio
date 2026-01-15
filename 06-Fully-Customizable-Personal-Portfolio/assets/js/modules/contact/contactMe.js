@@ -1,18 +1,16 @@
-emailjs.init("YOUR_PUBLIC_KEY");
+emailjs.init("OYrY6rSmYFDAmeLdr");
 
-document.getElementById("contact-form").addEventListener("submit", function (e) {
+document.querySelector(".contact-form-fields").addEventListener("submit", function (e) {
     e.preventDefault();
-
     emailjs.sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_bc5qe7e",
         this
-    )
-        .then(() => {
-            alert("Message sent successfully!");
-            this.reset();
-        })
-        .catch(() => {
-            alert("Something went wrong 😕");
+    ).then(() => {
+        alert("✅ Message sent successfully!");
+        this.reset(); // Clear the form
+    })
+        .catch((error) => {
+            console.error("EmailJS Error:", error);
+            alert("❌ Something went wrong. Please try again.");
         });
 });
