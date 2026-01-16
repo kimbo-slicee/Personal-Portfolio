@@ -4,6 +4,8 @@ import "./modules/portfolio";
 import "./modules/articles";
 import "./modules/resume/resume.js";
 import "./modules/bottomNavBar/bottomNav.js";
+import "./features/cursor.js";
+import "./features/ScrollReveal.js";
 
 const mouseScroll=document.querySelector(".mouse-scroll");
 const compass = document.querySelector(".scroll-compass");

@@ -1,3 +1,5 @@
+import {revealPortfolio} from "../../features/ScrollReveal.js";
+
 const icons={
     calendar:`
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon icon--sm">
@@ -62,4 +64,6 @@ export function renderItems(items, container, renderItem, limit=3) {
         .slice(0, limit)
         .map(e=>renderItem(e))
         .join("");
+       revealPortfolio();
+
 }

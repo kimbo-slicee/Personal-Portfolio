@@ -1,4 +1,5 @@
 import {renderProjectCard} from "./card.template.js";
+import {revealPortfolio} from "../../features/ScrollReveal.js";
 
 export const portfolioContainer = document.querySelector(".portfolio-items");
 
@@ -11,4 +12,6 @@ export function renderProjectsCards(category,projectsList) {
     portfolioContainer.innerHTML = projects
         .map(renderProjectCard)
         .join("");
+
+    revealPortfolio();
 }

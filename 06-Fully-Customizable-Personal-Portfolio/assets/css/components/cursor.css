@@ -1,0 +1,32 @@
+.cursor{
+    z-index: var(--z-top);
+    position: fixed;
+    pointer-events: none;
+}
+.cursor-dot{
+    position: absolute;
+    width: .5rem;
+    height: .5rem;
+    transform: translate(-50%,-50%);
+    border-radius: var(--radius-full);
+    background: var(--color-primary);
+    transition-property: top , left , width, height;
+    transition-duration: .03s , .03s, .3s, .3s;
+
+}
+.cursor-circle{
+    position: absolute;
+    opacity: .5;
+    height: 2rem;
+    width: 2rem;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-full);
+    transform: translate(-50%,-50%);
+}
+.cursor-dot.large{
+    background:hsl(var(--hue) var(--sat) var(--light) / .35);
+    transition-property: top , left , width, height;
+    transition-duration: .03s , .03s, .3s, .3s;
+    width: 5rem;
+    height: 5rem;
+}
