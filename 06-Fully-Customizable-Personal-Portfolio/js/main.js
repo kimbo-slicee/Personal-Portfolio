@@ -1,7 +1,7 @@
 import "./theme/modes.js";
 import "./features/carousel/carousel.js";
-import "./modules/portfolio";
-import "./modules/articles";
+import "./modules/portfolio/index";
+import "./modules/articles/index";
 import "./modules/resume/resume.js";
 import "./modules/bottomNavBar/bottomNav.js";
 import "./features/cursor.js";
