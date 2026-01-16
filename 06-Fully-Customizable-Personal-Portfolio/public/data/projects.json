@@ -1,60 +1,11 @@
 [
-  {
-    "id": "task-manager",
-    "title": "Task Manager App",
-    "slug": "task-manager",
-    "featured": true,
-    "status": "completed",
-
-    "description": {
-      "short": "A full-stack task manager with authentication.",
-      "long": "A complete task management system with user authentication, role-based access, and real-time updates."
-    },
-
-    "techStack": {
-      "frontend": ["React", "Tailwind CSS"],
-      "backend":  ["Laravel", "JWT"],
-      "database": ["MySQL"]
-    },
-
-    "images": {
-      "cover": "/assets/images/portfolio-images/task-manager-system/image-01.png",
-      "gallery": [
-        "/assets/images/portfolio-images/task-manager-system/image-01.png",
-        "/assets/images/portfolio-images/task-manager-system/image-02.png",
-        "/assets/images/portfolio-images/task-manager-system/image-03.png"
-      ]
-    },
-
-    "links": {
-      "live": "https://project-management-gs.vercel.app/",
-      "github": "https://github.com/GreatStackDev/project-management",
-      "api": null
-    },
-
-    "dates": {
-      "startedAt": "2024-11",
-      "finishedAt": "2025-01"
-    },
-
-    "features": [
-      "Authentication & Authorization",
-      "CRUD Tasks",
-      "Dark Mode",
-      "Responsive UI"
-    ],
-
-    "role": "Full Stack Developer",
-    "type": "personal",
-    "visibility": "public"
-  },
 
   {
     "id": "appointment-system",
     "title": "Appointment Booking System",
     "slug": "appointment-system",
     "featured": true,
-    "status": "in-progress",
+    "status": "completed",
 
     "description": {
       "short": "An appointment scheduling and booking system.",
@@ -70,21 +21,16 @@
     "images": {
       "cover": "assets/images/portfolio-images/appointment-system/image-01.png",
       "gallery": [
-                "assets/images/portfolio-images/appointment-system/image-01.png",
-                "assets/images/portfolio-images/appointment-system/image-02.png",
-                "assets/images/portfolio-images/appointment-system/image-03.png"
+        "assets/images/portfolio-images/appointment-system/image-01.png",
+        "assets/images/portfolio-images/appointment-system/image-02.png",
+        "assets/images/portfolio-images/appointment-system/image-03.png"
       ]
     },
 
     "links": {
-      "live": null,
-      "github": null,
+      "live": "",
+      "github": "https://github.com/kimbo-slicee/doctor-appointment-booking-system",
       "api": null
-    },
-
-    "dates": {
-      "startedAt": "2025-02",
-      "finishedAt": null
     },
 
     "features": [
@@ -98,23 +44,111 @@
     "type": "personal",
     "visibility": "public"
   },
+  {
+    "id": "Hoobank",
+    "title": "Landing Page",
+    "slug": "Hoobank",
+    "featured": false,
+    "status": "completed",
 
+    "description": {
+      "short": "Complete React modern website",
+      "long": "Hoobank is a fully responsive and modern website with a sleek UI/UX design built using React JS and Tailwind CSS. This project demonstrates the latest web development practices, delivering a seamless user experience across all devices."
+    },
+
+    "techStack": {
+      "frontend": ["html","TailwindCss" ,"JavaScript (ES6+)","React.js"],
+      "backend": [],
+      "database": []
+    },
+
+    "images": {
+      "cover": "/assets/images/portfolio-images/hooBank/image.png",
+      "gallery": [
+        "/assets/images/portfolio-images/hooBank/image-01.png",
+        "/assets/images/portfolio-images/hooBank/image-02.png",
+        "/assets/images/portfolio-images/hooBank/image-03.png"
+      ]
+    },
+
+    "links": {
+      "live": "fully-responsive-website-zeta.vercel.app",
+      "github": "https://github.com/kimbo-slicee/Hoobank",
+      "api": null
+    },
+
+    "features": [
+      "Responsive Design",
+      "Modern UI/UX",
+      "Scalable Architecture",
+      "Tailwind Powered"
+    ],
+
+    "role": "Frontend Developer",
+    "type": "personal",
+    "visibility": "public"
+  },
+  {
+    "id": "task-manager",
+    "title": "Task Manager App",
+    "slug": "task-manager",
+    "featured": true,
+    "status": "completed",
+
+    "description": {
+      "short": "A full-stack task manager with authentication.",
+      "long": "A complete task management system with user authentication, role-based access, and real-time updates."
+    },
+
+    "techStack": {
+      "frontend": ["React", "Tailwind CSS","Redux"],
+      "backend":  ["Nodejs","Express JS", "JWT"],
+      "database": ["PostgresSQL", "Prisma"]
+    },
+
+    "images": {
+      "cover": "/assets/images/portfolio-images/task-manager-system/image-01.png",
+      "gallery": [
+        "/assets/images/portfolio-images/task-manager-system/image-01.png",
+        "/assets/images/portfolio-images/task-manager-system/image-02.png",
+        "/assets/images/portfolio-images/task-manager-system/image-03.png"
+      ]
+    },
+
+    "links": {
+      "live": "https://project-management-gs.vercel.app/",
+      "github": "https://github.com/kimbo-slicee/Full-Stack-Project-Management",
+      "api": null
+    },
+
+    "features": [
+      "Authentication & Authorization",
+      "CRUD Tasks",
+      "Dark Mode",
+      "Responsive UI",
+      "Email Notifications"
+    ],
+
+    "role": "Full Stack Developer",
+    "type": "academic",
+    "visibility": "public"
+  },
   {
     "id": "booking-system",
     "title": "Booking System",
     "slug": "booking-system",
     "featured": false,
-    "status": "completed",
+    "status": "in-progress",
 
     "description": {
-      "short": "A generic booking system for services.",
-      "long": "A booking platform designed to handle reservations, availability management, and booking confirmations."
+      "short": "Complete React Booking System Tutorial for Beginners",
+      "long": "Hotel booking application project using MERN Stack. Full-stack React, Node.js, MongoDB application using Context API, JWT, custom hooks, and React calendar."
     },
 
     "techStack": {
-      "frontend": ["HTML", "CSS", "JavaScript"],
-      "backend": [],
-      "database": []
+      "frontend": ["React.js", "React Context API","Custom React Hooks"],
+      "backend": ["Node.js", "Express.js","Cookies","JWT"],
+      "database": ["MongoDB", "Mongoose"]
     },
 
     "images": {
@@ -127,208 +161,33 @@
     },
 
     "links": {
-      "live": null,
-      "github": null,
+      "live": "",
+      "github": "",
       "api": null
     },
 
-    "dates": {
-      "startedAt": "2024-08",
-      "finishedAt": "2024-09"
-    },
-
     "features": [
-      "Service Booking",
-      "Availability Check",
-      "Responsive Design"
+      "User Authentication: Register, Login, and Logout",
+      "JWT-based Authentication with Cookies",
+      "Role-Based Authorization (e.g., Admin vs User)",
+      "Full CRUD operations for hotel bookings and administration",
+      "Search functionality for bookings",
+      "Fetch and display data from a Node.js/Express backend",
+      "Custom React hooks for data fetching and state management",
+      "React Context API for global state management",
+      "Hotel booking component with interactive UI",
+      "Display and manipulate booking data dynamically",
+      "Integration of React Calendar for booking dates",
+      "Admin panel for managing bookings",
+      "Error handling and validation on backend and frontend",
+      "Responsive UI design for user-friendly experience",
+      "Separation of concerns between frontend and backend",
+      "Full-stack MERN architecture demonstrating real-world application flow"
     ],
 
     "role": "Frontend Developer",
     "type": "academic",
     "visibility": "public"
-  },
-
-  {
-    "id": "e-commerce",
-    "title": "E-Commerce Platform",
-    "slug": "e-commerce",
-    "featured": true,
-    "status": "completed",
-
-    "description": {
-      "short": "A complete e-commerce web application.",
-      "long": "An online shopping platform featuring product listings, cart management, and checkout flow."
-    },
-
-    "techStack": {
-      "frontend": ["HTML", "CSS", "JavaScript"],
-      "backend": ["Node.js"],
-      "database": ["MongoDB"]
-    },
-
-    "images": {
-      "cover": "/assets/images/portfolio-images/e-commerce/image-01.png",
-      "gallery": [
-        "/assets/images/portfolio-images/e-commerce/image-01.png",
-        "/assets/images/portfolio-images/e-commerce/image-02.png",
-        "/assets/images/portfolio-images/e-commerce/image-03.png"
-      ]
-    },
-
-    "links": {
-      "live": null,
-      "github": null,
-      "api": null
-    },
-
-    "dates": {
-      "startedAt": "2024-06",
-      "finishedAt": "2024-08"
-    },
-
-    "features": [
-      "Product Catalog",
-      "Shopping Cart",
-      "Order Management"
-    ],
-
-    "role": "Full Stack Developer",
-    "type": "freelance",
-    "visibility": "public"
-  },
-
-  {
-    "id": "electro-shop",
-    "title": "Electro Shop",
-    "slug": "electro-shop",
-    "featured": false,
-    "status": "completed",
-
-    "description": {
-      "short": "An electronics-focused online store.",
-      "long": "A themed e-commerce website for selling electronic products with a modern UI."
-    },
-
-    "techStack": {
-      "frontend": ["HTML", "CSS", "JavaScript"],
-      "backend": [],
-      "database": []
-    },
-
-    "images": {
-      "cover": "/assets/images/portfolio-images/electro-shop/image-01.png",
-      "gallery": []
-    },
-
-    "links": {
-      "live": null,
-      "github": null,
-      "api": null
-    },
-
-    "dates": {
-      "startedAt": "2024-04",
-      "finishedAt": "2024-05"
-    },
-
-    "features": [
-      "Product Showcase",
-      "Category Filtering",
-      "Responsive Layout"
-    ],
-
-    "role": "Frontend Developer",
-    "type": "personal",
-    "visibility": "public"
-  },
-
-  {
-    "id": "hoo-bank",
-    "title": "HooBank Landing Page",
-    "slug": "hoo-bank",
-    "featured": false,
-    "status": "completed",
-
-    "description": {
-      "short": "A modern banking landing page.",
-      "long": "A responsive and animated landing page inspired by modern fintech UI trends."
-    },
-
-    "techStack": {
-      "frontend": ["HTML", "CSS", "JavaScript"],
-      "backend": [],
-      "database": []
-    },
-
-    "images": {
-      "cover": "/assets/images/portfolio-images/hooBank/image-01.png",
-      "gallery": []
-    },
-
-    "links": {
-      "live": null,
-      "github": null,
-      "api": null
-    },
-
-    "dates": {
-      "startedAt": "2024-03",
-      "finishedAt": "2024-03"
-    },
-
-    "features": [
-      "Landing Page",
-      "Animations",
-      "Responsive Design"
-    ],
-
-    "role": "Frontend Developer",
-    "type": "personal",
-    "visibility": "public"
-  },
-
-  {
-    "id": "portfolio",
-    "title": "Personal Portfolio",
-    "slug": "portfolio",
-    "featured": true,
-    "status": "ongoing",
-
-    "description": {
-      "short": "My personal developer portfolio.",
-      "long": "A personal portfolio showcasing my projects, articles, and technical skills."
-    },
-
-    "techStack": {
-      "frontend": ["HTML", "CSS", "JavaScript"],
-      "backend": [],
-      "database": []
-    },
-
-    "images": {
-      "cover": "/assets/images/portfolio-images/portfolio/image-01.png",
-      "gallery": []
-    },
-
-    "links": {
-      "live": null,
-      "github": null,
-      "api": null
-    },
-
-    "dates": {
-      "startedAt": "2024-12",
-      "finishedAt": null
-    },
-
-    "features": [
-      "Projects Showcase",
-      "Articles Section",
-      "Dark Mode"
-    ],
-
-    "role": "Frontend Developer",
-    "type": "personal",
-    "visibility": "public"
   }
+
 ]

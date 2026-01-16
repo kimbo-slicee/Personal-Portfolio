@@ -10,10 +10,13 @@ const sr = ScrollReveal({
 });
 
 export function revealPortfolio() {
-    sr.reveal('.project-card , .article-card', {
+    sr.reveal('.project-card .front-face , .article-card', {
         origin: 'bottom',
         interval: 150,
-        scale: 0.97
+        scale: 0.97,
+        beforeReveal(el) {
+            el.style.transform = 'none';
+        }
     });
 }
 

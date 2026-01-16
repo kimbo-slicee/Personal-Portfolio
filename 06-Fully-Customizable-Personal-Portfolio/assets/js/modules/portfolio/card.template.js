@@ -77,7 +77,7 @@ const renderFeatures=(features=[])=> `
             </ol>
     </div>
 `
-const renderContent=(slug,live,github,long,techStack,startedAt,finishedAt,features)=>` 
+const renderContent=(slug,live,github,long,techStack,features)=>` 
                 <div class="back-overlay-content">
                      <div class="project-header">
                             <h3 class="project-title">${slug}</h3>
@@ -103,7 +103,7 @@ const renderContent=(slug,live,github,long,techStack,startedAt,finishedAt,featur
 const renderBack = ({images:{gallery},
                         slug,
                         links:{live,github},
-                        description:{long},techStack,dates:{startedAt,finishedAt},
+                        description:{long},techStack,
                         features
 }) => `
   <div class="back-overlay">
@@ -111,7 +111,7 @@ const renderBack = ({images:{gallery},
       <div class="back-overlay-wrapper">
         <div class="scroll-content">
            ${renderSlider(gallery)}
-           ${renderContent(slug,live,github,long,techStack,startedAt,finishedAt,features)}
+           ${renderContent(slug,live,github,long,techStack,features)}
         </div>  
       </div>
   </div>

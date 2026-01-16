@@ -13,5 +13,4 @@ export function renderProjectsCards(category,projectsList) {
         .map(renderProjectCard)
         .join("");
 
-    revealPortfolio();
 }
