@@ -1,11 +1,12 @@
-@import url(https://fonts.bunny.net/css?family=krub:200i,300);
+@import url('https://fonts.bunny.net/css?family=inter:400,500,600,700');
+@import url('https://fonts.bunny.net/css?family=poppins:300,400,600,700');
 @layer variables{
     :root {
     /* =============================
        TYPOGRAPHY
        ============================= */
-    --font-base: 'Krub', sans-serif;
-    --headgin-font: 'Krub', sans-serif;
+    --font-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --headgin-font: 'Poppins', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
     /* =============================
         COLOR PALETTE

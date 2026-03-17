@@ -49,6 +49,7 @@
     width: 1.5rem;
     height: 1.5rem;
     fill: var(--body-bg-color);
+    opacity: 1!important;
 }
 .icon-block:first-child {
     top: 0;
@@ -75,6 +76,7 @@
     width: 80%;
     animation: Rotate-reverse 20s linear infinite;
     -webkit-animation: Rotate-reverse 20s linear infinite;
+
 }
 .circle {
     animation: circle-rotate 20s linear infinite;
@@ -95,6 +97,7 @@
     animation: img-rotate 20s linear infinite;
     -webkit-animation: img-rotate 20s linear infinite;
 }
+
 .center-logo {
     position: absolute;
     top: 50%;

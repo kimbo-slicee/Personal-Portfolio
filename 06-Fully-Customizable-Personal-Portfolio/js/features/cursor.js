@@ -1,34 +1,42 @@
 const cursorDot = document.querySelector(".cursor-dot");
 const cursorCircle = document.querySelector(".cursor-circle");
-const hoverTargets = document.querySelectorAll(
-    "button, a[href], .icon, .theme-switcher, .carousel-item"
-);
 
-// Move cursor
-document.addEventListener("mousemove", ({ clientX, clientY }) => {
-    const x = `${clientX}px`;
-    const y = `${clientY}px`;
+let mouseX = 0;
+let mouseY = 0;
+let circleX = 0;
+let circleY = 0;
 
-    cursorDot.style.left = x;
-    cursorDot.style.top = y;
-
-    cursorCircle.style.left = x;
-    cursorCircle.style.top = y;
+// Track mouse position
+document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    // Instant dot (no lag)
+    cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
 });
 
-// Hover effects
-const onHoverIn = () => {
-    cursorDot.classList.add("large");
-    cursorCircle.style.display = "none";
-};
+// Smooth animation loop for circle
+function animate() {
+    // Smooth follow (lerp)
+    circleX += (mouseX - circleX) * 0.1;
+    circleY += (mouseY - circleY) * 0.1;
 
-const onHoverOut = () => {
-    cursorDot.classList.remove("large");
-    cursorCircle.style.display = "block";
-};
+    cursorCircle.style.transform = `translate(${circleX}px, ${circleY}px)`;
 
-hoverTargets.forEach(el => {
-    el.addEventListener("mouseenter", onHoverIn);
-    el.addEventListener("mouseleave", onHoverOut);
+    requestAnimationFrame(animate);
+}
+animate();
+
+// Hover (using event delegation → better performance)
+document.addEventListener("mouseover", (e) => {
+    if (e.target.closest("button, a, .icon, .theme-switcher, .carousel-item")) {
+        cursorDot.classList.add("large");
+        cursorCircle.style.opacity = "0";
+    }
 });
 
+document.addEventListener("mouseout", (e) => {
+    if (e.target.closest("button, a, .icon, .theme-switcher, .carousel-item")) {
+        cursorDot.classList.remove("large");
+        cursorCircle.style.opacity = "1";
+    }
+});
